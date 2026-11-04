@@ -1,0 +1,241 @@
+source,f_global_fcfa_an,k,architecture,patients,eur_patient_an,keur_an,affectation_la_plus_frequente,frequence,moyenne,p2_5,p97_5
+scénario bas,0,1.0,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,0,1.0,tout LoRa sous convention,27965,25.76,720.4,,,,,
+scénario bas,0,1.0,tout cellulaire sous convention,27965,25.92,724.7,,,,,
+scénario bas,0,1.0,choix par commune,27965,23.62,660.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario bas,0,1.5,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,0,1.5,tout LoRa sous convention,27965,25.76,720.4,,,,,
+scénario bas,0,1.5,tout cellulaire sous convention,27965,25.92,724.7,,,,,
+scénario bas,0,1.5,choix par commune,27965,23.62,660.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario bas,0,2.0,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,0,2.0,tout LoRa sous convention,27965,25.76,720.4,,,,,
+scénario bas,0,2.0,tout cellulaire sous convention,27965,25.92,724.7,,,,,
+scénario bas,0,2.0,choix par commune,27965,23.62,660.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario bas,5000000,1.0,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,5000000,1.0,tout LoRa sous convention,27965,26.03,728.0,,,,,
+scénario bas,5000000,1.0,tout cellulaire sous convention,27965,26.19,732.3,,,,,
+scénario bas,5000000,1.0,choix par commune,27965,23.89,668.1,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario bas,5000000,1.5,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,5000000,1.5,tout LoRa sous convention,27965,26.17,731.9,,,,,
+scénario bas,5000000,1.5,tout cellulaire sous convention,27965,26.32,736.1,,,,,
+scénario bas,5000000,1.5,choix par commune,27965,24.03,671.9,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario bas,5000000,2.0,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,5000000,2.0,tout LoRa sous convention,27965,26.31,735.7,,,,,
+scénario bas,5000000,2.0,tout cellulaire sous convention,27965,26.46,740.0,,,,,
+scénario bas,5000000,2.0,choix par commune,27965,24.16,675.7,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario bas,10000000,1.0,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,10000000,1.0,tout LoRa sous convention,27965,26.31,735.7,,,,,
+scénario bas,10000000,1.0,tout cellulaire sous convention,27965,26.46,740.0,,,,,
+scénario bas,10000000,1.0,choix par commune,27965,24.16,675.7,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario bas,10000000,1.5,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,10000000,1.5,tout LoRa sous convention,27965,26.58,743.3,,,,,
+scénario bas,10000000,1.5,tout cellulaire sous convention,27965,26.73,747.6,,,,,
+scénario bas,10000000,1.5,choix par commune,27965,24.44,683.3,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario bas,10000000,2.0,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,10000000,2.0,tout LoRa sous convention,27965,26.85,750.9,,,,,
+scénario bas,10000000,2.0,tout cellulaire sous convention,27965,27.01,755.2,,,,,
+scénario bas,10000000,2.0,choix par commune,27965,24.71,691.0,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario bas,20000000,1.0,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,20000000,1.0,tout LoRa sous convention,27965,26.85,750.9,,,,,
+scénario bas,20000000,1.0,tout cellulaire sous convention,27965,27.01,755.2,,,,,
+scénario bas,20000000,1.0,choix par commune,27965,24.71,691.0,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario bas,20000000,1.5,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,20000000,1.5,tout LoRa sous convention,27965,27.4,766.2,,,,,
+scénario bas,20000000,1.5,tout cellulaire sous convention,27965,27.55,770.5,,,,,
+scénario bas,20000000,1.5,choix par commune,27965,25.25,706.2,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario bas,20000000,2.0,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,20000000,2.0,tout LoRa sous convention,27965,27.94,781.4,,,,,
+scénario bas,20000000,2.0,tout cellulaire sous convention,27965,28.1,785.7,,,,,
+scénario bas,20000000,2.0,choix par commune,27965,25.8,721.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario bas,50000000,1.0,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,50000000,1.0,tout LoRa sous convention,27965,28.49,796.7,,,,,
+scénario bas,50000000,1.0,tout cellulaire sous convention,27965,28.64,800.9,,,,,
+scénario bas,50000000,1.0,choix par commune,27965,26.34,736.7,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario bas,50000000,1.5,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,50000000,1.5,tout LoRa sous convention,27965,29.85,834.8,,,,,
+scénario bas,50000000,1.5,tout cellulaire sous convention,27965,30.0,839.1,,,,,
+scénario bas,50000000,1.5,choix par commune,27965,27.51,769.3,LoRa sans convention : toutes les communes,1.0,,,
+scénario bas,50000000,2.0,tout LoRa sans convention,27965,27.51,769.3,,,,,
+scénario bas,50000000,2.0,tout LoRa sous convention,27965,31.21,872.9,,,,,
+scénario bas,50000000,2.0,tout cellulaire sous convention,27965,31.37,877.2,,,,,
+scénario bas,50000000,2.0,choix par commune,27965,27.51,769.3,LoRa sans convention : toutes les communes,1.0,,,
+"Monte-Carlo, scénario bas détaillé",0,1.0,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",0,1.0,tout LoRa sous convention,27965,40.92,1144.4,,,42.0,29.26,59.03
+"Monte-Carlo, scénario bas détaillé",0,1.0,tout cellulaire sous convention,27965,45.42,1270.0,,,46.48,31.56,63.9
+"Monte-Carlo, scénario bas détaillé",0,1.0,choix par commune,27965,39.02,1091.1,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518,39.88,27.78,55.47
+"Monte-Carlo, scénario bas détaillé",0,1.5,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",0,1.5,tout LoRa sous convention,27965,40.92,1144.4,,,42.0,29.26,59.03
+"Monte-Carlo, scénario bas détaillé",0,1.5,tout cellulaire sous convention,27965,45.42,1270.0,,,46.48,31.56,63.9
+"Monte-Carlo, scénario bas détaillé",0,1.5,choix par commune,27965,39.02,1091.1,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518,39.88,27.78,55.47
+"Monte-Carlo, scénario bas détaillé",0,2.0,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",0,2.0,tout LoRa sous convention,27965,40.92,1144.4,,,42.0,29.26,59.03
+"Monte-Carlo, scénario bas détaillé",0,2.0,tout cellulaire sous convention,27965,45.42,1270.0,,,46.48,31.56,63.9
+"Monte-Carlo, scénario bas détaillé",0,2.0,choix par commune,27965,39.02,1091.1,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518,39.88,27.78,55.47
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,tout LoRa sous convention,27965,41.2,1152.1,,,42.27,29.53,59.3
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,tout cellulaire sous convention,27965,45.69,1277.7,,,46.76,31.84,64.17
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,choix par commune,27965,39.29,1098.8,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518,40.15,28.05,55.75
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,tout LoRa sous convention,27965,41.33,1155.9,,,42.41,29.67,59.44
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,tout cellulaire sous convention,27965,45.82,1281.5,,,46.89,31.97,64.31
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,choix par commune,27965,39.43,1102.6,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518,40.28,28.19,55.88
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,tout LoRa sous convention,27965,41.47,1159.7,,,42.54,29.81,59.57
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,tout cellulaire sous convention,27965,45.96,1285.3,,,47.03,32.11,64.45
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,choix par commune,27965,39.56,1106.4,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518,40.42,28.32,56.02
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,tout LoRa sous convention,27965,41.47,1159.7,,,42.54,29.81,59.57
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,tout cellulaire sous convention,27965,45.96,1285.3,,,47.03,32.11,64.45
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,choix par commune,27965,39.56,1106.4,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518,40.42,28.32,56.02
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,tout LoRa sous convention,27965,41.74,1167.3,,,42.82,30.08,59.85
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,tout cellulaire sous convention,27965,46.23,1292.9,,,47.3,32.38,64.72
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,choix par commune,27965,39.84,1114.0,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518,40.69,28.59,56.29
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,tout LoRa sous convention,27965,42.01,1174.9,,,43.09,30.35,60.12
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,tout cellulaire sous convention,27965,46.51,1300.5,,,47.57,32.65,64.99
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,choix par commune,27965,40.11,1121.6,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518,40.97,28.87,56.56
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,tout LoRa sous convention,27965,42.01,1174.9,,,43.09,30.35,60.12
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,tout cellulaire sous convention,27965,46.51,1300.5,,,47.57,32.65,64.99
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,choix par commune,27965,40.11,1121.6,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518,40.97,28.87,56.56
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,tout LoRa sous convention,27965,42.56,1190.2,,,43.64,30.9,60.66
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,tout cellulaire sous convention,27965,47.05,1315.8,,,48.12,33.2,65.54
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,choix par commune,27965,40.65,1136.9,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518,41.51,29.41,57.11
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,tout LoRa sous convention,27965,43.1,1205.4,,,44.18,31.44,61.21
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,tout cellulaire sous convention,27965,47.6,1331.0,,,48.66,33.74,66.08
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,choix par commune,27965,41.2,1152.1,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518,42.05,29.96,57.66
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,tout LoRa sous convention,27965,43.65,1220.7,,,44.73,31.99,61.75
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,tout cellulaire sous convention,27965,48.14,1346.3,,,49.21,34.29,66.63
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,choix par commune,27965,41.74,1167.4,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518,42.59,30.5,58.2
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,tout LoRa sous convention,27965,45.01,1258.8,,,46.09,33.35,63.12
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,tout cellulaire sous convention,27965,49.5,1384.4,,,50.57,35.65,67.99
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,choix par commune,27965,43.08,1204.8,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.502,43.87,31.84,59.56
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,tout LoRa sans convention,27965,47.09,1317.0,,,48.02,33.96,65.47
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,tout LoRa sous convention,27965,46.38,1296.9,,,47.45,34.71,64.48
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,tout cellulaire sous convention,27965,50.87,1422.5,,,51.94,37.01,69.35
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,choix par commune,27965,44.37,1240.8,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.452,45.03,32.85,60.93
+scénario haut,0,1.0,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,0,1.0,tout LoRa sous convention,27965,67.42,1885.3,,,,,
+scénario haut,0,1.0,tout cellulaire sous convention,27965,68.07,1903.6,,,,,
+scénario haut,0,1.0,choix par commune,27965,59.38,1660.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario haut,0,1.5,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,0,1.5,tout LoRa sous convention,27965,67.42,1885.3,,,,,
+scénario haut,0,1.5,tout cellulaire sous convention,27965,68.07,1903.6,,,,,
+scénario haut,0,1.5,choix par commune,27965,59.38,1660.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario haut,0,2.0,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,0,2.0,tout LoRa sous convention,27965,67.42,1885.3,,,,,
+scénario haut,0,2.0,tout cellulaire sous convention,27965,68.07,1903.6,,,,,
+scénario haut,0,2.0,choix par commune,27965,59.38,1660.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario haut,5000000,1.0,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,5000000,1.0,tout LoRa sous convention,27965,67.69,1892.9,,,,,
+scénario haut,5000000,1.0,tout cellulaire sous convention,27965,68.34,1911.2,,,,,
+scénario haut,5000000,1.0,choix par commune,27965,59.65,1668.1,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario haut,5000000,1.5,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,5000000,1.5,tout LoRa sous convention,27965,67.83,1896.7,,,,,
+scénario haut,5000000,1.5,tout cellulaire sous convention,27965,68.48,1915.0,,,,,
+scénario haut,5000000,1.5,choix par commune,27965,59.79,1671.9,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario haut,5000000,2.0,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,5000000,2.0,tout LoRa sous convention,27965,67.96,1900.5,,,,,
+scénario haut,5000000,2.0,tout cellulaire sous convention,27965,68.62,1918.8,,,,,
+scénario haut,5000000,2.0,choix par commune,27965,59.92,1675.7,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario haut,10000000,1.0,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,10000000,1.0,tout LoRa sous convention,27965,67.96,1900.5,,,,,
+scénario haut,10000000,1.0,tout cellulaire sous convention,27965,68.62,1918.8,,,,,
+scénario haut,10000000,1.0,choix par commune,27965,59.92,1675.7,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario haut,10000000,1.5,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,10000000,1.5,tout LoRa sous convention,27965,68.24,1908.2,,,,,
+scénario haut,10000000,1.5,tout cellulaire sous convention,27965,68.89,1926.4,,,,,
+scénario haut,10000000,1.5,choix par commune,27965,60.2,1683.4,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario haut,10000000,2.0,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,10000000,2.0,tout LoRa sous convention,27965,68.51,1915.8,,,,,
+scénario haut,10000000,2.0,tout cellulaire sous convention,27965,69.16,1934.0,,,,,
+scénario haut,10000000,2.0,choix par commune,27965,60.47,1691.0,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario haut,20000000,1.0,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,20000000,1.0,tout LoRa sous convention,27965,68.51,1915.8,,,,,
+scénario haut,20000000,1.0,tout cellulaire sous convention,27965,69.16,1934.0,,,,,
+scénario haut,20000000,1.0,choix par commune,27965,60.47,1691.0,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario haut,20000000,1.5,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,20000000,1.5,tout LoRa sous convention,27965,69.05,1931.0,,,,,
+scénario haut,20000000,1.5,tout cellulaire sous convention,27965,69.71,1949.3,,,,,
+scénario haut,20000000,1.5,choix par commune,27965,61.01,1706.2,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario haut,20000000,2.0,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,20000000,2.0,tout LoRa sous convention,27965,69.6,1946.3,,,,,
+scénario haut,20000000,2.0,tout cellulaire sous convention,27965,70.25,1964.5,,,,,
+scénario haut,20000000,2.0,choix par commune,27965,61.56,1721.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario haut,50000000,1.0,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,50000000,1.0,tout LoRa sous convention,27965,70.14,1961.5,,,,,
+scénario haut,50000000,1.0,tout cellulaire sous convention,27965,70.8,1979.8,,,,,
+scénario haut,50000000,1.0,choix par commune,27965,62.1,1736.7,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario haut,50000000,1.5,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,50000000,1.5,tout LoRa sous convention,27965,71.51,1999.6,,,,,
+scénario haut,50000000,1.5,tout cellulaire sous convention,27965,72.16,2017.9,,,,,
+scénario haut,50000000,1.5,choix par commune,27965,63.47,1774.8,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+scénario haut,50000000,2.0,tout LoRa sans convention,27965,72.81,2036.0,,,,,
+scénario haut,50000000,2.0,tout LoRa sous convention,27965,72.87,2037.8,,,,,
+scénario haut,50000000,2.0,tout cellulaire sous convention,27965,73.52,2056.0,,,,,
+scénario haut,50000000,2.0,choix par commune,27965,64.83,1813.0,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",1.0,,,
+"Monte-Carlo, Kerlink 10 %",0,1.0,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",0,1.0,tout LoRa sous convention,27965,51.15,1430.4,,,53.11,36.95,76.51
+"Monte-Carlo, Kerlink 10 %",0,1.0,tout cellulaire sous convention,27965,46.85,1310.2,,,48.0,33.0,66.14
+"Monte-Carlo, Kerlink 10 %",0,1.0,choix par commune,27965,42.09,1177.2,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,43.25,30.24,60.63
+"Monte-Carlo, Kerlink 10 %",0,1.5,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",0,1.5,tout LoRa sous convention,27965,51.15,1430.4,,,53.11,36.95,76.51
+"Monte-Carlo, Kerlink 10 %",0,1.5,tout cellulaire sous convention,27965,46.85,1310.2,,,48.0,33.0,66.14
+"Monte-Carlo, Kerlink 10 %",0,1.5,choix par commune,27965,42.09,1177.2,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,43.25,30.24,60.63
+"Monte-Carlo, Kerlink 10 %",0,2.0,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",0,2.0,tout LoRa sous convention,27965,51.15,1430.4,,,53.11,36.95,76.51
+"Monte-Carlo, Kerlink 10 %",0,2.0,tout cellulaire sous convention,27965,46.85,1310.2,,,48.0,33.0,66.14
+"Monte-Carlo, Kerlink 10 %",0,2.0,choix par commune,27965,42.09,1177.2,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,43.25,30.24,60.63
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,tout LoRa sous convention,27965,51.42,1438.0,,,53.38,37.22,76.78
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,tout cellulaire sous convention,27965,47.12,1317.8,,,48.27,33.27,66.41
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,choix par commune,27965,42.37,1184.8,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,43.52,30.52,60.91
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,tout LoRa sous convention,27965,51.56,1441.8,,,53.52,37.36,76.91
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,tout cellulaire sous convention,27965,47.26,1321.6,,,48.41,33.41,66.54
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,choix par commune,27965,42.5,1188.6,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,43.66,30.65,61.04
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,tout LoRa sous convention,27965,51.69,1445.6,,,53.66,37.49,77.05
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,tout cellulaire sous convention,27965,47.4,1325.4,,,48.54,33.55,66.68
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,choix par commune,27965,42.64,1192.4,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,43.8,30.79,61.18
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,tout LoRa sous convention,27965,51.69,1445.6,,,53.66,37.49,77.05
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,tout cellulaire sous convention,27965,47.4,1325.4,,,48.54,33.55,66.68
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,choix par commune,27965,42.64,1192.4,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,43.8,30.79,61.18
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,tout LoRa sous convention,27965,51.97,1453.2,,,53.93,37.77,77.32
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,tout cellulaire sous convention,27965,47.67,1333.0,,,48.82,33.82,66.95
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,choix par commune,27965,42.91,1200.0,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,44.07,31.06,61.45
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,tout LoRa sous convention,27965,52.24,1460.9,,,54.2,38.04,77.6
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,tout cellulaire sous convention,27965,47.94,1340.7,,,49.09,34.09,67.23
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,choix par commune,27965,43.18,1207.6,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,44.34,31.34,61.72
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,tout LoRa sous convention,27965,52.24,1460.9,,,54.2,38.04,77.6
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,tout cellulaire sous convention,27965,47.94,1340.7,,,49.09,34.09,67.23
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,choix par commune,27965,43.18,1207.6,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,44.34,31.34,61.72
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,tout LoRa sous convention,27965,52.78,1476.1,,,54.75,38.58,78.14
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,tout cellulaire sous convention,27965,48.49,1355.9,,,49.63,34.64,67.77
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,choix par commune,27965,43.73,1222.9,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,44.89,31.88,62.27
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,tout LoRa sous convention,27965,53.33,1491.3,,,55.29,39.13,78.69
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,tout cellulaire sous convention,27965,49.03,1371.1,,,50.18,35.18,68.32
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,choix par commune,27965,44.28,1238.1,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,45.43,32.43,62.81
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,tout LoRa sous convention,27965,53.88,1506.6,,,55.84,39.67,79.23
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,tout cellulaire sous convention,27965,49.58,1386.4,,,50.72,35.73,68.86
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,choix par commune,27965,44.82,1253.4,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,45.98,32.97,63.36
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,tout LoRa sous convention,27965,55.24,1544.7,,,57.2,41.04,80.59
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,tout cellulaire sous convention,27965,50.94,1424.5,,,52.09,37.09,70.22
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,choix par commune,27965,46.18,1291.5,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,47.34,34.33,64.72
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,tout LoRa sans convention,27965,54.41,1521.6,,,56.25,39.26,79.73
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,tout LoRa sous convention,27965,56.6,1582.8,,,58.56,42.4,81.96
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,tout cellulaire sous convention,27965,52.3,1462.6,,,53.45,38.45,71.59
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,choix par commune,27965,47.55,1329.6,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822,48.69,35.7,66.09

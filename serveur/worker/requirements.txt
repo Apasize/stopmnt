@@ -1,0 +1,17 @@
+# MQTT client
+paho-mqtt==2.1.0
+
+# InfluxDB client
+influxdb-client==1.44.0
+
+# PostgreSQL
+asyncpg==0.29.0
+
+# Redis
+redis==5.0.4
+
+# Variables d'environnement
+python-dotenv==1.0.1
+
+# Firebase Cloud Messaging
+firebase-admin==6.5.0

@@ -1,0 +1,14 @@
+scenario,structure,fraction,part_smartphone,f_ligne,mult_passerelle,patients,cout_passerelle_eur_an,cout_keur_an,eur_patient_an,borne_inf_eur_patient_an,passerelles,doublees_capacite,part_patients_lora,charge_max_passerelle,statut,tout_cellulaire_eur,couverture_complete_lora_eur,choix_commune_eur
+centre_detaille,detaillee,0.02,0.0,,1.0,27965,411.2,1079.2,38.59,38.49,193,0,0.768,654,Time limit reached,45.63,40.56,38.77
+centre_kerlink,Kerlink,0.02,0.0,,1.0,27965,974.2,1159.1,41.45,41.42,92,0,0.599,664,Time limit reached,46.13,51.18,41.14
+bas,detaillee,0.02,0.0,,1.0,27965,294.0,668.2,23.89,23.87,125,0,0.673,664,Time limit reached,26.25,26.31,23.86
+haut,Kerlink,0.02,0.0,,1.0,27965,1105.8,1647.3,58.91,58.8,126,0,0.675,664,Time limit reached,67.82,67.96,58.78
+smartphone_detaille,detaillee,0.02,0.2903,,1.0,27965,411.2,892.0,31.9,31.85,148,0,0.711,471,Time limit reached,36.25,34.8,31.87
+smartphone_kerlink,Kerlink,0.02,0.2903,,1.0,27965,974.2,954.4,34.13,34.13,68,0,0.526,499,Optimal,36.75,45.43,33.81
+fligne66_detaille,detaillee,0.02,0.0,66.0,1.0,27965,404.5,1022.9,36.58,36.56,107,0,0.636,664,Time limit reached,39.05,40.29,36.5
+fligne800_detaille,detaillee,0.02,0.0,800.0,1.0,27965,417.9,1121.2,40.09,39.93,247,0,0.816,567,Time limit reached,52.2,40.83,40.32
+passerelle_x05,detaillee,0.02,0.0,,0.5,27965,205.6,1027.4,36.74,36.65,316,0,0.862,567,Time limit reached,45.38,36.61,36.61
+passerelle_x2,detaillee,0.02,0.0,,2.0,27965,822.4,1145.6,40.97,40.93,105,0,0.632,664,Time limit reached,46.13,48.46,40.83
+suivi_0_5pc,detaillee,0.005,0.0,,1.0,6991,411.2,322.4,46.11,46.11,59,0,0.49,176,Optimal,49.26,66.44,45.7
+suivi_5pc,detaillee,0.05,0.0,,1.0,69911,411.2,2501.5,35.78,35.72,371,0,0.891,1023,Time limit reached,44.89,35.4,35.4
+rayon_diversite,detaillee,0.02,0.0,,1.0,27965,411.2,1001.3,35.81,35.8,112,0,0.888,2016,Optimal,45.63,40.56,38.77

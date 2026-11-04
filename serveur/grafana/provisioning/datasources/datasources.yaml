@@ -1,0 +1,31 @@
+apiVersion: 1
+
+datasources:
+
+  - name: InfluxDB-STOPMNT
+    type: influxdb
+    access: proxy
+    url: http://influxdb:8086
+    jsonData:
+      version: Flux
+      organization: stopmnt
+      defaultBucket: physiological_data
+      tlsSkipVerify: true
+    secureJsonData:
+      token: ${INFLUXDB_TOKEN}
+    isDefault: true
+    editable: false
+
+  - name: PostgreSQL-STOPMNT
+    type: postgres
+    url: postgres_primary:5432
+    user: ${POSTGRES_USER}
+    secureJsonData:
+      password: ${POSTGRES_PASSWORD}
+    jsonData:
+      database: ${POSTGRES_DB}
+      sslmode: disable
+      maxOpenConns: 5
+      maxIdleConns: 2
+      connMaxLifetime: 14400
+    editable: false

@@ -1,0 +1,9 @@
+scenario,rayon,passerelles_couverture,tout_lora,tout_cellulaire,choix_commune,communes_lora
+centre_detaille,passerelle_seule,1270,51.34,45.63,41.8,abomey_calavi so_ava
+centre_detaille,reseau_pave,492,39.9,45.63,38.52,abomey_calavi ouidah so_ava
+centre_kerlink,passerelle_seule,1270,76.72,46.13,45.46,so_ava
+centre_kerlink,reseau_pave,492,49.61,46.13,40.83,abomey_calavi so_ava
+bas,passerelle_seule,1270,34.01,26.25,25.59,abomey_calavi so_ava
+bas,reseau_pave,492,25.83,26.25,23.68,abomey_calavi ouidah so_ava
+haut,passerelle_seule,1270,96.95,67.82,65.29,abomey_calavi so_ava
+haut,reseau_pave,492,66.18,67.82,58.11,abomey_calavi ouidah so_ava

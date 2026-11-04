@@ -1,0 +1,13 @@
+.env
+*.key
+*.csr
+*.srl
+**/google-services.json
+**/service-account.json
+application/build/
+application/.dart_tool/
+__pycache__/
+*.pyc
+simulation/resultats/production/
+simulation/donnees/worldpop/
+simulation/donnees/worldcover/

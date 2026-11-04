@@ -1,0 +1,152 @@
+[
+ {
+  "test": "accès sans jeton refusé",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "inscription d'un patient",
+  "ok": true,
+  "detail": "201"
+ },
+ {
+  "test": "mauvais mot de passe refusé",
+  "ok": true,
+  "detail": "401"
+ },
+ {
+  "test": "connexion du patient",
+  "ok": true,
+  "detail": "200"
+ },
+ {
+  "test": "mesure refusée sans dispositif enrôlé",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "enrôlement du dispositif : certificat délivré",
+  "ok": true,
+  "detail": "200"
+ },
+ {
+  "test": "tension incohérente refusée",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "mesure enregistrée",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "renvoi d'une mesure : aucun doublon",
+  "ok": true,
+  "detail": "lignes=1"
+ },
+ {
+  "test": "oxymètre accepté",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "nom de montre accepté",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "nom de capteur malformé refusé",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "valeur critique : alerte créée",
+  "ok": true,
+  "detail": "{'niveau': 'critique', 'message': 'HTA critique : 190/125 mmHg'}"
+ },
+ {
+  "test": "dossier médical : écriture",
+  "ok": true,
+  "detail": "200"
+ },
+ {
+  "test": "dossier médical : lecture",
+  "ok": true,
+  "detail": "200"
+ },
+ {
+  "test": "patient : pas d'accès aux routes médecin",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "médecin du département : lecture permise",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "médecin d'un autre département : mesures refusées",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "médecin d'un autre département : dossier refusé",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "alerte visible par le médecin du département",
+  "ok": true,
+  "detail": "1"
+ },
+ {
+  "test": "autre département : acquittement refusé",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "médecin du département : acquittement",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "Nginx : les rafales sont limitées",
+  "ok": true,
+  "detail": "{200: 46, 503: 254}"
+ },
+ {
+  "test": "charge : 1 000 envois directs à l'API",
+  "ok": true,
+  "detail": "{'requetes': 1000, 'concurrence': 20, 'erreurs': 0, 'debit_par_s': 475.0, 'p50_ms': 34.1, 'p95_ms': 35.4, 'p99_ms': 434.2}"
+ },
+ {
+  "test": "avant déconnexion : jeton valable",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "déconnexion",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "après déconnexion : jeton refusé",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "test": "MQTT : message écrit dans InfluxDB",
+  "ok": true,
+  "detail": "1"
+ },
+ {
+  "test": "MQTT : messages reçus pendant une panne d'InfluxDB non perdus",
+  "ok": true,
+  "detail": "avant=1 apres=3"
+ },
+ {
+  "test": "sauvegarde restaurée : même nombre de mesures",
+  "ok": true,
+  "detail": "base=1744 restaurée=1744"
+ }
+]

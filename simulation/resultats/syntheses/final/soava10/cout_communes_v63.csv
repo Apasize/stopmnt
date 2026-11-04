@@ -1,0 +1,1441 @@
+source,f_global_fcfa_an,k,commune,zone,patients,option,eur_patient_an,moyenne,p2_5,p97_5
+scénario bas,0,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,0,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,21.4,,,
+scénario bas,0,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,25.48,,,
+scénario bas,0,1.0,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,0,1.0,allada,rural_degage,2550,LoRa sous convention,29.82,,,
+scénario bas,0,1.0,allada,rural_degage,2550,cellulaire sous convention,25.47,,,
+scénario bas,0,1.0,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,0,1.0,kpomasse,rural_degage,1353,LoRa sous convention,31.43,,,
+scénario bas,0,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,25.68,,,
+scénario bas,0,1.0,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,0,1.0,ouidah,peri_urbain,3241,LoRa sous convention,25.01,,,
+scénario bas,0,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,25.5,,,
+scénario bas,0,1.0,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,0,1.0,so_ava,lacustre,2371,LoRa sous convention,21.43,,,
+scénario bas,0,1.0,so_ava,lacustre,2371,cellulaire sous convention,25.34,,,
+scénario bas,0,1.0,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,0,1.0,toffo,rural_arbore,2032,LoRa sous convention,34.93,,,
+scénario bas,0,1.0,toffo,rural_arbore,2032,cellulaire sous convention,26.65,,,
+scénario bas,0,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,0,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,35.47,,,
+scénario bas,0,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,25.68,,,
+scénario bas,0,1.0,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,0,1.0,ze,rural_arbore,2138,LoRa sous convention,37.22,,,
+scénario bas,0,1.0,ze,rural_arbore,2138,cellulaire sous convention,27.16,,,
+scénario bas,0,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,0,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,21.4,,,
+scénario bas,0,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,25.48,,,
+scénario bas,0,1.5,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,0,1.5,allada,rural_degage,2550,LoRa sous convention,29.82,,,
+scénario bas,0,1.5,allada,rural_degage,2550,cellulaire sous convention,25.47,,,
+scénario bas,0,1.5,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,0,1.5,kpomasse,rural_degage,1353,LoRa sous convention,31.43,,,
+scénario bas,0,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,25.68,,,
+scénario bas,0,1.5,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,0,1.5,ouidah,peri_urbain,3241,LoRa sous convention,25.01,,,
+scénario bas,0,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,25.5,,,
+scénario bas,0,1.5,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,0,1.5,so_ava,lacustre,2371,LoRa sous convention,21.43,,,
+scénario bas,0,1.5,so_ava,lacustre,2371,cellulaire sous convention,25.34,,,
+scénario bas,0,1.5,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,0,1.5,toffo,rural_arbore,2032,LoRa sous convention,34.93,,,
+scénario bas,0,1.5,toffo,rural_arbore,2032,cellulaire sous convention,26.65,,,
+scénario bas,0,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,0,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,35.47,,,
+scénario bas,0,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,25.68,,,
+scénario bas,0,1.5,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,0,1.5,ze,rural_arbore,2138,LoRa sous convention,37.22,,,
+scénario bas,0,1.5,ze,rural_arbore,2138,cellulaire sous convention,27.16,,,
+scénario bas,0,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,0,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,21.4,,,
+scénario bas,0,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,25.48,,,
+scénario bas,0,2.0,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,0,2.0,allada,rural_degage,2550,LoRa sous convention,29.82,,,
+scénario bas,0,2.0,allada,rural_degage,2550,cellulaire sous convention,25.47,,,
+scénario bas,0,2.0,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,0,2.0,kpomasse,rural_degage,1353,LoRa sous convention,31.43,,,
+scénario bas,0,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,25.68,,,
+scénario bas,0,2.0,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,0,2.0,ouidah,peri_urbain,3241,LoRa sous convention,25.01,,,
+scénario bas,0,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,25.5,,,
+scénario bas,0,2.0,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,0,2.0,so_ava,lacustre,2371,LoRa sous convention,21.43,,,
+scénario bas,0,2.0,so_ava,lacustre,2371,cellulaire sous convention,25.34,,,
+scénario bas,0,2.0,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,0,2.0,toffo,rural_arbore,2032,LoRa sous convention,34.93,,,
+scénario bas,0,2.0,toffo,rural_arbore,2032,cellulaire sous convention,26.65,,,
+scénario bas,0,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,0,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,35.47,,,
+scénario bas,0,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,25.68,,,
+scénario bas,0,2.0,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,0,2.0,ze,rural_arbore,2138,LoRa sous convention,37.22,,,
+scénario bas,0,2.0,ze,rural_arbore,2138,cellulaire sous convention,27.16,,,
+scénario bas,5000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,5000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,21.42,,,
+scénario bas,5000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,25.83,,,
+scénario bas,5000000,1.0,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,5000000,1.0,allada,rural_degage,2550,LoRa sous convention,29.88,,,
+scénario bas,5000000,1.0,allada,rural_degage,2550,cellulaire sous convention,26.29,,,
+scénario bas,5000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,5000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,31.49,,,
+scénario bas,5000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,26.5,,,
+scénario bas,5000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,5000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,25.04,,,
+scénario bas,5000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,26.11,,,
+scénario bas,5000000,1.0,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,5000000,1.0,so_ava,lacustre,2371,LoRa sous convention,21.46,,,
+scénario bas,5000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,25.98,,,
+scénario bas,5000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,5000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,35.01,,,
+scénario bas,5000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,27.4,,,
+scénario bas,5000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,5000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,35.55,,,
+scénario bas,5000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,26.5,,,
+scénario bas,5000000,1.0,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,5000000,1.0,ze,rural_arbore,2138,LoRa sous convention,37.3,,,
+scénario bas,5000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,27.9,,,
+scénario bas,5000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,5000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,21.42,,,
+scénario bas,5000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,26.0,,,
+scénario bas,5000000,1.5,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,5000000,1.5,allada,rural_degage,2550,LoRa sous convention,29.91,,,
+scénario bas,5000000,1.5,allada,rural_degage,2550,cellulaire sous convention,26.7,,,
+scénario bas,5000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,5000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,31.52,,,
+scénario bas,5000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,26.92,,,
+scénario bas,5000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,5000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,25.05,,,
+scénario bas,5000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,26.42,,,
+scénario bas,5000000,1.5,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,5000000,1.5,so_ava,lacustre,2371,LoRa sous convention,21.48,,,
+scénario bas,5000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,26.3,,,
+scénario bas,5000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,5000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,35.05,,,
+scénario bas,5000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,27.77,,,
+scénario bas,5000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,5000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,35.58,,,
+scénario bas,5000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,26.91,,,
+scénario bas,5000000,1.5,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,5000000,1.5,ze,rural_arbore,2138,LoRa sous convention,37.35,,,
+scénario bas,5000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,28.27,,,
+scénario bas,5000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,5000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,21.43,,,
+scénario bas,5000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,26.17,,,
+scénario bas,5000000,2.0,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,5000000,2.0,allada,rural_degage,2550,LoRa sous convention,29.94,,,
+scénario bas,5000000,2.0,allada,rural_degage,2550,cellulaire sous convention,27.12,,,
+scénario bas,5000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,5000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,31.55,,,
+scénario bas,5000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,27.33,,,
+scénario bas,5000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,5000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,25.07,,,
+scénario bas,5000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,26.73,,,
+scénario bas,5000000,2.0,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,5000000,2.0,so_ava,lacustre,2371,LoRa sous convention,21.49,,,
+scénario bas,5000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,26.61,,,
+scénario bas,5000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,5000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,35.09,,,
+scénario bas,5000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,28.14,,,
+scénario bas,5000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,5000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,35.62,,,
+scénario bas,5000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,27.32,,,
+scénario bas,5000000,2.0,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,5000000,2.0,ze,rural_arbore,2138,LoRa sous convention,37.39,,,
+scénario bas,5000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,28.63,,,
+scénario bas,10000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,10000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,21.43,,,
+scénario bas,10000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,26.17,,,
+scénario bas,10000000,1.0,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,10000000,1.0,allada,rural_degage,2550,LoRa sous convention,29.94,,,
+scénario bas,10000000,1.0,allada,rural_degage,2550,cellulaire sous convention,27.12,,,
+scénario bas,10000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,10000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,31.55,,,
+scénario bas,10000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,27.33,,,
+scénario bas,10000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,10000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,25.07,,,
+scénario bas,10000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,26.73,,,
+scénario bas,10000000,1.0,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,10000000,1.0,so_ava,lacustre,2371,LoRa sous convention,21.49,,,
+scénario bas,10000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,26.61,,,
+scénario bas,10000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,10000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,35.09,,,
+scénario bas,10000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,28.14,,,
+scénario bas,10000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,10000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,35.62,,,
+scénario bas,10000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,27.32,,,
+scénario bas,10000000,1.0,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,10000000,1.0,ze,rural_arbore,2138,LoRa sous convention,37.39,,,
+scénario bas,10000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,28.63,,,
+scénario bas,10000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,10000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,21.45,,,
+scénario bas,10000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,26.52,,,
+scénario bas,10000000,1.5,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,10000000,1.5,allada,rural_degage,2550,LoRa sous convention,30.01,,,
+scénario bas,10000000,1.5,allada,rural_degage,2550,cellulaire sous convention,27.94,,,
+scénario bas,10000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,10000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,31.61,,,
+scénario bas,10000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,28.15,,,
+scénario bas,10000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,10000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,25.1,,,
+scénario bas,10000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,27.34,,,
+scénario bas,10000000,1.5,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,10000000,1.5,so_ava,lacustre,2371,LoRa sous convention,21.52,,,
+scénario bas,10000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,27.25,,,
+scénario bas,10000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,10000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,35.17,,,
+scénario bas,10000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,28.89,,,
+scénario bas,10000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,10000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,35.7,,,
+scénario bas,10000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,28.13,,,
+scénario bas,10000000,1.5,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,10000000,1.5,ze,rural_arbore,2138,LoRa sous convention,37.48,,,
+scénario bas,10000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,29.37,,,
+scénario bas,10000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,10000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,21.46,,,
+scénario bas,10000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,26.86,,,
+scénario bas,10000000,2.0,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,10000000,2.0,allada,rural_degage,2550,LoRa sous convention,30.07,,,
+scénario bas,10000000,2.0,allada,rural_degage,2550,cellulaire sous convention,28.77,,,
+scénario bas,10000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,10000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,31.67,,,
+scénario bas,10000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,28.98,,,
+scénario bas,10000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,10000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,25.13,,,
+scénario bas,10000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,27.95,,,
+scénario bas,10000000,2.0,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,10000000,2.0,so_ava,lacustre,2371,LoRa sous convention,21.56,,,
+scénario bas,10000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,27.89,,,
+scénario bas,10000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,10000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,35.25,,,
+scénario bas,10000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,29.64,,,
+scénario bas,10000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,10000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,35.77,,,
+scénario bas,10000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,28.95,,,
+scénario bas,10000000,2.0,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,10000000,2.0,ze,rural_arbore,2138,LoRa sous convention,37.57,,,
+scénario bas,10000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,30.1,,,
+scénario bas,20000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,20000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,21.46,,,
+scénario bas,20000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,26.86,,,
+scénario bas,20000000,1.0,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,20000000,1.0,allada,rural_degage,2550,LoRa sous convention,30.07,,,
+scénario bas,20000000,1.0,allada,rural_degage,2550,cellulaire sous convention,28.77,,,
+scénario bas,20000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,20000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,31.67,,,
+scénario bas,20000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,28.98,,,
+scénario bas,20000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,20000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,25.13,,,
+scénario bas,20000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,27.95,,,
+scénario bas,20000000,1.0,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,20000000,1.0,so_ava,lacustre,2371,LoRa sous convention,21.56,,,
+scénario bas,20000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,27.89,,,
+scénario bas,20000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,20000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,35.25,,,
+scénario bas,20000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,29.64,,,
+scénario bas,20000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,20000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,35.77,,,
+scénario bas,20000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,28.95,,,
+scénario bas,20000000,1.0,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,20000000,1.0,ze,rural_arbore,2138,LoRa sous convention,37.57,,,
+scénario bas,20000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,30.1,,,
+scénario bas,20000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,20000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,21.49,,,
+scénario bas,20000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,27.55,,,
+scénario bas,20000000,1.5,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,20000000,1.5,allada,rural_degage,2550,LoRa sous convention,30.19,,,
+scénario bas,20000000,1.5,allada,rural_degage,2550,cellulaire sous convention,30.42,,,
+scénario bas,20000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,20000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,31.79,,,
+scénario bas,20000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,30.63,,,
+scénario bas,20000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,20000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,25.19,,,
+scénario bas,20000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,29.17,,,
+scénario bas,20000000,1.5,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,20000000,1.5,so_ava,lacustre,2371,LoRa sous convention,21.62,,,
+scénario bas,20000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,29.16,,,
+scénario bas,20000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,20000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,35.41,,,
+scénario bas,20000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,31.13,,,
+scénario bas,20000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,20000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,35.93,,,
+scénario bas,20000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,30.59,,,
+scénario bas,20000000,1.5,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,20000000,1.5,ze,rural_arbore,2138,LoRa sous convention,37.75,,,
+scénario bas,20000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,31.57,,,
+scénario bas,20000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,20000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,21.52,,,
+scénario bas,20000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,28.24,,,
+scénario bas,20000000,2.0,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,20000000,2.0,allada,rural_degage,2550,LoRa sous convention,30.32,,,
+scénario bas,20000000,2.0,allada,rural_degage,2550,cellulaire sous convention,32.07,,,
+scénario bas,20000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,20000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,31.91,,,
+scénario bas,20000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,32.28,,,
+scénario bas,20000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,20000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,25.25,,,
+scénario bas,20000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,30.4,,,
+scénario bas,20000000,2.0,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,20000000,2.0,so_ava,lacustre,2371,LoRa sous convention,21.68,,,
+scénario bas,20000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,30.44,,,
+scénario bas,20000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,20000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,35.57,,,
+scénario bas,20000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,32.62,,,
+scénario bas,20000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,20000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,36.08,,,
+scénario bas,20000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,32.23,,,
+scénario bas,20000000,2.0,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,20000000,2.0,ze,rural_arbore,2138,LoRa sous convention,37.92,,,
+scénario bas,20000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,33.04,,,
+scénario bas,50000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,50000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,21.55,,,
+scénario bas,50000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,28.93,,,
+scénario bas,50000000,1.0,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,50000000,1.0,allada,rural_degage,2550,LoRa sous convention,30.45,,,
+scénario bas,50000000,1.0,allada,rural_degage,2550,cellulaire sous convention,33.71,,,
+scénario bas,50000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,50000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,32.02,,,
+scénario bas,50000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,33.92,,,
+scénario bas,50000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,50000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,25.31,,,
+scénario bas,50000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,31.62,,,
+scénario bas,50000000,1.0,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,50000000,1.0,so_ava,lacustre,2371,LoRa sous convention,21.74,,,
+scénario bas,50000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,31.71,,,
+scénario bas,50000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,50000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,35.73,,,
+scénario bas,50000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,34.12,,,
+scénario bas,50000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,50000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,36.23,,,
+scénario bas,50000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,33.87,,,
+scénario bas,50000000,1.0,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,50000000,1.0,ze,rural_arbore,2138,LoRa sous convention,38.1,,,
+scénario bas,50000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,34.51,,,
+scénario bas,50000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,50000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,21.63,,,
+scénario bas,50000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,30.65,,,
+scénario bas,50000000,1.5,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,50000000,1.5,allada,rural_degage,2550,LoRa sous convention,30.76,,,
+scénario bas,50000000,1.5,allada,rural_degage,2550,cellulaire sous convention,37.84,,,
+scénario bas,50000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,50000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,32.32,,,
+scénario bas,50000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,38.05,,,
+scénario bas,50000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,50000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,25.46,,,
+scénario bas,50000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,34.68,,,
+scénario bas,50000000,1.5,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,50000000,1.5,so_ava,lacustre,2371,LoRa sous convention,21.9,,,
+scénario bas,50000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,34.9,,,
+scénario bas,50000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,50000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,36.13,,,
+scénario bas,50000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,37.85,,,
+scénario bas,50000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,50000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,36.61,,,
+scénario bas,50000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,37.96,,,
+scénario bas,50000000,1.5,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,50000000,1.5,ze,rural_arbore,2138,LoRa sous convention,38.54,,,
+scénario bas,50000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,38.19,,,
+scénario bas,50000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,22.22,,,
+scénario bas,50000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,33.01,,,
+scénario bas,50000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,37.1,,,
+scénario bas,50000000,2.0,allada,rural_degage,2550,LoRa sans convention,32.29,,,
+scénario bas,50000000,2.0,allada,rural_degage,2550,LoRa sous convention,89.59,,,
+scénario bas,50000000,2.0,allada,rural_degage,2550,cellulaire sous convention,85.24,,,
+scénario bas,50000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,34.14,,,
+scénario bas,50000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,144.11,,,
+scénario bas,50000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,138.36,,,
+scénario bas,50000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,26.6,,,
+scénario bas,50000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,72.05,,,
+scénario bas,50000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,72.54,,,
+scénario bas,50000000,2.0,so_ava,lacustre,2371,LoRa sans convention,23.12,,,
+scénario bas,50000000,2.0,so_ava,lacustre,2371,LoRa sous convention,85.73,,,
+scénario bas,50000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,89.64,,,
+scénario bas,50000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,38.41,,,
+scénario bas,50000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,109.96,,,
+scénario bas,50000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,101.69,,,
+scénario bas,50000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,39.04,,,
+scénario bas,50000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,167.73,,,
+scénario bas,50000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,157.94,,,
+scénario bas,50000000,2.0,ze,rural_arbore,2138,LoRa sans convention,41.04,,,
+scénario bas,50000000,2.0,ze,rural_arbore,2138,LoRa sous convention,108.51,,,
+scénario bas,50000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,98.46,,,
+"Monte-Carlo, scénario bas détaillé",0,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",0,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,34.62,35.17,24.13,49.47
+"Monte-Carlo, scénario bas détaillé",0,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,45.19,45.99,30.98,63.48
+"Monte-Carlo, scénario bas détaillé",0,1.0,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",0,1.0,allada,rural_degage,2550,LoRa sous convention,46.87,48.32,33.92,68.86
+"Monte-Carlo, scénario bas détaillé",0,1.0,allada,rural_degage,2550,cellulaire sous convention,45.17,45.97,30.97,63.45
+"Monte-Carlo, scénario bas détaillé",0,1.0,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",0,1.0,kpomasse,rural_degage,1353,LoRa sous convention,49.19,50.84,35.7,72.55
+"Monte-Carlo, scénario bas détaillé",0,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,45.43,46.3,31.19,63.86
+"Monte-Carlo, scénario bas détaillé",0,1.0,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",0,1.0,ouidah,peri_urbain,3241,LoRa sous convention,39.87,40.82,28.39,57.27
+"Monte-Carlo, scénario bas détaillé",0,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,45.13,45.98,30.99,63.43
+"Monte-Carlo, scénario bas détaillé",0,1.0,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",0,1.0,so_ava,lacustre,2371,LoRa sous convention,34.75,35.3,24.23,49.51
+"Monte-Carlo, scénario bas détaillé",0,1.0,so_ava,lacustre,2371,cellulaire sous convention,44.64,45.57,30.76,62.76
+"Monte-Carlo, scénario bas détaillé",0,1.0,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",0,1.0,toffo,rural_arbore,2032,LoRa sous convention,54.16,56.31,39.21,81.36
+"Monte-Carlo, scénario bas détaillé",0,1.0,toffo,rural_arbore,2032,cellulaire sous convention,46.49,47.55,32.65,65.66
+"Monte-Carlo, scénario bas détaillé",0,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",0,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,54.95,57.16,39.75,82.72
+"Monte-Carlo, scénario bas détaillé",0,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,45.37,46.27,31.18,63.81
+"Monte-Carlo, scénario bas détaillé",0,1.0,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",0,1.0,ze,rural_arbore,2138,LoRa sous convention,57.46,59.88,41.55,87.04
+"Monte-Carlo, scénario bas détaillé",0,1.0,ze,rural_arbore,2138,cellulaire sous convention,47.25,48.35,33.4,67.08
+"Monte-Carlo, scénario bas détaillé",0,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",0,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,34.62,35.17,24.13,49.47
+"Monte-Carlo, scénario bas détaillé",0,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,45.19,45.99,30.98,63.48
+"Monte-Carlo, scénario bas détaillé",0,1.5,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",0,1.5,allada,rural_degage,2550,LoRa sous convention,46.87,48.32,33.92,68.86
+"Monte-Carlo, scénario bas détaillé",0,1.5,allada,rural_degage,2550,cellulaire sous convention,45.17,45.97,30.97,63.45
+"Monte-Carlo, scénario bas détaillé",0,1.5,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",0,1.5,kpomasse,rural_degage,1353,LoRa sous convention,49.19,50.84,35.7,72.55
+"Monte-Carlo, scénario bas détaillé",0,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,45.43,46.3,31.19,63.86
+"Monte-Carlo, scénario bas détaillé",0,1.5,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",0,1.5,ouidah,peri_urbain,3241,LoRa sous convention,39.87,40.82,28.39,57.27
+"Monte-Carlo, scénario bas détaillé",0,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,45.13,45.98,30.99,63.43
+"Monte-Carlo, scénario bas détaillé",0,1.5,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",0,1.5,so_ava,lacustre,2371,LoRa sous convention,34.75,35.3,24.23,49.51
+"Monte-Carlo, scénario bas détaillé",0,1.5,so_ava,lacustre,2371,cellulaire sous convention,44.64,45.57,30.76,62.76
+"Monte-Carlo, scénario bas détaillé",0,1.5,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",0,1.5,toffo,rural_arbore,2032,LoRa sous convention,54.16,56.31,39.21,81.36
+"Monte-Carlo, scénario bas détaillé",0,1.5,toffo,rural_arbore,2032,cellulaire sous convention,46.49,47.55,32.65,65.66
+"Monte-Carlo, scénario bas détaillé",0,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",0,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,54.95,57.16,39.75,82.72
+"Monte-Carlo, scénario bas détaillé",0,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,45.37,46.27,31.18,63.81
+"Monte-Carlo, scénario bas détaillé",0,1.5,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",0,1.5,ze,rural_arbore,2138,LoRa sous convention,57.46,59.88,41.55,87.04
+"Monte-Carlo, scénario bas détaillé",0,1.5,ze,rural_arbore,2138,cellulaire sous convention,47.25,48.35,33.4,67.08
+"Monte-Carlo, scénario bas détaillé",0,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",0,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,34.62,35.17,24.13,49.47
+"Monte-Carlo, scénario bas détaillé",0,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,45.19,45.99,30.98,63.48
+"Monte-Carlo, scénario bas détaillé",0,2.0,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",0,2.0,allada,rural_degage,2550,LoRa sous convention,46.87,48.32,33.92,68.86
+"Monte-Carlo, scénario bas détaillé",0,2.0,allada,rural_degage,2550,cellulaire sous convention,45.17,45.97,30.97,63.45
+"Monte-Carlo, scénario bas détaillé",0,2.0,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",0,2.0,kpomasse,rural_degage,1353,LoRa sous convention,49.19,50.84,35.7,72.55
+"Monte-Carlo, scénario bas détaillé",0,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,45.43,46.3,31.19,63.86
+"Monte-Carlo, scénario bas détaillé",0,2.0,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",0,2.0,ouidah,peri_urbain,3241,LoRa sous convention,39.87,40.82,28.39,57.27
+"Monte-Carlo, scénario bas détaillé",0,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,45.13,45.98,30.99,63.43
+"Monte-Carlo, scénario bas détaillé",0,2.0,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",0,2.0,so_ava,lacustre,2371,LoRa sous convention,34.75,35.3,24.23,49.51
+"Monte-Carlo, scénario bas détaillé",0,2.0,so_ava,lacustre,2371,cellulaire sous convention,44.64,45.57,30.76,62.76
+"Monte-Carlo, scénario bas détaillé",0,2.0,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",0,2.0,toffo,rural_arbore,2032,LoRa sous convention,54.16,56.31,39.21,81.36
+"Monte-Carlo, scénario bas détaillé",0,2.0,toffo,rural_arbore,2032,cellulaire sous convention,46.49,47.55,32.65,65.66
+"Monte-Carlo, scénario bas détaillé",0,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",0,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,54.95,57.16,39.75,82.72
+"Monte-Carlo, scénario bas détaillé",0,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,45.37,46.27,31.18,63.81
+"Monte-Carlo, scénario bas détaillé",0,2.0,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",0,2.0,ze,rural_arbore,2138,LoRa sous convention,57.46,59.88,41.55,87.04
+"Monte-Carlo, scénario bas détaillé",0,2.0,ze,rural_arbore,2138,cellulaire sous convention,47.25,48.35,33.4,67.08
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,34.63,35.19,24.14,49.48
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,45.58,46.36,31.33,63.86
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,allada,rural_degage,2550,LoRa sous convention,46.92,48.39,33.99,68.91
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,allada,rural_degage,2550,cellulaire sous convention,46.14,46.83,31.76,64.31
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,49.25,50.92,35.77,72.61
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,46.59,47.24,32.01,64.79
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,39.91,40.85,28.43,57.3
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,45.95,46.69,31.61,64.14
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,so_ava,lacustre,2371,LoRa sous convention,34.78,35.34,24.28,49.54
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,45.52,46.3,31.4,63.55
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,54.28,56.42,39.4,81.44
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,47.44,48.43,33.31,66.41
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,55.04,57.26,39.95,82.8
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,46.58,47.25,32.0,64.75
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,ze,rural_arbore,2138,LoRa sous convention,57.57,60.0,41.85,87.13
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,48.3,49.24,34.05,67.82
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,34.64,35.2,24.15,49.49
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,45.82,46.54,31.5,64.04
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,allada,rural_degage,2550,LoRa sous convention,46.95,48.43,34.02,68.94
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,allada,rural_degage,2550,cellulaire sous convention,46.55,47.25,32.12,64.73
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,49.28,50.95,35.81,72.64
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,47.03,47.71,32.37,65.2
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,39.93,40.87,28.44,57.32
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,46.29,47.04,31.91,64.45
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,so_ava,lacustre,2371,LoRa sous convention,34.8,35.36,24.3,49.56
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,45.88,46.66,31.72,63.95
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,54.33,56.47,39.46,81.48
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,47.87,48.87,33.64,66.78
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,55.1,57.31,39.99,82.84
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,47.07,47.75,32.36,65.16
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,ze,rural_arbore,2138,LoRa sous convention,57.64,60.06,41.89,87.17
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,48.76,49.68,34.37,68.24
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,34.65,35.21,24.15,49.5
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,46.04,46.72,31.67,64.21
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,allada,rural_degage,2550,LoRa sous convention,46.97,48.46,34.05,68.96
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,allada,rural_degage,2550,cellulaire sous convention,46.99,47.68,32.46,65.14
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,49.31,50.99,35.84,72.67
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,47.51,48.18,32.73,65.61
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,39.94,40.89,28.46,57.33
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,46.67,47.39,32.22,64.75
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,so_ava,lacustre,2371,LoRa sous convention,34.82,35.38,24.32,49.57
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,46.28,47.03,32.02,64.28
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,54.37,56.52,39.52,81.52
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,48.3,49.31,33.97,67.26
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,55.15,57.36,40.04,82.87
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,47.57,48.24,32.72,65.57
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,ze,rural_arbore,2138,LoRa sous convention,57.72,60.12,41.93,87.22
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,49.15,50.12,34.7,68.77
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,34.65,35.21,24.15,49.5
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,46.04,46.72,31.67,64.21
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,allada,rural_degage,2550,LoRa sous convention,46.97,48.46,34.05,68.96
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,allada,rural_degage,2550,cellulaire sous convention,46.99,47.68,32.46,65.14
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,49.31,50.99,35.84,72.67
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,47.51,48.18,32.73,65.61
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,39.94,40.89,28.46,57.33
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,46.67,47.39,32.22,64.75
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,so_ava,lacustre,2371,LoRa sous convention,34.82,35.38,24.32,49.57
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,46.28,47.03,32.02,64.28
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,54.37,56.52,39.52,81.52
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,48.3,49.31,33.97,67.26
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,55.15,57.36,40.04,82.87
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,47.57,48.24,32.72,65.57
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,ze,rural_arbore,2138,LoRa sous convention,57.72,60.12,41.93,87.22
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,49.15,50.12,34.7,68.77
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,34.66,35.23,24.17,49.51
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,46.41,47.08,32.02,64.56
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,allada,rural_degage,2550,LoRa sous convention,47.03,48.53,34.11,69.02
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,allada,rural_degage,2550,cellulaire sous convention,47.82,48.53,33.13,65.96
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,49.37,51.06,35.91,72.73
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,48.38,49.13,33.43,66.44
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,39.98,40.93,28.49,57.36
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,47.39,48.09,32.83,65.36
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,so_ava,lacustre,2371,LoRa sous convention,34.86,35.42,24.36,49.6
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,47.1,47.76,32.59,64.92
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,54.45,56.63,39.63,81.6
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,49.27,50.18,34.65,68.16
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,55.26,57.46,40.14,82.95
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,48.49,49.23,33.42,66.39
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,ze,rural_arbore,2138,LoRa sous convention,57.87,60.25,42.0,87.31
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,50.0,51.0,35.38,69.51
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,34.68,35.25,24.18,49.52
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,46.77,47.44,32.36,64.9
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,allada,rural_degage,2550,LoRa sous convention,47.08,48.6,34.18,69.08
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,allada,rural_degage,2550,cellulaire sous convention,48.64,49.39,33.87,66.79
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,49.43,51.13,35.99,72.79
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,49.38,50.07,34.16,67.26
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,40.01,40.97,28.52,57.39
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,48.19,48.8,33.44,65.98
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,so_ava,lacustre,2371,LoRa sous convention,34.9,35.46,24.4,49.62
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,47.87,48.5,33.15,65.56
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,54.55,56.73,39.73,81.68
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,50.05,51.06,35.39,68.91
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,55.39,57.55,40.23,83.03
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,49.47,50.21,34.14,67.21
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,ze,rural_arbore,2138,LoRa sous convention,58.04,60.37,42.1,87.4
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,50.83,51.89,36.12,70.24
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,34.68,35.25,24.18,49.52
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,46.77,47.44,32.36,64.9
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,allada,rural_degage,2550,LoRa sous convention,47.08,48.6,34.18,69.08
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,allada,rural_degage,2550,cellulaire sous convention,48.64,49.39,33.87,66.79
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,49.43,51.13,35.99,72.79
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,49.38,50.07,34.16,67.26
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,40.01,40.97,28.52,57.39
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,48.19,48.8,33.44,65.98
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,so_ava,lacustre,2371,LoRa sous convention,34.9,35.46,24.4,49.62
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,47.87,48.5,33.15,65.56
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,54.55,56.73,39.73,81.68
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,50.05,51.06,35.39,68.91
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,55.39,57.55,40.23,83.03
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,49.47,50.21,34.14,67.21
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,ze,rural_arbore,2138,LoRa sous convention,58.04,60.37,42.1,87.4
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,50.83,51.89,36.12,70.24
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,34.76,35.3,24.21,49.55
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,47.5,48.17,33.0,65.59
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,allada,rural_degage,2550,LoRa sous convention,47.38,48.8,34.3,69.2
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,allada,rural_degage,2550,cellulaire sous convention,50.36,51.11,35.52,68.56
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,49.66,51.4,36.13,73.2
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,51.36,52.01,35.74,69.63
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,40.18,41.1,28.57,57.45
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,49.49,50.22,34.66,67.2
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,so_ava,lacustre,2371,LoRa sous convention,35.0,35.61,24.48,49.84
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,49.28,49.98,34.24,67.03
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,54.81,57.01,39.93,81.84
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,51.95,52.85,36.89,71.17
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,55.62,57.9,40.41,83.22
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,51.62,52.26,35.7,69.72
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,ze,rural_arbore,2138,LoRa sous convention,58.38,60.68,42.48,87.57
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,52.67,53.68,37.59,71.88
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,34.85,35.36,24.23,49.58
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,48.2,48.9,33.64,66.28
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,allada,rural_degage,2550,LoRa sous convention,47.72,49.09,34.43,69.33
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,allada,rural_degage,2550,cellulaire sous convention,52.04,52.88,37.17,70.33
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,49.9,51.84,36.28,73.67
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,53.3,54.06,37.39,72.53
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,40.4,41.3,28.63,57.51
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,50.78,51.67,35.89,68.6
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,so_ava,lacustre,2371,LoRa sous convention,35.16,35.86,24.58,52.22
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,50.75,51.52,35.44,69.77
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,55.21,57.41,40.13,82.0
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,53.68,54.69,38.38,74.11
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,56.02,58.44,40.68,83.7
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,53.48,54.43,37.33,73.2
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,ze,rural_arbore,2138,LoRa sous convention,58.7,61.09,42.66,87.75
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,54.54,55.51,39.07,75.19
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,34.88,35.44,24.28,49.6
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,48.93,49.63,34.27,66.97
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,allada,rural_degage,2550,LoRa sous convention,47.95,49.45,34.55,69.63
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,allada,rural_degage,2550,cellulaire sous convention,53.71,54.7,38.77,73.72
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,50.24,52.42,36.42,75.03
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,55.07,56.22,39.04,76.66
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,40.62,41.55,28.72,58.51
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,52.42,53.15,37.11,70.11
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,so_ava,lacustre,2371,LoRa sous convention,35.33,36.19,24.83,52.7
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,52.25,53.11,36.72,73.16
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,55.76,57.89,40.34,82.46
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,55.68,56.61,39.88,76.82
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,56.53,59.13,40.96,84.84
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,55.52,56.74,38.97,77.28
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,ze,rural_arbore,2138,LoRa sous convention,59.13,61.58,42.93,87.92
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,56.15,57.41,40.54,78.06
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,35.65,36.18,24.72,50.24
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,50.99,51.64,36.0,68.69
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,allada,rural_degage,2550,LoRa sous convention,49.63,53.16,35.18,91.58
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,allada,rural_degage,2550,cellulaire sous convention,58.71,61.31,42.94,94.19
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,52.25,59.2,36.91,133.46
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,60.47,66.08,43.16,134.17
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,41.93,44.41,29.06,74.92
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,56.54,58.41,40.44,84.61
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,so_ava,lacustre,2371,LoRa sous convention,36.17,40.05,25.17,82.69
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,56.5,59.43,39.98,97.01
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,58.3,62.58,41.13,110.06
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,60.73,64.02,43.62,106.14
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,59.07,67.13,41.9,153.73
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,60.81,67.81,43.06,148.8
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,ze,rural_arbore,2138,LoRa sous convention,62.01,66.11,44.1,110.4
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,61.42,64.6,44.5,103.62
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,36.94,37.97,26.43,52.85
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.73,37.43,24.95,52.11
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,53.49,53.86,37.68,70.58
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,allada,rural_degage,2550,LoRa sans convention,55.63,56.85,40.0,77.37
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,allada,rural_degage,2550,LoRa sous convention,52.51,59.56,35.82,110.93
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,allada,rural_degage,2550,cellulaire sous convention,64.4,69.87,46.71,113.02
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,59.0,60.2,42.29,82.38
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,55.27,71.1,38.04,166.13
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,66.67,80.29,46.96,166.26
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,45.3,46.28,32.68,63.22
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,43.88,49.4,29.68,91.63
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,61.6,65.19,43.54,100.25
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,so_ava,lacustre,2371,LoRa sans convention,40.19,41.1,28.64,56.42
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,so_ava,lacustre,2371,LoRa sous convention,37.67,46.84,25.49,103.11
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,61.54,68.02,43.08,116.9
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,66.77,68.35,47.83,94.76
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,61.59,70.63,42.56,133.86
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,66.57,74.05,47.35,129.62
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,67.85,69.48,48.66,96.37
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,62.38,81.12,42.94,192.01
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,67.12,84.04,46.84,185.77
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,ze,rural_arbore,2138,LoRa sans convention,71.31,73.1,51.21,101.42
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,ze,rural_arbore,2138,LoRa sous convention,65.68,73.81,45.25,134.0
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,67.45,74.25,47.91,126.74
+scénario haut,0,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,0,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.02,,,
+scénario haut,0,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,66.45,,,
+scénario haut,0,1.0,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,0,1.0,allada,rural_degage,2550,LoRa sous convention,82.67,,,
+scénario haut,0,1.0,allada,rural_degage,2550,cellulaire sous convention,66.39,,,
+scénario haut,0,1.0,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,0,1.0,kpomasse,rural_degage,1353,LoRa sous convention,88.74,,,
+scénario haut,0,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,67.18,,,
+scénario haut,0,1.0,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,0,1.0,ouidah,peri_urbain,3241,LoRa sous convention,64.59,,,
+scénario haut,0,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,66.52,,,
+scénario haut,0,1.0,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,0,1.0,so_ava,lacustre,2371,LoRa sous convention,51.12,,,
+scénario haut,0,1.0,so_ava,lacustre,2371,cellulaire sous convention,65.9,,,
+scénario haut,0,1.0,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,0,1.0,toffo,rural_arbore,2032,LoRa sous convention,101.88,,,
+scénario haut,0,1.0,toffo,rural_arbore,2032,cellulaire sous convention,70.83,,,
+scénario haut,0,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,0,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,103.93,,,
+scénario haut,0,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,67.18,,,
+scénario haut,0,1.0,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,0,1.0,ze,rural_arbore,2138,LoRa sous convention,110.49,,,
+scénario haut,0,1.0,ze,rural_arbore,2138,cellulaire sous convention,72.76,,,
+scénario haut,0,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,0,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.02,,,
+scénario haut,0,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,66.45,,,
+scénario haut,0,1.5,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,0,1.5,allada,rural_degage,2550,LoRa sous convention,82.67,,,
+scénario haut,0,1.5,allada,rural_degage,2550,cellulaire sous convention,66.39,,,
+scénario haut,0,1.5,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,0,1.5,kpomasse,rural_degage,1353,LoRa sous convention,88.74,,,
+scénario haut,0,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,67.18,,,
+scénario haut,0,1.5,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,0,1.5,ouidah,peri_urbain,3241,LoRa sous convention,64.59,,,
+scénario haut,0,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,66.52,,,
+scénario haut,0,1.5,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,0,1.5,so_ava,lacustre,2371,LoRa sous convention,51.12,,,
+scénario haut,0,1.5,so_ava,lacustre,2371,cellulaire sous convention,65.9,,,
+scénario haut,0,1.5,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,0,1.5,toffo,rural_arbore,2032,LoRa sous convention,101.88,,,
+scénario haut,0,1.5,toffo,rural_arbore,2032,cellulaire sous convention,70.83,,,
+scénario haut,0,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,0,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,103.93,,,
+scénario haut,0,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,67.18,,,
+scénario haut,0,1.5,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,0,1.5,ze,rural_arbore,2138,LoRa sous convention,110.49,,,
+scénario haut,0,1.5,ze,rural_arbore,2138,cellulaire sous convention,72.76,,,
+scénario haut,0,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,0,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.02,,,
+scénario haut,0,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,66.45,,,
+scénario haut,0,2.0,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,0,2.0,allada,rural_degage,2550,LoRa sous convention,82.67,,,
+scénario haut,0,2.0,allada,rural_degage,2550,cellulaire sous convention,66.39,,,
+scénario haut,0,2.0,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,0,2.0,kpomasse,rural_degage,1353,LoRa sous convention,88.74,,,
+scénario haut,0,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,67.18,,,
+scénario haut,0,2.0,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,0,2.0,ouidah,peri_urbain,3241,LoRa sous convention,64.59,,,
+scénario haut,0,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,66.52,,,
+scénario haut,0,2.0,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,0,2.0,so_ava,lacustre,2371,LoRa sous convention,51.12,,,
+scénario haut,0,2.0,so_ava,lacustre,2371,cellulaire sous convention,65.9,,,
+scénario haut,0,2.0,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,0,2.0,toffo,rural_arbore,2032,LoRa sous convention,101.88,,,
+scénario haut,0,2.0,toffo,rural_arbore,2032,cellulaire sous convention,70.83,,,
+scénario haut,0,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,0,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,103.93,,,
+scénario haut,0,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,67.18,,,
+scénario haut,0,2.0,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,0,2.0,ze,rural_arbore,2138,LoRa sous convention,110.49,,,
+scénario haut,0,2.0,ze,rural_arbore,2138,cellulaire sous convention,72.76,,,
+scénario haut,5000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,5000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.03,,,
+scénario haut,5000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,66.8,,,
+scénario haut,5000000,1.0,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,5000000,1.0,allada,rural_degage,2550,LoRa sous convention,82.69,,,
+scénario haut,5000000,1.0,allada,rural_degage,2550,cellulaire sous convention,67.23,,,
+scénario haut,5000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,5000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,88.77,,,
+scénario haut,5000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,68.02,,,
+scénario haut,5000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,5000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,64.6,,,
+scénario haut,5000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,67.14,,,
+scénario haut,5000000,1.0,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,5000000,1.0,so_ava,lacustre,2371,LoRa sous convention,51.15,,,
+scénario haut,5000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,66.55,,,
+scénario haut,5000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,5000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,101.91,,,
+scénario haut,5000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,71.59,,,
+scénario haut,5000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,5000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,103.96,,,
+scénario haut,5000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,68.01,,,
+scénario haut,5000000,1.0,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,5000000,1.0,ze,rural_arbore,2138,LoRa sous convention,110.52,,,
+scénario haut,5000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,73.51,,,
+scénario haut,5000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,5000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.03,,,
+scénario haut,5000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,66.97,,,
+scénario haut,5000000,1.5,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,5000000,1.5,allada,rural_degage,2550,LoRa sous convention,82.71,,,
+scénario haut,5000000,1.5,allada,rural_degage,2550,cellulaire sous convention,67.65,,,
+scénario haut,5000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,5000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,88.78,,,
+scénario haut,5000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,68.44,,,
+scénario haut,5000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,5000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,64.61,,,
+scénario haut,5000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,67.45,,,
+scénario haut,5000000,1.5,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,5000000,1.5,so_ava,lacustre,2371,LoRa sous convention,51.17,,,
+scénario haut,5000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,66.87,,,
+scénario haut,5000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,5000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,101.93,,,
+scénario haut,5000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,71.97,,,
+scénario haut,5000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,5000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,103.97,,,
+scénario haut,5000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,68.43,,,
+scénario haut,5000000,1.5,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,5000000,1.5,ze,rural_arbore,2138,LoRa sous convention,110.54,,,
+scénario haut,5000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,73.88,,,
+scénario haut,5000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,5000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.04,,,
+scénario haut,5000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,67.14,,,
+scénario haut,5000000,2.0,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,5000000,2.0,allada,rural_degage,2550,LoRa sous convention,82.72,,,
+scénario haut,5000000,2.0,allada,rural_degage,2550,cellulaire sous convention,68.06,,,
+scénario haut,5000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,5000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,88.79,,,
+scénario haut,5000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,68.86,,,
+scénario haut,5000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,5000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,64.62,,,
+scénario haut,5000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,67.76,,,
+scénario haut,5000000,2.0,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,5000000,2.0,so_ava,lacustre,2371,LoRa sous convention,51.18,,,
+scénario haut,5000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,67.2,,,
+scénario haut,5000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,5000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,101.94,,,
+scénario haut,5000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,72.34,,,
+scénario haut,5000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,5000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,103.98,,,
+scénario haut,5000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,68.85,,,
+scénario haut,5000000,2.0,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,5000000,2.0,ze,rural_arbore,2138,LoRa sous convention,110.55,,,
+scénario haut,5000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,74.25,,,
+scénario haut,10000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,10000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.04,,,
+scénario haut,10000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,67.14,,,
+scénario haut,10000000,1.0,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,10000000,1.0,allada,rural_degage,2550,LoRa sous convention,82.72,,,
+scénario haut,10000000,1.0,allada,rural_degage,2550,cellulaire sous convention,68.06,,,
+scénario haut,10000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,10000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,88.79,,,
+scénario haut,10000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,68.86,,,
+scénario haut,10000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,10000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,64.62,,,
+scénario haut,10000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,67.76,,,
+scénario haut,10000000,1.0,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,10000000,1.0,so_ava,lacustre,2371,LoRa sous convention,51.18,,,
+scénario haut,10000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,67.2,,,
+scénario haut,10000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,10000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,101.94,,,
+scénario haut,10000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,72.34,,,
+scénario haut,10000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,10000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,103.98,,,
+scénario haut,10000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,68.85,,,
+scénario haut,10000000,1.0,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,10000000,1.0,ze,rural_arbore,2138,LoRa sous convention,110.55,,,
+scénario haut,10000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,74.25,,,
+scénario haut,10000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,10000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.05,,,
+scénario haut,10000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,67.49,,,
+scénario haut,10000000,1.5,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,10000000,1.5,allada,rural_degage,2550,LoRa sous convention,82.75,,,
+scénario haut,10000000,1.5,allada,rural_degage,2550,cellulaire sous convention,68.9,,,
+scénario haut,10000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,10000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,88.81,,,
+scénario haut,10000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,69.7,,,
+scénario haut,10000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,10000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,64.64,,,
+scénario haut,10000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,68.37,,,
+scénario haut,10000000,1.5,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,10000000,1.5,so_ava,lacustre,2371,LoRa sous convention,51.21,,,
+scénario haut,10000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,67.84,,,
+scénario haut,10000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,10000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,101.97,,,
+scénario haut,10000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,73.1,,,
+scénario haut,10000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,10000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,104.01,,,
+scénario haut,10000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,69.68,,,
+scénario haut,10000000,1.5,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,10000000,1.5,ze,rural_arbore,2138,LoRa sous convention,110.59,,,
+scénario haut,10000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,74.99,,,
+scénario haut,10000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,10000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.06,,,
+scénario haut,10000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,67.83,,,
+scénario haut,10000000,2.0,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,10000000,2.0,allada,rural_degage,2550,LoRa sous convention,82.77,,,
+scénario haut,10000000,2.0,allada,rural_degage,2550,cellulaire sous convention,69.74,,,
+scénario haut,10000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,10000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,88.84,,,
+scénario haut,10000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,70.54,,,
+scénario haut,10000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,10000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,64.65,,,
+scénario haut,10000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,68.99,,,
+scénario haut,10000000,2.0,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,10000000,2.0,so_ava,lacustre,2371,LoRa sous convention,51.24,,,
+scénario haut,10000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,68.49,,,
+scénario haut,10000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,10000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,102.01,,,
+scénario haut,10000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,73.85,,,
+scénario haut,10000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,10000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,104.04,,,
+scénario haut,10000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,70.51,,,
+scénario haut,10000000,2.0,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,10000000,2.0,ze,rural_arbore,2138,LoRa sous convention,110.62,,,
+scénario haut,10000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,75.73,,,
+scénario haut,20000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,20000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.06,,,
+scénario haut,20000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,67.83,,,
+scénario haut,20000000,1.0,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,20000000,1.0,allada,rural_degage,2550,LoRa sous convention,82.77,,,
+scénario haut,20000000,1.0,allada,rural_degage,2550,cellulaire sous convention,69.74,,,
+scénario haut,20000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,20000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,88.84,,,
+scénario haut,20000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,70.54,,,
+scénario haut,20000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,20000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,64.65,,,
+scénario haut,20000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,68.99,,,
+scénario haut,20000000,1.0,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,20000000,1.0,so_ava,lacustre,2371,LoRa sous convention,51.24,,,
+scénario haut,20000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,68.49,,,
+scénario haut,20000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,20000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,102.01,,,
+scénario haut,20000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,73.85,,,
+scénario haut,20000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,20000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,104.04,,,
+scénario haut,20000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,70.51,,,
+scénario haut,20000000,1.0,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,20000000,1.0,ze,rural_arbore,2138,LoRa sous convention,110.62,,,
+scénario haut,20000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,75.73,,,
+scénario haut,20000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,20000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.09,,,
+scénario haut,20000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,68.53,,,
+scénario haut,20000000,1.5,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,20000000,1.5,allada,rural_degage,2550,LoRa sous convention,82.83,,,
+scénario haut,20000000,1.5,allada,rural_degage,2550,cellulaire sous convention,71.42,,,
+scénario haut,20000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,20000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,88.88,,,
+scénario haut,20000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,72.21,,,
+scénario haut,20000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,20000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,64.68,,,
+scénario haut,20000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,70.22,,,
+scénario haut,20000000,1.5,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,20000000,1.5,so_ava,lacustre,2371,LoRa sous convention,51.29,,,
+scénario haut,20000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,69.78,,,
+scénario haut,20000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,20000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,102.07,,,
+scénario haut,20000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,75.36,,,
+scénario haut,20000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,20000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,104.1,,,
+scénario haut,20000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,72.17,,,
+scénario haut,20000000,1.5,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,20000000,1.5,ze,rural_arbore,2138,LoRa sous convention,110.68,,,
+scénario haut,20000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,77.21,,,
+scénario haut,20000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,20000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.11,,,
+scénario haut,20000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,69.22,,,
+scénario haut,20000000,2.0,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,20000000,2.0,allada,rural_degage,2550,LoRa sous convention,82.88,,,
+scénario haut,20000000,2.0,allada,rural_degage,2550,cellulaire sous convention,73.1,,,
+scénario haut,20000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,20000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,88.93,,,
+scénario haut,20000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,73.89,,,
+scénario haut,20000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,20000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,64.72,,,
+scénario haut,20000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,71.46,,,
+scénario haut,20000000,2.0,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,20000000,2.0,so_ava,lacustre,2371,LoRa sous convention,51.35,,,
+scénario haut,20000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,71.07,,,
+scénario haut,20000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,20000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,102.13,,,
+scénario haut,20000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,76.87,,,
+scénario haut,20000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,20000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,104.15,,,
+scénario haut,20000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,73.84,,,
+scénario haut,20000000,2.0,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,20000000,2.0,ze,rural_arbore,2138,LoRa sous convention,110.74,,,
+scénario haut,20000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,78.69,,,
+scénario haut,50000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,50000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.13,,,
+scénario haut,50000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,69.91,,,
+scénario haut,50000000,1.0,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,50000000,1.0,allada,rural_degage,2550,LoRa sous convention,82.94,,,
+scénario haut,50000000,1.0,allada,rural_degage,2550,cellulaire sous convention,74.77,,,
+scénario haut,50000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,50000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,88.97,,,
+scénario haut,50000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,75.56,,,
+scénario haut,50000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,50000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,64.75,,,
+scénario haut,50000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,72.69,,,
+scénario haut,50000000,1.0,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,50000000,1.0,so_ava,lacustre,2371,LoRa sous convention,51.41,,,
+scénario haut,50000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,72.36,,,
+scénario haut,50000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,50000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,102.19,,,
+scénario haut,50000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,78.38,,,
+scénario haut,50000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,50000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,104.21,,,
+scénario haut,50000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,75.5,,,
+scénario haut,50000000,1.0,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,50000000,1.0,ze,rural_arbore,2138,LoRa sous convention,110.8,,,
+scénario haut,50000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,80.17,,,
+scénario haut,50000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,50000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.19,,,
+scénario haut,50000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,71.64,,,
+scénario haut,50000000,1.5,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,50000000,1.5,allada,rural_degage,2550,LoRa sous convention,83.07,,,
+scénario haut,50000000,1.5,allada,rural_degage,2550,cellulaire sous convention,78.97,,,
+scénario haut,50000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,50000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,89.09,,,
+scénario haut,50000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,79.75,,,
+scénario haut,50000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,50000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,64.83,,,
+scénario haut,50000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,75.78,,,
+scénario haut,50000000,1.5,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,50000000,1.5,so_ava,lacustre,2371,LoRa sous convention,51.55,,,
+scénario haut,50000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,75.58,,,
+scénario haut,50000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,50000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,102.34,,,
+scénario haut,50000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,82.15,,,
+scénario haut,50000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,50000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,104.35,,,
+scénario haut,50000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,79.66,,,
+scénario haut,50000000,1.5,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,50000000,1.5,ze,rural_arbore,2138,LoRa sous convention,110.96,,,
+scénario haut,50000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,83.87,,,
+scénario haut,50000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,54.68,,,
+scénario haut,50000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,51.25,,,
+scénario haut,50000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,73.37,,,
+scénario haut,50000000,2.0,allada,rural_degage,2550,LoRa sans convention,88.81,,,
+scénario haut,50000000,2.0,allada,rural_degage,2550,LoRa sous convention,83.21,,,
+scénario haut,50000000,2.0,allada,rural_degage,2550,cellulaire sous convention,83.16,,,
+scénario haut,50000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,94.89,,,
+scénario haut,50000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,89.2,,,
+scénario haut,50000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,83.94,,,
+scénario haut,50000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,69.69,,,
+scénario haut,50000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,64.91,,,
+scénario haut,50000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,78.86,,,
+scénario haut,50000000,2.0,so_ava,lacustre,2371,LoRa sans convention,60.02,,,
+scénario haut,50000000,2.0,so_ava,lacustre,2371,LoRa sous convention,51.69,,,
+scénario haut,50000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,78.81,,,
+scénario haut,50000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,109.6,,,
+scénario haut,50000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,102.5,,,
+scénario haut,50000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,85.92,,,
+scénario haut,50000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,111.64,,,
+scénario haut,50000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,104.49,,,
+scénario haut,50000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,83.82,,,
+scénario haut,50000000,2.0,ze,rural_arbore,2138,LoRa sans convention,118.21,,,
+scénario haut,50000000,2.0,ze,rural_arbore,2138,LoRa sous convention,111.11,,,
+scénario haut,50000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,87.58,,,
+"Monte-Carlo, Kerlink 10 %",0,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",0,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.8,37.62,25.93,53.04
+"Monte-Carlo, Kerlink 10 %",0,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,45.03,45.85,30.85,63.31
+"Monte-Carlo, Kerlink 10 %",0,1.0,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",0,1.0,allada,rural_degage,2550,LoRa sous convention,64.68,67.51,47.04,98.16
+"Monte-Carlo, Kerlink 10 %",0,1.0,allada,rural_degage,2550,cellulaire sous convention,44.97,45.79,30.79,63.22
+"Monte-Carlo, Kerlink 10 %",0,1.0,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",0,1.0,kpomasse,rural_degage,1353,LoRa sous convention,70.37,73.26,51.0,106.7
+"Monte-Carlo, Kerlink 10 %",0,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,45.52,46.55,31.38,64.25
+"Monte-Carlo, Kerlink 10 %",0,1.0,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",0,1.0,ouidah,peri_urbain,3241,LoRa sous convention,48.72,50.43,35.07,72.29
+"Monte-Carlo, Kerlink 10 %",0,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,45.07,45.98,30.97,63.45
+"Monte-Carlo, Kerlink 10 %",0,1.0,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",0,1.0,so_ava,lacustre,2371,LoRa sous convention,36.84,37.59,25.89,52.89
+"Monte-Carlo, Kerlink 10 %",0,1.0,so_ava,lacustre,2371,cellulaire sous convention,44.61,45.63,30.79,62.86
+"Monte-Carlo, Kerlink 10 %",0,1.0,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",0,1.0,toffo,rural_arbore,2032,LoRa sous convention,81.84,85.66,59.67,124.94
+"Monte-Carlo, Kerlink 10 %",0,1.0,toffo,rural_arbore,2032,cellulaire sous convention,49.84,51.08,35.98,70.95
+"Monte-Carlo, Kerlink 10 %",0,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",0,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,83.61,87.59,61.01,127.82
+"Monte-Carlo, Kerlink 10 %",0,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,45.53,46.59,31.43,64.29
+"Monte-Carlo, Kerlink 10 %",0,1.0,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",0,1.0,ze,rural_arbore,2138,LoRa sous convention,89.57,93.81,65.34,136.99
+"Monte-Carlo, Kerlink 10 %",0,1.0,ze,rural_arbore,2138,cellulaire sous convention,51.81,53.19,37.69,74.24
+"Monte-Carlo, Kerlink 10 %",0,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",0,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.8,37.62,25.93,53.04
+"Monte-Carlo, Kerlink 10 %",0,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,45.03,45.85,30.85,63.31
+"Monte-Carlo, Kerlink 10 %",0,1.5,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",0,1.5,allada,rural_degage,2550,LoRa sous convention,64.68,67.51,47.04,98.16
+"Monte-Carlo, Kerlink 10 %",0,1.5,allada,rural_degage,2550,cellulaire sous convention,44.97,45.79,30.79,63.22
+"Monte-Carlo, Kerlink 10 %",0,1.5,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",0,1.5,kpomasse,rural_degage,1353,LoRa sous convention,70.37,73.26,51.0,106.7
+"Monte-Carlo, Kerlink 10 %",0,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,45.52,46.55,31.38,64.25
+"Monte-Carlo, Kerlink 10 %",0,1.5,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",0,1.5,ouidah,peri_urbain,3241,LoRa sous convention,48.72,50.43,35.07,72.29
+"Monte-Carlo, Kerlink 10 %",0,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,45.07,45.98,30.97,63.45
+"Monte-Carlo, Kerlink 10 %",0,1.5,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",0,1.5,so_ava,lacustre,2371,LoRa sous convention,36.84,37.59,25.89,52.89
+"Monte-Carlo, Kerlink 10 %",0,1.5,so_ava,lacustre,2371,cellulaire sous convention,44.61,45.63,30.79,62.86
+"Monte-Carlo, Kerlink 10 %",0,1.5,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",0,1.5,toffo,rural_arbore,2032,LoRa sous convention,81.84,85.66,59.67,124.94
+"Monte-Carlo, Kerlink 10 %",0,1.5,toffo,rural_arbore,2032,cellulaire sous convention,49.84,51.08,35.98,70.95
+"Monte-Carlo, Kerlink 10 %",0,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",0,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,83.61,87.59,61.01,127.82
+"Monte-Carlo, Kerlink 10 %",0,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,45.53,46.59,31.43,64.29
+"Monte-Carlo, Kerlink 10 %",0,1.5,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",0,1.5,ze,rural_arbore,2138,LoRa sous convention,89.57,93.81,65.34,136.99
+"Monte-Carlo, Kerlink 10 %",0,1.5,ze,rural_arbore,2138,cellulaire sous convention,51.81,53.19,37.69,74.24
+"Monte-Carlo, Kerlink 10 %",0,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",0,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.8,37.62,25.93,53.04
+"Monte-Carlo, Kerlink 10 %",0,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,45.03,45.85,30.85,63.31
+"Monte-Carlo, Kerlink 10 %",0,2.0,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",0,2.0,allada,rural_degage,2550,LoRa sous convention,64.68,67.51,47.04,98.16
+"Monte-Carlo, Kerlink 10 %",0,2.0,allada,rural_degage,2550,cellulaire sous convention,44.97,45.79,30.79,63.22
+"Monte-Carlo, Kerlink 10 %",0,2.0,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",0,2.0,kpomasse,rural_degage,1353,LoRa sous convention,70.37,73.26,51.0,106.7
+"Monte-Carlo, Kerlink 10 %",0,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,45.52,46.55,31.38,64.25
+"Monte-Carlo, Kerlink 10 %",0,2.0,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",0,2.0,ouidah,peri_urbain,3241,LoRa sous convention,48.72,50.43,35.07,72.29
+"Monte-Carlo, Kerlink 10 %",0,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,45.07,45.98,30.97,63.45
+"Monte-Carlo, Kerlink 10 %",0,2.0,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",0,2.0,so_ava,lacustre,2371,LoRa sous convention,36.84,37.59,25.89,52.89
+"Monte-Carlo, Kerlink 10 %",0,2.0,so_ava,lacustre,2371,cellulaire sous convention,44.61,45.63,30.79,62.86
+"Monte-Carlo, Kerlink 10 %",0,2.0,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",0,2.0,toffo,rural_arbore,2032,LoRa sous convention,81.84,85.66,59.67,124.94
+"Monte-Carlo, Kerlink 10 %",0,2.0,toffo,rural_arbore,2032,cellulaire sous convention,49.84,51.08,35.98,70.95
+"Monte-Carlo, Kerlink 10 %",0,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",0,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,83.61,87.59,61.01,127.82
+"Monte-Carlo, Kerlink 10 %",0,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,45.53,46.59,31.43,64.29
+"Monte-Carlo, Kerlink 10 %",0,2.0,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",0,2.0,ze,rural_arbore,2138,LoRa sous convention,89.57,93.81,65.34,136.99
+"Monte-Carlo, Kerlink 10 %",0,2.0,ze,rural_arbore,2138,cellulaire sous convention,51.81,53.19,37.69,74.24
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.81,37.63,25.94,53.05
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,45.35,46.17,31.15,63.61
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,allada,rural_degage,2550,LoRa sous convention,64.69,67.53,47.06,98.18
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,allada,rural_degage,2550,cellulaire sous convention,45.76,46.46,31.41,63.84
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,70.4,73.28,51.03,106.72
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,46.35,47.22,32.0,64.87
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,48.74,50.44,35.09,72.3
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,45.68,46.6,31.58,64.07
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,so_ava,lacustre,2371,LoRa sous convention,36.86,37.61,25.91,52.91
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,45.21,46.17,31.3,63.37
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,81.87,85.68,59.7,124.96
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,50.49,51.69,36.54,71.51
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,83.63,87.62,61.04,127.84
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,46.32,47.26,32.05,64.91
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,ze,rural_arbore,2138,LoRa sous convention,89.6,93.83,65.37,137.01
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,52.5,53.78,38.34,74.79
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.81,37.63,25.94,53.05
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,45.51,46.32,31.3,63.76
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,allada,rural_degage,2550,LoRa sous convention,64.7,67.54,47.08,98.19
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,allada,rural_degage,2550,cellulaire sous convention,46.12,46.8,31.73,64.15
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,70.41,73.29,51.04,106.72
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,46.75,47.56,32.32,65.19
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,48.75,50.45,35.1,72.31
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,45.99,46.91,31.89,64.38
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,so_ava,lacustre,2371,LoRa sous convention,36.88,37.62,25.92,52.92
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,45.51,46.43,31.55,63.62
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,81.88,85.69,59.71,124.97
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,50.79,51.99,36.82,71.79
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,83.64,87.63,61.06,127.85
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,46.73,47.59,32.36,65.22
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,ze,rural_arbore,2138,LoRa sous convention,89.61,93.84,65.39,137.02
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,52.83,54.08,38.66,75.06
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.82,37.64,25.95,53.06
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,45.68,46.48,31.45,63.91
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,allada,rural_degage,2550,LoRa sous convention,64.71,67.55,47.09,98.2
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,allada,rural_degage,2550,cellulaire sous convention,46.5,47.13,32.04,64.46
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,70.42,73.3,51.05,106.73
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,47.15,47.89,32.63,65.5
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,48.75,50.46,35.1,72.32
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,46.3,47.21,32.2,64.68
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,so_ava,lacustre,2371,LoRa sous convention,36.89,37.64,25.93,52.93
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,45.81,46.7,31.8,63.87
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,81.89,85.71,59.73,124.99
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,51.11,52.29,37.1,72.07
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,83.66,87.64,61.07,127.86
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,47.14,47.93,32.67,65.53
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,ze,rural_arbore,2138,LoRa sous convention,89.62,93.86,65.4,137.03
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,53.11,54.38,38.97,75.34
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.82,37.64,25.95,53.06
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,45.68,46.48,31.45,63.91
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,allada,rural_degage,2550,LoRa sous convention,64.71,67.55,47.09,98.2
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,allada,rural_degage,2550,cellulaire sous convention,46.5,47.13,32.04,64.46
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,70.42,73.3,51.05,106.73
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,47.15,47.89,32.63,65.5
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,48.75,50.46,35.1,72.32
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,46.3,47.21,32.2,64.68
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,so_ava,lacustre,2371,LoRa sous convention,36.89,37.64,25.93,52.93
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,45.81,46.7,31.8,63.87
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,81.89,85.71,59.73,124.99
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,51.11,52.29,37.1,72.07
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,83.66,87.64,61.07,127.86
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,47.14,47.93,32.67,65.53
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,ze,rural_arbore,2138,LoRa sous convention,89.62,93.86,65.4,137.03
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,53.11,54.38,38.97,75.34
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.83,37.65,25.96,53.06
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,46.0,46.79,31.75,64.21
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,allada,rural_degage,2550,LoRa sous convention,64.74,67.57,47.11,98.22
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,allada,rural_degage,2550,cellulaire sous convention,47.16,47.81,32.66,65.09
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,70.44,73.32,51.07,106.75
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,47.88,48.56,33.25,66.12
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,48.77,50.47,35.12,72.34
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,46.92,47.83,32.82,65.3
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,so_ava,lacustre,2371,LoRa sous convention,36.91,37.66,25.96,52.95
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,46.45,47.24,32.31,64.38
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,81.92,85.73,59.76,125.01
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,51.68,52.9,37.66,72.63
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,83.68,87.66,61.1,127.88
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,47.89,48.59,33.29,66.14
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,ze,rural_arbore,2138,LoRa sous convention,89.65,93.88,65.43,137.05
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,53.66,54.97,39.52,75.89
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.84,37.66,25.97,53.07
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,46.35,47.11,32.06,64.52
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,allada,rural_degage,2550,LoRa sous convention,64.76,67.59,47.13,98.24
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,allada,rural_degage,2550,cellulaire sous convention,47.83,48.48,33.28,65.71
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,70.46,73.33,51.1,106.77
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,48.51,49.24,33.87,66.74
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,48.79,50.49,35.14,72.35
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,47.54,48.45,33.44,65.92
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,so_ava,lacustre,2371,LoRa sous convention,36.94,37.68,25.98,52.97
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,47.1,47.78,32.81,64.88
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,81.95,85.75,59.79,125.03
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,52.32,53.5,38.22,73.19
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,83.7,87.68,61.13,127.9
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,48.54,49.26,33.91,66.76
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,ze,rural_arbore,2138,LoRa sous convention,89.68,93.9,65.47,137.07
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,54.32,55.56,40.07,76.44
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.84,37.66,25.97,53.07
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,46.35,47.11,32.06,64.52
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,allada,rural_degage,2550,LoRa sous convention,64.76,67.59,47.13,98.24
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,allada,rural_degage,2550,cellulaire sous convention,47.83,48.48,33.28,65.71
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,70.46,73.33,51.1,106.77
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,48.51,49.24,33.87,66.74
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,48.79,50.49,35.14,72.35
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,47.54,48.45,33.44,65.92
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,so_ava,lacustre,2371,LoRa sous convention,36.94,37.68,25.98,52.97
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,47.1,47.78,32.81,64.88
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,81.95,85.75,59.79,125.03
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,52.32,53.5,38.22,73.19
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,83.7,87.68,61.13,127.9
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,48.54,49.26,33.91,66.76
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,ze,rural_arbore,2138,LoRa sous convention,89.68,93.9,65.47,137.07
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,54.32,55.56,40.07,76.44
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.87,37.68,25.99,53.09
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,47.03,47.73,32.66,65.12
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,allada,rural_degage,2550,LoRa sous convention,64.8,67.63,47.18,98.27
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,allada,rural_degage,2550,cellulaire sous convention,49.26,49.82,34.53,66.96
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,70.5,73.37,51.14,106.8
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,49.93,50.58,35.12,67.99
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,48.82,50.52,35.17,72.39
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,48.77,49.68,34.67,67.15
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,so_ava,lacustre,2371,LoRa sous convention,36.98,37.73,26.02,53.02
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,48.21,48.85,33.82,65.89
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,82.0,85.8,59.85,125.07
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,53.53,54.71,39.34,74.31
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,83.75,87.73,61.18,127.94
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,49.9,50.6,35.14,68.0
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,ze,rural_arbore,2138,LoRa sous convention,89.73,93.95,65.53,137.12
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,55.55,56.75,41.17,77.54
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.89,37.69,26.01,53.11
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,47.68,48.36,33.27,65.73
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,allada,rural_degage,2550,LoRa sous convention,64.85,67.67,47.21,98.31
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,allada,rural_degage,2550,cellulaire sous convention,50.72,51.17,35.78,68.2
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,70.54,73.41,51.19,106.83
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,51.35,51.93,36.36,69.23
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,48.85,50.56,35.2,72.42
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,50.0,50.92,35.9,68.39
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,so_ava,lacustre,2371,LoRa sous convention,37.03,37.77,26.06,53.06
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,49.21,49.92,34.83,66.9
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,82.05,85.85,59.91,125.11
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,54.78,55.92,40.46,75.43
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,83.8,87.77,61.24,127.98
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,51.35,51.93,36.38,69.24
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,ze,rural_arbore,2138,LoRa sous convention,89.78,94.0,65.59,137.16
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,56.82,57.94,42.27,78.64
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.91,37.71,26.03,53.13
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,48.34,48.98,33.87,66.33
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,allada,rural_degage,2550,LoRa sous convention,64.89,67.71,47.26,98.35
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,allada,rural_degage,2550,cellulaire sous convention,52.03,52.52,37.02,69.45
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,kpomasse,rural_degage,1353,LoRa sous convention,70.57,73.44,51.24,106.86
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,kpomasse,rural_degage,1353,cellulaire sous convention,52.87,53.27,37.61,70.48
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,ouidah,peri_urbain,3241,LoRa sous convention,48.89,50.59,35.24,72.45
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,ouidah,peri_urbain,3241,cellulaire sous convention,51.24,52.15,37.14,69.62
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,so_ava,lacustre,2371,LoRa sous convention,37.08,37.82,26.1,53.1
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,so_ava,lacustre,2371,cellulaire sous convention,50.37,51.0,35.84,67.91
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,toffo,rural_arbore,2032,LoRa sous convention,82.1,85.89,59.97,125.16
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,toffo,rural_arbore,2032,cellulaire sous convention,56.16,57.13,41.58,76.55
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,tori_bossito,rural_arbore,1153,LoRa sous convention,83.85,87.82,61.3,128.02
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,52.87,53.27,37.62,70.47
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,ze,rural_arbore,2138,LoRa sous convention,89.83,94.05,65.65,137.2
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,ze,rural_arbore,2138,cellulaire sous convention,57.94,59.13,43.37,79.74
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,abomey_calavi,urbain_dense,13127,LoRa sous convention,36.97,37.76,26.08,53.17
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,abomey_calavi,urbain_dense,13127,cellulaire sous convention,49.9,50.54,35.38,67.84
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,allada,rural_degage,2550,LoRa sous convention,65.01,67.82,47.37,98.44
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,allada,rural_degage,2550,cellulaire sous convention,55.56,55.88,40.14,72.56
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,kpomasse,rural_degage,1353,LoRa sous convention,70.67,73.53,51.35,106.95
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,kpomasse,rural_degage,1353,cellulaire sous convention,56.29,56.63,40.72,73.59
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,ouidah,peri_urbain,3241,LoRa sous convention,48.97,50.67,35.32,72.53
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,ouidah,peri_urbain,3241,cellulaire sous convention,54.32,55.23,40.22,72.7
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,so_ava,lacustre,2371,LoRa sous convention,37.2,37.93,26.21,53.21
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,so_ava,lacustre,2371,cellulaire sous convention,53.28,53.68,38.36,70.43
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,toffo,rural_arbore,2032,LoRa sous convention,82.23,86.01,60.13,125.26
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,toffo,rural_arbore,2032,cellulaire sous convention,59.17,60.16,44.38,79.69
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,tori_bossito,rural_arbore,1153,LoRa sous convention,83.97,87.93,61.44,128.13
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,tori_bossito,rural_arbore,1153,cellulaire sous convention,56.27,56.6,40.71,73.56
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,ze,rural_arbore,2138,LoRa sous convention,89.97,94.16,65.81,137.31
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,ze,rural_arbore,2138,cellulaire sous convention,60.83,62.1,46.12,82.49
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sans convention,38.6,39.75,27.61,55.86
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,abomey_calavi,urbain_dense,13127,LoRa sous convention,37.12,37.85,26.13,53.21
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,abomey_calavi,urbain_dense,13127,cellulaire sous convention,51.45,52.13,36.9,69.36
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,allada,rural_degage,2550,LoRa sans convention,68.18,71.09,49.81,101.34
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,allada,rural_degage,2550,LoRa sous convention,65.27,68.16,47.49,99.07
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,allada,rural_degage,2550,cellulaire sous convention,59.04,59.41,43.25,75.91
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,kpomasse,rural_degage,1353,LoRa sans convention,73.67,76.84,53.85,109.87
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,kpomasse,rural_degage,1353,LoRa sous convention,70.88,74.07,51.47,107.77
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,kpomasse,rural_degage,1353,cellulaire sous convention,59.74,60.37,43.83,77.04
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,ouidah,peri_urbain,3241,LoRa sans convention,51.62,53.39,37.12,75.76
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,ouidah,peri_urbain,3241,LoRa sous convention,49.15,50.94,35.4,72.78
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,ouidah,peri_urbain,3241,cellulaire sous convention,57.41,58.46,43.31,76.11
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,so_ava,lacustre,2371,LoRa sans convention,41.86,42.76,29.58,59.34
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,so_ava,lacustre,2371,LoRa sous convention,37.36,38.3,26.32,53.41
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,so_ava,lacustre,2371,cellulaire sous convention,55.96,56.57,40.88,73.47
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,toffo,rural_arbore,2032,LoRa sans convention,86.21,90.15,62.96,129.43
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,toffo,rural_arbore,2032,LoRa sous convention,82.57,86.43,60.28,125.63
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,toffo,rural_arbore,2032,cellulaire sous convention,62.23,63.42,47.18,83.38
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,tori_bossito,rural_arbore,1153,LoRa sans convention,88.03,92.08,64.27,132.37
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,tori_bossito,rural_arbore,1153,LoRa sous convention,84.4,88.56,61.58,128.46
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,tori_bossito,rural_arbore,1153,cellulaire sous convention,59.64,60.4,43.8,77.04
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,ze,rural_arbore,2138,LoRa sans convention,93.97,98.3,68.47,141.76
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,ze,rural_arbore,2138,LoRa sous convention,90.29,94.57,65.95,137.52
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,ze,rural_arbore,2138,cellulaire sous convention,63.82,65.29,48.87,86.05

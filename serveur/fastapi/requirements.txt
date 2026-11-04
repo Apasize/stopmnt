@@ -1,0 +1,39 @@
+# Framework principal
+fastapi==0.111.0
+
+# Serveur ASGI — fait tourner FastAPI
+uvicorn[standard]==0.29.0
+
+# Driver PostgreSQL asynchrone
+# asyncpg est plus rapide que psycopg2 pour les applications async
+asyncpg==0.29.0
+
+# Client Redis asynchrone
+redis==5.0.4
+
+# Validation des données — intégré à FastAPI mais on fixe la version
+pydantic[email]==2.7.1
+
+# Tokens JWT
+# python-jose gère la génération et vérification des tokens
+python-jose[cryptography]==3.3.0
+
+# Hachage des mots de passe
+# bcrypt est l'algorithme recommandé — lent intentionnellement pour résister aux attaques
+passlib==1.7.4
+bcrypt==4.0.1
+
+# Génération et manipulation des certificats X.509
+cryptography==42.0.7
+
+# Pour lire les fichiers multipart (uploads)
+python-multipart==0.0.9
+
+# Pour les variables d'environnement depuis .env
+python-dotenv==1.0.1
+
+# Limitation du débit des requêtes
+slowapi==0.1.9
+
+
+influxdb-client==1.44.0

@@ -1,0 +1,481 @@
+source,f_global_fcfa_an,k,commune,gagnant,part_des_tirages,part_lora_sans_convention,part_lora_sous_convention,part_cellulaire,gagnant_v62_scenario
+scénario bas,0,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,0,1.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,0,1.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,0,1.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,0,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,0,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,0,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,0,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,0,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,0,1.5,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,0,1.5,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,0,1.5,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,0,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,0,1.5,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,0,1.5,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,0,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,0,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,0,2.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,0,2.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,0,2.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,0,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,0,2.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,0,2.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,0,2.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,5000000,1.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,1.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,1.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,5000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,5000000,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,5000000,1.5,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,1.5,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,1.5,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,5000000,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,5000000,1.5,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,1.5,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,5000000,2.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,2.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,2.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,5000000,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,5000000,2.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,2.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,5000000,2.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,10000000,1.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,1.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,1.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,10000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,10000000,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,10000000,1.5,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,1.5,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,1.5,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,10000000,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,10000000,1.5,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,1.5,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,10000000,2.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,2.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,2.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,10000000,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,10000000,2.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,2.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,10000000,2.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,20000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,20000000,1.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,20000000,1.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,20000000,1.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,20000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,20000000,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,20000000,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,20000000,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,20000000,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,20000000,1.5,allada,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,20000000,1.5,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,20000000,1.5,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,20000000,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,20000000,1.5,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,20000000,1.5,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,20000000,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,20000000,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,20000000,2.0,allada,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,20000000,2.0,kpomasse,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,20000000,2.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,20000000,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,20000000,2.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,20000000,2.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,20000000,2.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,50000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,50000000,1.0,allada,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,50000000,1.0,kpomasse,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,50000000,1.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,50000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,50000000,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,50000000,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,50000000,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,50000000,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,50000000,1.5,allada,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,50000000,1.5,kpomasse,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,50000000,1.5,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,50000000,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario bas,50000000,1.5,toffo,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,50000000,1.5,tori_bossito,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario bas,50000000,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario bas,50000000,2.0,abomey_calavi,LoRa,1.0,1.0,0.0,0.0,LoRa
+scénario bas,50000000,2.0,allada,LoRa,1.0,1.0,0.0,0.0,cellulaire
+scénario bas,50000000,2.0,kpomasse,LoRa,1.0,1.0,0.0,0.0,cellulaire
+scénario bas,50000000,2.0,ouidah,LoRa,1.0,1.0,0.0,0.0,cellulaire
+scénario bas,50000000,2.0,so_ava,LoRa,1.0,1.0,0.0,0.0,LoRa
+scénario bas,50000000,2.0,toffo,LoRa,1.0,1.0,0.0,0.0,cellulaire
+scénario bas,50000000,2.0,tori_bossito,LoRa,1.0,1.0,0.0,0.0,cellulaire
+scénario bas,50000000,2.0,ze,LoRa,1.0,1.0,0.0,0.0,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",0,1.0,allada,cellulaire,0.664,0.0,0.336,0.664,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,1.0,kpomasse,cellulaire,0.812,0.0,0.188,0.812,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,1.0,ouidah,LoRa,0.89,0.0,0.89,0.11,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",0,1.0,toffo,cellulaire,0.958,0.0,0.042,0.958,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,1.0,tori_bossito,cellulaire,0.974,0.0,0.026,0.974,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,1.0,ze,cellulaire,0.986,0.0,0.014,0.986,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",0,1.5,allada,cellulaire,0.664,0.0,0.336,0.664,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,1.5,kpomasse,cellulaire,0.812,0.0,0.188,0.812,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,1.5,ouidah,LoRa,0.89,0.0,0.89,0.11,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",0,1.5,toffo,cellulaire,0.958,0.0,0.042,0.958,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,1.5,tori_bossito,cellulaire,0.974,0.0,0.026,0.974,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,1.5,ze,cellulaire,0.986,0.0,0.014,0.986,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",0,2.0,allada,cellulaire,0.664,0.0,0.336,0.664,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,2.0,kpomasse,cellulaire,0.812,0.0,0.188,0.812,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,2.0,ouidah,LoRa,0.89,0.0,0.89,0.11,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",0,2.0,toffo,cellulaire,0.958,0.0,0.042,0.958,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,2.0,tori_bossito,cellulaire,0.974,0.0,0.026,0.974,cellulaire
+"Monte-Carlo, scénario bas détaillé",0,2.0,ze,cellulaire,0.986,0.0,0.014,0.986,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,allada,cellulaire,0.602,0.0,0.398,0.602,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,kpomasse,cellulaire,0.744,0.0,0.256,0.744,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,ouidah,LoRa,0.936,0.0,0.936,0.064,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,toffo,cellulaire,0.926,0.0,0.074,0.926,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,tori_bossito,cellulaire,0.95,0.0,0.05,0.95,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,1.0,ze,cellulaire,0.968,0.0,0.032,0.968,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,allada,cellulaire,0.564,0.0,0.436,0.564,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,kpomasse,cellulaire,0.698,0.0,0.302,0.698,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,ouidah,LoRa,0.956,0.0,0.956,0.044,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,toffo,cellulaire,0.912,0.0,0.088,0.912,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,tori_bossito,cellulaire,0.932,0.0,0.068,0.932,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,1.5,ze,cellulaire,0.958,0.0,0.042,0.958,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,allada,cellulaire,0.54,0.0,0.46,0.54,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,kpomasse,cellulaire,0.672,0.0,0.328,0.672,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,ouidah,LoRa,0.962,0.0,0.962,0.038,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,toffo,cellulaire,0.904,0.0,0.096,0.904,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,tori_bossito,cellulaire,0.918,0.0,0.082,0.918,cellulaire
+"Monte-Carlo, scénario bas détaillé",5000000,2.0,ze,cellulaire,0.954,0.0,0.046,0.954,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,allada,cellulaire,0.54,0.0,0.46,0.54,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,kpomasse,cellulaire,0.672,0.0,0.328,0.672,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,ouidah,LoRa,0.962,0.0,0.962,0.038,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,toffo,cellulaire,0.904,0.0,0.096,0.904,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,tori_bossito,cellulaire,0.918,0.0,0.082,0.918,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,1.0,ze,cellulaire,0.954,0.0,0.046,0.954,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,allada,LoRa,0.506,0.0,0.506,0.494,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,kpomasse,cellulaire,0.644,0.0,0.356,0.644,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,ouidah,LoRa,0.974,0.0,0.974,0.026,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,toffo,cellulaire,0.856,0.0,0.144,0.856,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,tori_bossito,cellulaire,0.888,0.0,0.112,0.888,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,1.5,ze,cellulaire,0.93,0.0,0.07,0.93,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,allada,LoRa,0.562,0.0,0.562,0.438,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,kpomasse,cellulaire,0.592,0.0,0.408,0.592,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,ouidah,LoRa,0.98,0.0,0.98,0.02,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,toffo,cellulaire,0.822,0.0,0.178,0.822,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,tori_bossito,cellulaire,0.852,0.0,0.148,0.852,cellulaire
+"Monte-Carlo, scénario bas détaillé",10000000,2.0,ze,cellulaire,0.902,0.0,0.098,0.902,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,allada,LoRa,0.562,0.0,0.562,0.438,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,kpomasse,cellulaire,0.592,0.0,0.408,0.592,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,ouidah,LoRa,0.98,0.0,0.98,0.02,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,toffo,cellulaire,0.822,0.0,0.178,0.822,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,tori_bossito,cellulaire,0.852,0.0,0.148,0.852,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,1.0,ze,cellulaire,0.902,0.0,0.098,0.902,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,abomey_calavi,LoRa,1.0,0.004,0.996,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,allada,LoRa,0.664,0.004,0.66,0.336,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,kpomasse,LoRa,0.53,0.004,0.526,0.47,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,ouidah,LoRa,0.994,0.004,0.99,0.006,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,so_ava,LoRa,1.0,0.004,0.996,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,toffo,cellulaire,0.73,0.004,0.266,0.73,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,tori_bossito,cellulaire,0.778,0.004,0.218,0.778,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,1.5,ze,cellulaire,0.844,0.004,0.152,0.844,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,abomey_calavi,LoRa,1.0,0.01,0.99,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,allada,LoRa,0.774,0.01,0.764,0.226,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,kpomasse,LoRa,0.624,0.01,0.614,0.376,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,ouidah,LoRa,1.0,0.01,0.99,0.0,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,so_ava,LoRa,1.0,0.01,0.99,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,toffo,cellulaire,0.662,0.01,0.328,0.662,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,tori_bossito,cellulaire,0.684,0.01,0.306,0.684,cellulaire
+"Monte-Carlo, scénario bas détaillé",20000000,2.0,ze,cellulaire,0.764,0.01,0.226,0.764,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,abomey_calavi,LoRa,1.0,0.016,0.984,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,allada,LoRa,0.846,0.016,0.83,0.154,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,kpomasse,LoRa,0.716,0.016,0.7,0.284,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,ouidah,LoRa,1.0,0.016,0.984,0.0,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,so_ava,LoRa,1.0,0.016,0.984,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,toffo,cellulaire,0.604,0.016,0.38,0.604,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,tori_bossito,cellulaire,0.652,0.016,0.332,0.652,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,1.0,ze,cellulaire,0.708,0.016,0.276,0.708,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,abomey_calavi,LoRa,1.0,0.088,0.912,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,allada,LoRa,0.93,0.088,0.842,0.07,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,kpomasse,LoRa,0.882,0.088,0.794,0.118,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,ouidah,LoRa,1.0,0.088,0.912,0.0,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,so_ava,LoRa,1.0,0.088,0.912,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,toffo,LoRa,0.604,0.088,0.516,0.396,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,tori_bossito,LoRa,0.558,0.088,0.47,0.442,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,1.5,ze,cellulaire,0.554,0.088,0.358,0.554,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,abomey_calavi,LoRa,1.0,0.17,0.83,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,allada,LoRa,0.96,0.17,0.79,0.04,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,kpomasse,LoRa,0.932,0.17,0.762,0.068,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,ouidah,LoRa,1.0,0.17,0.83,0.0,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,so_ava,LoRa,1.0,0.17,0.83,0.0,LoRa
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,toffo,LoRa,0.776,0.17,0.606,0.224,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,tori_bossito,LoRa,0.738,0.17,0.568,0.262,cellulaire
+"Monte-Carlo, scénario bas détaillé",50000000,2.0,ze,LoRa,0.62,0.17,0.45,0.38,cellulaire
+scénario haut,0,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,0,1.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,0,1.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,0,1.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,0,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,0,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,0,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,0,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,0,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,0,1.5,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,0,1.5,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,0,1.5,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,0,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,0,1.5,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,0,1.5,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,0,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,0,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,0,2.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,0,2.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,0,2.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,0,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,0,2.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,0,2.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,0,2.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,5000000,1.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,1.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,1.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,5000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,5000000,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,5000000,1.5,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,1.5,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,1.5,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,5000000,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,5000000,1.5,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,1.5,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,5000000,2.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,2.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,2.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,5000000,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,5000000,2.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,2.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,5000000,2.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,10000000,1.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,1.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,1.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,10000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,10000000,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,10000000,1.5,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,1.5,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,1.5,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,10000000,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,10000000,1.5,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,1.5,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,10000000,2.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,2.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,2.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,10000000,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,10000000,2.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,2.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,10000000,2.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,20000000,1.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,1.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,1.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,20000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,20000000,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,20000000,1.5,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,1.5,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,1.5,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,20000000,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,20000000,1.5,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,1.5,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,20000000,2.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,2.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,2.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,20000000,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,20000000,2.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,2.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,20000000,2.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,50000000,1.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,1.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,1.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,50000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,50000000,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,50000000,1.5,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,1.5,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,1.5,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,50000000,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,50000000,1.5,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,1.5,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,50000000,2.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,2.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,2.0,ouidah,LoRa,1.0,0.0,1.0,0.0,cellulaire
+scénario haut,50000000,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+scénario haut,50000000,2.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,2.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+scénario haut,50000000,2.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",0,1.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,1.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,1.0,ouidah,cellulaire,0.77,0.0,0.23,0.77,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",0,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",0,1.5,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,1.5,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,1.5,ouidah,cellulaire,0.77,0.0,0.23,0.77,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",0,1.5,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,1.5,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",0,2.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,2.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,2.0,ouidah,cellulaire,0.77,0.0,0.23,0.77,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",0,2.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,2.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",0,2.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,ouidah,cellulaire,0.732,0.0,0.268,0.732,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,ouidah,cellulaire,0.716,0.0,0.284,0.716,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,ouidah,cellulaire,0.7,0.0,0.3,0.7,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",5000000,2.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,ouidah,cellulaire,0.7,0.0,0.3,0.7,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,ouidah,cellulaire,0.664,0.0,0.336,0.664,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,ouidah,cellulaire,0.626,0.0,0.374,0.626,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",10000000,2.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,allada,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,ouidah,cellulaire,0.626,0.0,0.374,0.626,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,allada,cellulaire,0.996,0.0,0.004,0.996,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,ouidah,cellulaire,0.544,0.0,0.456,0.544,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,allada,cellulaire,0.984,0.0,0.016,0.984,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,kpomasse,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,ouidah,LoRa,0.54,0.0,0.54,0.46,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",20000000,2.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,allada,cellulaire,0.96,0.0,0.04,0.96,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,kpomasse,cellulaire,0.996,0.0,0.004,0.996,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,ouidah,LoRa,0.61,0.0,0.61,0.39,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,1.0,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,abomey_calavi,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,allada,cellulaire,0.864,0.0,0.136,0.864,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,kpomasse,cellulaire,0.958,0.0,0.042,0.958,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,ouidah,LoRa,0.786,0.0,0.786,0.214,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,so_ava,LoRa,1.0,0.0,1.0,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,toffo,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,tori_bossito,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,1.5,ze,cellulaire,1.0,0.0,0.0,1.0,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,abomey_calavi,LoRa,1.0,0.004,0.996,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,allada,cellulaire,0.786,0.004,0.21,0.786,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,kpomasse,cellulaire,0.854,0.004,0.142,0.854,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,ouidah,LoRa,0.912,0.004,0.908,0.088,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,so_ava,LoRa,1.0,0.004,0.996,0.0,LoRa
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,toffo,cellulaire,0.99,0.004,0.006,0.99,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,tori_bossito,cellulaire,0.996,0.004,0.0,0.996,cellulaire
+"Monte-Carlo, Kerlink 10 %",50000000,2.0,ze,cellulaire,0.996,0.004,0.0,0.996,cellulaire

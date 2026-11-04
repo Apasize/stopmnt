@@ -1,0 +1,77 @@
+seuil,source,k,commune,f_global_fcfa_an,valeur_fcfa,valeur_fcfa_par_patient_mois,p2_5,p97_5,part_tirages_f_nul
+F_global*,scénario bas,1.0,département,,71366330,212.7,,,
+F_global*,scénario bas,1.5,département,,47577553,141.8,,,
+F_global*,scénario bas,2.0,département,,35683165,106.3,,,
+f_ligne*,scénario bas,1.0,abomey_calavi,0,0,,,,
+f_ligne*,scénario bas,1.0,allada,0,315,,,,
+f_ligne*,scénario bas,1.0,kpomasse,0,405,,,,
+f_ligne*,scénario bas,1.0,ouidah,0,60,,,,
+f_ligne*,scénario bas,1.0,so_ava,0,0,,,,
+f_ligne*,scénario bas,1.0,toffo,0,610,,,,
+f_ligne*,scénario bas,1.0,tori_bossito,0,655,,,,
+f_ligne*,scénario bas,1.0,ze,0,710,,,,
+f_ligne*,scénario bas,1.0,abomey_calavi,10000000,0,,,,
+f_ligne*,scénario bas,1.0,allada,10000000,220,,,,
+f_ligne*,scénario bas,1.0,kpomasse,10000000,310,,,,
+f_ligne*,scénario bas,1.0,ouidah,10000000,0,,,,
+f_ligne*,scénario bas,1.0,so_ava,10000000,0,,,,
+f_ligne*,scénario bas,1.0,toffo,10000000,450,,,,
+f_ligne*,scénario bas,1.0,tori_bossito,10000000,490,,,,
+f_ligne*,scénario bas,1.0,ze,10000000,550,,,,
+F_global*,"Monte-Carlo, scénario bas détaillé",1.0,département,,147118635,438.4,52252451,253628292,0.0
+F_global*,"Monte-Carlo, scénario bas détaillé",1.5,département,,98079090,292.3,34834968,169085528,0.0
+F_global*,"Monte-Carlo, scénario bas détaillé",2.0,département,,73559317,219.2,26126226,126814146,0.0
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,abomey_calavi,0,0,,0,0,1.0
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,allada,0,525,,275,1000,0.0
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,kpomasse,0,660,,365,1230,0.0
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,ouidah,0,145,,15,368,0.018
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,so_ava,0,0,,0,0,1.0
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,toffo,0,948,,510,1690,0.0
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,tori_bossito,0,1015,,590,1810,0.0
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,ze,0,1052,,452,2070,0.0
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,abomey_calavi,10000000,0,,0,0,1.0
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,allada,10000000,430,,180,905,0.0
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,kpomasse,10000000,530,,267,1100,0.0
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,ouidah,10000000,75,,0,298,0.152
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,so_ava,10000000,0,,0,0,1.0
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,toffo,10000000,788,,382,1530,0.0
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,tori_bossito,10000000,835,,417,1620,0.0
+f_ligne*,"Monte-Carlo, scénario bas détaillé",1.0,ze,10000000,870,,317,1785,0.0
+F_global*,scénario haut,1.0,département,,246339477,734.1,,,
+F_global*,scénario haut,1.5,département,,164226318,489.4,,,
+F_global*,scénario haut,2.0,département,,123169738,367.0,,,
+f_ligne*,scénario haut,1.0,abomey_calavi,0,0,,,,
+f_ligne*,scénario haut,1.0,allada,0,1695,,,,
+f_ligne*,scénario haut,1.0,kpomasse,0,2025,,,,
+f_ligne*,scénario haut,1.0,ouidah,0,760,,,,
+f_ligne*,scénario haut,1.0,so_ava,0,0,,,,
+f_ligne*,scénario haut,1.0,toffo,0,2730,,,,
+f_ligne*,scénario haut,1.0,tori_bossito,0,2880,,,,
+f_ligne*,scénario haut,1.0,ze,0,3075,,,,
+f_ligne*,scénario haut,1.0,abomey_calavi,10000000,0,,,,
+f_ligne*,scénario haut,1.0,allada,10000000,1595,,,,
+f_ligne*,scénario haut,1.0,kpomasse,10000000,1885,,,,
+f_ligne*,scénario haut,1.0,ouidah,10000000,685,,,,
+f_ligne*,scénario haut,1.0,so_ava,10000000,0,,,,
+f_ligne*,scénario haut,1.0,toffo,10000000,2555,,,,
+f_ligne*,scénario haut,1.0,tori_bossito,10000000,2700,,,,
+f_ligne*,scénario haut,1.0,ze,10000000,2810,,,,
+F_global*,"Monte-Carlo, Kerlink 10 %",1.0,département,,230055794,685.6,115263752,389345613,0.0
+F_global*,"Monte-Carlo, Kerlink 10 %",1.5,département,,153370529,457.0,76842502,259563742,0.0
+F_global*,"Monte-Carlo, Kerlink 10 %",2.0,département,,115027897,342.8,57631876,194672807,0.0
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,abomey_calavi,0,0,,0,40,0.822
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,allada,0,1540,,1020,2505,0.0
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,kpomasse,0,1835,,1225,2975,0.0
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,ouidah,0,695,,430,1175,0.0
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,so_ava,0,0,,0,0,1.0
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,toffo,0,2388,,1534,4006,0.0
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,tori_bossito,0,2588,,1755,4140,0.0
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,ze,0,2602,,1377,4786,0.0
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,abomey_calavi,10000000,0,,0,5,0.96
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,allada,10000000,1445,,922,2408,0.0
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,kpomasse,10000000,1698,,1085,2835,0.0
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,ouidah,10000000,625,,357,1103,0.0
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,so_ava,10000000,0,,0,0,1.0
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,toffo,10000000,2200,,1360,3831,0.0
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,tori_bossito,10000000,2330,,1517,3880,0.0
+f_ligne*,"Monte-Carlo, Kerlink 10 %",1.0,ze,10000000,2338,,1237,4399,0.0

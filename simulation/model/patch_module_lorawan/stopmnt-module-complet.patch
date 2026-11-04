@@ -1,0 +1,352 @@
+--- network-scheduler.h.orig	2026-10-27 02:34:51.299862994 +0100
++++ b/contrib/lorawan/model/network-scheduler.h	2026-10-28 21:13:12.000965263 +0100
+@@ -9,6 +9,11 @@
+ #ifndef NETWORK_SCHEDULER_H
+ #define NETWORK_SCHEDULER_H
+ 
++#include "ns3/nstime.h"
++#include "ns3/random-variable-stream.h"
++
++#include <deque>
++#include <vector>
+ #include "ns3/object.h"
+ #include "ns3/packet.h"
+ #include "ns3/traced-callback.h"
+@@ -75,6 +80,42 @@
+                                          //!< \todo Never called. Place calls in the right places.
+     Ptr<NetworkStatus> m_status;         //!< A pointer to the NetworkStatus object.
+     Ptr<NetworkController> m_controller; //!< A pointer to the NetworkController object.
++    // STOP-MNT (ajout local, desactive par defaut) : choix de la fenetre de
++    // reponse selon le bilan de liaison prevu en RX1.
++    bool m_rx1BudgetCheck = false;  //!< Passer en RX2 si RX1 ne porte pas
++    double m_edTxPowerDbm = 14;     //!< Puissance d'emission des noeuds (montante)
++    double m_gwRxGainDb = 0;        //!< Gain d'antenne passerelle en reception
++    double m_rx1PowerDbm = 14;      //!< Puissance d'emission passerelle en RX1
++    double m_rx1MarginDb = 0;       //!< Marge exigee en RX1
++    Time m_rx1Delay = Seconds(1);   //!< STOP-MNT : instant de la reponse RX1 apres reception
++    // STOP-MNT (ajout local, desactive par defaut) : remontee passerelle-serveur
++    // realiste (latence aleatoire, pics, retransmissions TCP, deduplication du
++    // serveur, estimation de l'aller-retour, rejet TOO_LATE de la passerelle).
++    bool m_bhModel = false;
++    double m_bhMedianMs = 20;       //!< mediane de la latence aller simple
++    double m_bhSigma = 0.5;         //!< ecart-type du logarithme (loi log-normale)
++    double m_bhSpikeProb = 0;       //!< probabilite d'un pic par trajet
++    double m_bhSpikeMinS = 1;       //!< bornes du retard d'un pic
++    double m_bhSpikeMaxS = 6;
++    double m_bhLossProb = 0;        //!< perte TCP par trajet, rattrapee apres un RTO
++    double m_bhRtoMs = 200;         //!< RTO minimal
++    double m_dedupMs = 200;         //!< attente de deduplication du serveur
++    double m_tooLateMs = 42.5;      //!< marge du JIT de la passerelle
++    uint32_t m_rttWindow = 20;      //!< echantillons d'aller-retour gardes
++    uint32_t m_rttMinSamples = 5;   //!< minimum pour utiliser l'estimation
++    std::deque<double> m_rttHist;   //!< aller-retours recents (s)
++    Ptr<UniformRandomVariable> m_bhUni;
++    Ptr<NormalRandomVariable> m_bhNorm;
++    double DrawOneWay();
++
++  public:
++    // Compteurs de la remontee (lus par le scenario en fin de run).
++    static uint32_t s_bhReplies;     //!< reponses a envoyer (accuses ou commandes)
++    static uint32_t s_bhRx1;         //!< parties en RX1
++    static uint32_t s_bhRx2Target;   //!< visees directement en RX2 (estimation trop longue)
++    static uint32_t s_bhRx2Fallback; //!< RX1 trop tard (TOO_LATE), rattrapees en RX2
++    static uint32_t s_bhLost;        //!< trop tard pour les deux fenetres
++    static std::vector<double> s_bhRtt; //!< aller-retours tires (s)
+ };
+ 
+ } // namespace lorawan
+--- network-scheduler.cc.orig	2026-10-27 02:34:51.299794745 +0100
++++ b/contrib/lorawan/model/network-scheduler.cc	2026-10-28 21:17:21.498927078 +0100
+@@ -7,6 +7,14 @@
+  */
+ 
+ #include "network-scheduler.h"
++#include "end-device-lora-phy.h"
++#include "ns3/boolean.h"
++#include "ns3/double.h"
++#include "ns3/nstime.h"
++#include "ns3/uinteger.h"
++
++#include <algorithm>
++#include <cmath>
+ 
+ #include "network-controller.h"
+ #include "network-status.h"
+@@ -22,6 +30,34 @@
+ 
+ NS_OBJECT_ENSURE_REGISTERED(NetworkScheduler);
+ 
++uint32_t NetworkScheduler::s_bhReplies = 0;
++uint32_t NetworkScheduler::s_bhRx1 = 0;
++uint32_t NetworkScheduler::s_bhRx2Target = 0;
++uint32_t NetworkScheduler::s_bhRx2Fallback = 0;
++uint32_t NetworkScheduler::s_bhLost = 0;
++std::vector<double> NetworkScheduler::s_bhRtt;
++
++// STOP-MNT : latence aller simple d'un message sur la remontee (s).
++double
++NetworkScheduler::DrawOneWay()
++{
++    if (!m_bhUni)
++    {
++        m_bhUni = CreateObject<UniformRandomVariable>();
++        m_bhNorm = CreateObject<NormalRandomVariable>();
++    }
++    double l = m_bhMedianMs / 1000.0 * std::exp(m_bhSigma * m_bhNorm->GetValue());
++    if (m_bhUni->GetValue() < m_bhLossProb)
++    {
++        l += m_bhRtoMs / 1000.0; // segment perdu : retransmis apres le RTO
++    }
++    if (m_bhUni->GetValue() < m_bhSpikeProb)
++    {
++        l += m_bhUni->GetValue(m_bhSpikeMinS, m_bhSpikeMaxS);
++    }
++    return l;
++}
++
+ TypeId
+ NetworkScheduler::GetTypeId()
+ {
+@@ -33,6 +69,48 @@
+                             "Trace source that is fired when a receive window opportunity happens.",
+                             MakeTraceSourceAccessor(&NetworkScheduler::m_receiveWindowOpened),
+                             "ns3::Packet::TracedCallback")
++            .AddAttribute("Rx1BudgetCheck",
++                          "STOP-MNT : repondre en RX2 quand le bilan prevu en RX1 ne porte pas",
++                          BooleanValue(false),
++                          MakeBooleanAccessor(&NetworkScheduler::m_rx1BudgetCheck),
++                          MakeBooleanChecker())
++            .AddAttribute("EdTxPowerDbm", "STOP-MNT : puissance d'emission des noeuds",
++                          DoubleValue(14), MakeDoubleAccessor(&NetworkScheduler::m_edTxPowerDbm),
++                          MakeDoubleChecker<double>())
++            .AddAttribute("GwRxGainDb", "STOP-MNT : gain d'antenne passerelle en reception",
++                          DoubleValue(0), MakeDoubleAccessor(&NetworkScheduler::m_gwRxGainDb),
++                          MakeDoubleChecker<double>())
++            .AddAttribute("Rx1PowerDbm", "STOP-MNT : puissance passerelle en RX1",
++                          DoubleValue(14), MakeDoubleAccessor(&NetworkScheduler::m_rx1PowerDbm),
++                          MakeDoubleChecker<double>())
++            .AddAttribute("Rx1MarginDb", "STOP-MNT : marge exigee en RX1",
++                          DoubleValue(0), MakeDoubleAccessor(&NetworkScheduler::m_rx1MarginDb),
++                          MakeDoubleChecker<double>())
++            .AddAttribute("BackhaulModel", "STOP-MNT : remontee realiste", BooleanValue(false),
++                          MakeBooleanAccessor(&NetworkScheduler::m_bhModel), MakeBooleanChecker())
++            .AddAttribute("BhMedianMs", "STOP-MNT : mediane de la latence aller simple (ms)", DoubleValue(20),
++                          MakeDoubleAccessor(&NetworkScheduler::m_bhMedianMs), MakeDoubleChecker<double>())
++            .AddAttribute("BhSigma", "STOP-MNT : ecart-type du log de la latence", DoubleValue(0.5),
++                          MakeDoubleAccessor(&NetworkScheduler::m_bhSigma), MakeDoubleChecker<double>())
++            .AddAttribute("BhSpikeProb", "STOP-MNT : probabilite d'un pic", DoubleValue(0),
++                          MakeDoubleAccessor(&NetworkScheduler::m_bhSpikeProb), MakeDoubleChecker<double>())
++            .AddAttribute("BhSpikeMinS", "STOP-MNT : pic, borne basse (s)", DoubleValue(1),
++                          MakeDoubleAccessor(&NetworkScheduler::m_bhSpikeMinS), MakeDoubleChecker<double>())
++            .AddAttribute("BhSpikeMaxS", "STOP-MNT : pic, borne haute (s)", DoubleValue(6),
++                          MakeDoubleAccessor(&NetworkScheduler::m_bhSpikeMaxS), MakeDoubleChecker<double>())
++            .AddAttribute("BhLossProb", "STOP-MNT : perte TCP par trajet", DoubleValue(0),
++                          MakeDoubleAccessor(&NetworkScheduler::m_bhLossProb), MakeDoubleChecker<double>())
++            .AddAttribute("BhRtoMs", "STOP-MNT : RTO minimal (ms)", DoubleValue(200),
++                          MakeDoubleAccessor(&NetworkScheduler::m_bhRtoMs), MakeDoubleChecker<double>())
++            .AddAttribute("DedupMs", "STOP-MNT : attente de deduplication (ms)", DoubleValue(200),
++                          MakeDoubleAccessor(&NetworkScheduler::m_dedupMs), MakeDoubleChecker<double>())
++            .AddAttribute("TooLateMs", "STOP-MNT : marge JIT de la passerelle (ms)", DoubleValue(42.5),
++                          MakeDoubleAccessor(&NetworkScheduler::m_tooLateMs), MakeDoubleChecker<double>())
++            .AddAttribute("RttWindow", "STOP-MNT : aller-retours gardes", UintegerValue(20),
++                          MakeUintegerAccessor(&NetworkScheduler::m_rttWindow), MakeUintegerChecker<uint32_t>())
++            .AddAttribute("Rx1Delay", "STOP-MNT : delai entre la reception au serveur et la reponse RX1",
++                          TimeValue(Seconds(1)), MakeTimeAccessor(&NetworkScheduler::m_rx1Delay),
++                          MakeTimeChecker())
+             .SetGroupName("lorawan");
+     return tid;
+ }
+@@ -70,13 +148,84 @@
+         // Extract the address
+         LoraDeviceAddress deviceAddress = receivedFrameHdr.GetAddress();
+ 
++        int window = 1;
++        Time when = m_rx1Delay;
++        if (m_bhModel)
++        {
++            // STOP-MNT : remontee realiste. Instants relatifs a la fin de la
++            // montante a la passerelle. Le serveur recoit apres Lu, attend la
++            // deduplication, choisit la fenetre d'apres son estimation de
++            // l'aller-retour (90e centile des derniers, comme The Things
++            // Stack) ; la reponse arrive apres Ld. La passerelle la rejette si
++            // elle arrive moins de TooLateMs avant l'emission (TOO_LATE,
++            // jitqueue.c) ; la fenetre suivante est alors tentee (elements
++            // RX1 puis RX2 d'une descendante ChirpStack).
++            double lu = DrawOneWay();
++            double ld = DrawOneWay();
++            double est = 0.0;
++            if (m_rttHist.size() >= m_rttMinSamples)
++            {
++                std::vector<double> h(m_rttHist.begin(), m_rttHist.end());
++                std::sort(h.begin(), h.end());
++                est = h[std::min<size_t>(h.size() - 1, (size_t)std::ceil(0.9 * h.size()) - 1)];
++            }
++            m_rttHist.push_back(lu + ld);
++            while (m_rttHist.size() > m_rttWindow)
++            {
++                m_rttHist.pop_front();
++            }
++            s_bhRtt.push_back(lu + ld);
++            double margin = m_tooLateMs / 1000.0;
++            double w1 = m_rx1Delay.GetSeconds();
++            double w2 = w1 + 1.0;
++            double proc = m_dedupMs / 1000.0;
++            double aEst = lu + proc + est / 2.0;
++            double a = lu + proc + ld;
++            // Le statut du noeud est mis a jour apres l'appel du planificateur :
++            // on lit le type de trame (montante confirmee = accuse a envoyer).
++            bool needs = receivedMacHdr.GetFType() == LorawanMacHeader::CONFIRMED_DATA_UP;
++            int target = (aEst + margin <= w1) ? 1 : ((aEst + margin <= w2) ? 2 : 0);
++            if (target == 1 && a + margin <= w1)
++            {
++                window = 1;
++            }
++            else if (target >= 1 && a + margin <= w2)
++            {
++                window = 2;
++            }
++            else
++            {
++                window = 3; // trop tard pour les deux fenetres : pas de reponse
++            }
++            if (needs)
++            {
++                s_bhReplies++;
++                if (window == 1)
++                {
++                    s_bhRx1++;
++                }
++                else if (window == 2 && target == 1)
++                {
++                    s_bhRx2Fallback++;
++                }
++                else if (window == 2)
++                {
++                    s_bhRx2Target++;
++                }
++                else
++                {
++                    s_bhLost++;
++                }
++            }
++            when = (window == 1) ? m_rx1Delay : m_rx1Delay + Seconds(1);
++        }
+         // Schedule OnReceiveWindowOpportunity event
+         m_status->GetEndDeviceStatus(packet)->SetReceiveWindowOpportunity(
+-            Simulator::Schedule(Seconds(1),
++            Simulator::Schedule(when,
+                                 &NetworkScheduler::OnReceiveWindowOpportunity,
+                                 this,
+                                 deviceAddress,
+-                                1)); // This will be the first receive window
++                                window));
+     }
+ }
+ 
+@@ -87,10 +236,38 @@
+ 
+     NS_LOG_DEBUG("Opening receive window number " << window << " for device " << deviceAddress);
+ 
++    // STOP-MNT : reponse arrivee trop tard pour les deux fenetres.
++    if (window == 3)
++    {
++        m_status->GetEndDeviceStatus(deviceAddress)->RemoveReceiveWindowOpportunity();
++        m_status->GetEndDeviceStatus(deviceAddress)->InitializeReply();
++        return;
++    }
++
+     // Check whether we can send a reply to the device, again by using
+     // NetworkStatus
+     Address gwAddress = m_status->GetBestGatewayForDevice(deviceAddress, window);
+ 
++    // STOP-MNT : si l'accuse en RX1 (meme debit que la montante, puissance
++    // RX1) n'atteindrait pas le noeud d'apres la perte du lien deduite de la
++    // puissance recue en montante, on saute RX1 et on vise RX2.
++    if (window == 1 && m_rx1BudgetCheck && gwAddress != Address())
++    {
++        Ptr<EndDeviceStatus> eds = m_status->GetEndDeviceStatus(deviceAddress);
++        std::map<double, Address> gws = eds->GetPowerGatewayMap();
++        if (!gws.empty())
++        {
++            double bestRx = gws.rbegin()->first;
++            double pathLoss = m_edTxPowerDbm + m_gwRxGainDb - bestRx;
++            uint8_t sf = eds->GetLastReceivedPacketInfo().sf;
++            double sens = EndDeviceLoraPhy::SENSITIVITY[std::min<int>(5, std::max<int>(0, sf - 7))];
++            if (m_rx1PowerDbm - pathLoss < sens + m_rx1MarginDb)
++            {
++                gwAddress = Address();
++            }
++        }
++    }
++
+     if (gwAddress == Address() && window == 1)
+     {
+         NS_LOG_DEBUG("No suitable gateway found for first window.");
+--- class-a-end-device-lorawan-mac.cc.orig	2026-10-27 23:36:24.772849215 +0100
++++ b/contrib/lorawan/model/class-a-end-device-lorawan-mac.cc	2026-10-27 23:36:24.793140546 +0100
+@@ -16,6 +16,7 @@
+ #include "lora-tag.h"
+ 
+ #include "ns3/simulator.h"
++#include "ns3/nstime.h"
+ 
+ namespace ns3
+ {
+@@ -32,7 +33,18 @@
+     static TypeId tid = TypeId("ns3::ClassAEndDeviceLorawanMac")
+                             .SetParent<EndDeviceLorawanMac>()
+                             .SetGroupName("lorawan")
+-                            .AddConstructor<ClassAEndDeviceLorawanMac>();
++                            .AddConstructor<ClassAEndDeviceLorawanMac>()
++                            // STOP-MNT (ajout local) : delais des fenetres de reception
++                            .AddAttribute("ReceiveDelay1",
++                                          "STOP-MNT : delai d'ouverture de RX1 apres l'emission",
++                                          TimeValue(Seconds(1)),
++                                          MakeTimeAccessor(&ClassAEndDeviceLorawanMac::m_receiveDelay1),
++                                          MakeTimeChecker())
++                            .AddAttribute("ReceiveDelay2",
++                                          "STOP-MNT : delai d'ouverture de RX2 apres l'emission",
++                                          TimeValue(Seconds(2)),
++                                          MakeTimeAccessor(&ClassAEndDeviceLorawanMac::m_receiveDelay2),
++                                          MakeTimeChecker());
+     return tid;
+ }
+ 
+--- logical-lora-channel-helper.h.orig	2026-10-27 23:37:30.923100779 +0100
++++ b/contrib/lorawan/model/logical-lora-channel-helper.h	2026-10-27 23:37:30.943059857 +0100
+@@ -134,8 +134,11 @@
+      * @param frequencyHz The frequency [Hz] we want to check.
+      * @return The SubBand the frequency belongs to, nullptr if none.
+      */
++  public: // STOP-MNT (ajout local) : rendu public pour regler la puissance RX2
+     Ptr<SubBand> GetSubBandFromFrequency(uint32_t frequencyHz) const;
+ 
++  private:
++
+     /**
+      * A vector of the SubBands that are currently registered within this helper.
+      */
+--- gateway-lora-phy.h.orig	2026-10-28 21:12:19.006038188 +0100
++++ b/contrib/lorawan/model/gateway-lora-phy.h	2026-10-28 21:13:12.000741223 +0100
+@@ -42,7 +42,9 @@
+     GatewayLoraPhy();           //!< Default constructor
+     ~GatewayLoraPhy() override; //!< Destructor
+ 
+-    static const double SENSITIVITY[6]; //!< The sensitivity vector of this gateway to different SFs
++    // STOP-MNT (ajout local) : non constante, pour regler la sensibilite de la
++    // generation de concentrateur simulee (SX1302 au lieu de SX1301).
++    static double SENSITIVITY[6]; //!< The sensitivity vector of this gateway to different SFs
+ 
+     // Forward LoraPhy's pure virtual function
+     void Send(Ptr<Packet> packet,
+--- gateway-lora-phy.cc.orig	2026-10-28 21:12:19.007346494 +0100
++++ b/contrib/lorawan/model/gateway-lora-phy.cc	2026-10-28 21:13:12.000820866 +0100
+@@ -122,7 +122,7 @@
+ // Sensitivity (from SX1301 datasheet)
+ // {SF7, SF8, SF9, SF10, SF11, SF12}
+ // These sensitivities are for a bandwidth of 125000 Hz
+-const double GatewayLoraPhy::SENSITIVITY[6] = {-130.0, -132.5, -135.0, -137.5, -140.0, -142.5};
++double GatewayLoraPhy::SENSITIVITY[6] = {-130.0, -132.5, -135.0, -137.5, -140.0, -142.5};
+ 
+ bool
+ GatewayLoraPhy::IsTransmitting() const

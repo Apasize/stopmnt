@@ -1,0 +1,2169 @@
+{
+  "_description": "Source de verite machine de la simulation LoRaWAN STOP-MNT. Forme JSON de la table des hypotheses. Aucune valeur ne doit vivre ailleurs que dans ce fichier. La table markdown reste la reference humaine et sourcee.",
+  "_version": "1.0",
+  "_date": "2026-10-26",
+  "_cible": "ns-3.48 + module lorawan signetlabdei 0.3.7",
+  "radio": {
+    "_commentaire": "Famille B de la table. Constantes techniques connues.",
+    "frequence_mhz": 868.0,
+    "bande_passante_khz": 125,
+    "coding_rate": "4/5",
+    "puissance_emission_dbm": 14.0,
+    "duty_cycle_pct": 1.0,
+    "politique_sf": "bilan_de_liaison",
+    "horizon_radio": {
+      "actif": true,
+      "en_simulation": false,
+      "_commentaire_application": "actif : l'horizon est pris en compte. en_simulation false : il n'est PAS dans la chaine de pertes ns-3, il est applique dans l'analyse (analyse_portee.py) qui masque les bandes au-dela de d_horizon avant de calculer le rayon fiable et de tracer. Decision auteur du 2026-10-25, remplace la coupure en simulation.",
+      "coefficient_km": 4.12,
+      "perte_au_dela_db": 300.0,
+      "_source": "Horizon radio avec refraction atmospherique standard, Terre de rayon effectif 4/3 : d_horizon_km = 4,12 (sqrt(h_passerelle_m) + sqrt(h_noeud_m)). Avec 15 m et 1,5 m, 21,0 km. Au-dela, pas de reception. perte_au_dela_db ne sert que si en_simulation vaut true (valeur sentinelle sans sens physique). Modele a une pente et exposants conserves, pas de modele a deux pentes (sur l'eau le LoRa atteint des dizaines de km). Decision auteur du 2026-10-25. Reference bibliographique precise a epingler par l'auteur.",
+      "en_simulation_multi_passerelles": true,
+      "_commentaire_multi": "Decision P (2026-10-26) : horizon coupe lien par lien en simulation pour les experiences a plusieurs passerelles ; la portee (une passerelle) garde l'horizon en analyse."
+    },
+    "_commentaire_propagation": "Depuis le 2026-10-25, la perte de reference n'est plus globale : chaque zone porte son ancrage (distance_reference_m, perte_reference_db) et son exposant, tires d'une seule source publiee. PL(d) = perte_reference_db + 10 n log10(d / distance_reference_m) + ombrage + vegetation eventuelle. La valeur globale de 31,2 dB a 1 m (espace libre) est remplacee.",
+    "adr_actif": false,
+    "_commentaire_sf": "Decouvert le 2026-10-25 : l'ADR du module 0.3.7 est actif par defaut (serveur et noeuds) et tournait sans avoir ete choisi. Il modifiait debit et puissance via les descendantes : jusqu'a la moitie des trames sous la sensibilite pour des noeuds fixes tres emetteurs. Choix provisoire a valider : ADR desactive, SF fixe par bilan de liaison vers la meilleure passerelle (SetSpreadingFactorsUp), equivalent a un ADR ideal pour des noeuds fixes au canal deterministe. A rediscuter pour la mobilite.",
+    "canaux_separes": true,
+    "_commentaire_canaux": "Le canal du module programme un evenement de reception pour chaque radio a chaque emission (cout en N^2) : un run de 6400 noeuds depassait 10 min. Canaux separes : montantes livrees aux seules passerelles, descendantes aux seuls noeuds. Valide le 2026-10-25 sur 800 noeuds, melange de profils et alertes : resultats identiques a une trame pres (1 trame sur 15970, acquittements d'alerte identiques), 6 fois plus rapide. Effet de bord : plus d'interference des montantes d'autres noeuds sur les fenetres de reception d'un noeud, ce que l'inversion IQ isole deja en LoRaWAN reel et que le module ignore.",
+    "politique_sf_mobiles": "oracle",
+    "_commentaire_sf_mobiles": "Decision R (2026-10-26) : oracle = SF recalcule par bilan de liaison avant chaque envoi, BORNE HAUTE d'un ADR ideal, a etiqueter comme telle. L'ADR reel converge lentement (arXiv 1808.09286) ; variante 'adr' (ADR du module) en sensibilite dans le scenario a.",
+    "correlation_ombrage_entre_sites": 0.5,
+    "_source_correlation_sites": "3GPP TR 36.942, coefficient 0,5 entre sites, repris par TR 36.825, 36.826, 36.809, 37.840, 36.885 (verifie dans ces rapports). Decision P (2026-10-26) : defaut 0,5, balaye 0,3 a 0,7 en multi-passerelles.",
+    "distance_reference_extrapolee_m": 100.0,
+    "_source_extrapolation": "Consignes v6, consequence de la perte en interieur (2026-10-28) : avec 14,2 dB en interieur et la sensibilite SX1302, le rayon de dimensionnement de l'urbain passe sous 1 km, ou le log-distance de ns-3 gardait la perte constante a PL(1 km) (v5 : d0 = 1 km, rayon nul). Loi de chaque zone extrapolee jusqu'a 100 m, meme exposant (PL(100 m) = PL(1 km) - 10 n). Hors du domaine des mesures sources : PROPOSITION a valider par l'auteur. Au-dessus de 1 km, rien ne change.",
+    "correction_hauteur_db": 0.0,
+    "correction_hauteur_variantes_db": {
+      "15": -3.23,
+      "20": 0.0,
+      "30": 4.44
+    },
+    "_source_correction_hauteur": "3GPP TR 38.901, tableau 7.4.1-1, RMa NLOS, terme -(24,37 - 3,7 (h/h_BS)^2) log10(h_BS), h = 5 m, valable pour h_BS de 10 a 150 m ; calcule depuis la hauteur de calibration (20 m) : a 15 m, perte + 3.23 dB ; a 30 m, perte 4.44 dB (correction_hauteur_db = gain de bilan, signe oppose). Okumura-Hata (terme -13,82 log h_b, domaine 30 a 200 m) n'est pas utilise : 15 et 20 m sont hors de son domaine. Variante, pas de simulation."
+  },
+  "trafic": {
+    "_commentaire": "Famille A. Cadence de mesure, pas d'emission. Le comportement store-and-forward fait que l'emission reelle depend du reseau.",
+    "mesures_par_jour": 10,
+    "mesures_par_jour_plage": [
+      2,
+      20
+    ],
+    "octets_par_mesure": 20,
+    "octets_par_mesure_plage": [
+      12,
+      40
+    ],
+    "entete_lorawan_octets": 13,
+    "entete_ajoute_par_module_octets": 9,
+    "mic_non_modelise_octets": 4,
+    "_commentaire_taille": "Trame reelle a l'antenne = charge + entete LoRaWAN = 20 + 13 = 33 octets. Le module ajoute lui-meme 9 octets (MHDR 1, FHDR et FPort 8) mais ne modelise pas le MIC de 4 octets. La taille passee au modele est donc charge + MIC = 24 octets, pour retomber sur 33 octets a l'antenne. Decision auteur du 2026-10-25.",
+    "regime_fiabilite": "non_confirme",
+    "regime_fiabilite_options": [
+      "non_confirme",
+      "confirme",
+      "differencie"
+    ],
+    "periode_emission_s": 8640,
+    "_commentaire_periode": "8640 s = une emission groupee toutes les 2,4 h si 10 mesures reparties sur 24 h. Variable balayee par l'experience de capacite.",
+    "messages_par_jour_cible": 10,
+    "messages_par_jour_majore": 15,
+    "_commentaire_cadence": "Decision de l'auteur du 2026-10-27 : un patient envoie environ 10 messages par jour (alerte comprise), majore a 15 pour couvrir les aleas, cas exceptionnels et rattrapages du store-and-forward. Le melange de profils de base n'en donne que 7 : les cadences de tous les profils sont multipliees par un meme facteur (orchestrateur, ctx messages_par_jour)."
+  },
+  "passerelle": {
+    "_commentaire": "Famille D. Le nombre de chemins de reception est le vrai goulot (saturation), sourcé SX130x.",
+    "chemins_reception": 8,
+    "chemins_reception_plage": [
+      3,
+      16
+    ],
+    "nb_passerelles": 1,
+    "hauteur_antenne_m": 20.0,
+    "sensibilite_dbm_sf7_a_sf12": [
+      -127.0,
+      -129.0,
+      -132.5,
+      -135.5,
+      -138.0,
+      -141.0
+    ],
+    "_source_sensibilite": "Consignes v6, point 1 (2026-10-28). Ancienne valeur (v5) : -130 a -142,5 dBm, valeurs du module lorawan 0.3.7 = chiffre commercial de la SX1301 ('jusqu'a -142,5 dBm'), pas son tableau (fiche SX1301 v2.4, juin 2017, tableau 12 : -126,5 a -139,5 dBm). Nouvelle valeur : fiche SX1302 rev. 1.1, janvier 2020, tableau 3-6, frontal SX1250, paquets de 12 octets, 10 % de PER (static6.arrow.com/.../sx1302imltrt.pdf) ; valeurs transmises par l'auteur, PDF non relu depuis cette machine (telechargement impossible). Page produit Semtech 2026 : 'jusqu'a -141 dBm' pour SX1302 et SX1303. Appliquee au module par l'argument gwSens (GatewayLoraPhy::SENSITIVITY rendu modifiable, ajout local).",
+    "gain_antenne_dbi": 8.0,
+    "gain_antenne_dbi_plage": [
+      3.0,
+      8.0
+    ],
+    "_source_gain": "Decision de l'auteur du 2026-10-27 : 5 dBi central, fiche officielle RAK RAKARG18 (863-870 MHz, 5,0 dBi a 868 MHz, 48 cm, pour passerelles RAK7289/RAK7240, docs.rakwireless.com). Sensibilite : 3 dBi (antenne fibre de verre Dragino, annonce revendeur, fiche non lue) et 8 dBi (Taoglas OMB.868.B08F21, fiche officielle lue : 8 dBi crete, ouverture verticale 13 deg, 1,47 m). Gain applique en reception passerelle seulement : la puissance rayonnee des descendantes est plafonnee par la reglementation (limites ARCEP a sourcer). L'antenne est independante de la marque de passerelle.",
+    "fenetres_reception": {
+      "_commentaire": "Consignes v4, points 10 et 13 (2026-10-27). Valeurs de base identiques au module lorawan 0.3.7 : RX1 1 s apres la fin de la montante, RX2 1 s plus tard, 869,525 MHz a 27 dBm (sous-bande ETSI 869,4-869,65 MHz du module), remontee point a point de 2 ms dans le modele. Surchargeables par experience ou balayage.",
+      "rx1_delai_s": 5.0,
+      "_source_rx1": "LoRaWAN Regional Parameters, EU863-870 : RECEIVE_DELAY1 = 1 s par defaut, RECEIVE_DELAY2 = RECEIVE_DELAY1 + 1 s. Valeur codee dans class-a-end-device-lorawan-mac.cc du module.",
+      "puissance_rx2_dbm": 27.0,
+      "_source_rx2": "Sous-bande 869,4-869,65 MHz a 500 mW PAR et 10 % (ETSI EN 300 220 / recommandation CEPT 70-03), codee dans lorawan-mac-helper.cc du module. La decision ARCEP 2020-320 ne fixe aucune puissance : 27 dBm non confirme pour le Benin.",
+      "latence_remontee_ms": 2.0,
+      "_source_latence": "Valeur du modele (lien point a point passerelle-serveur). Le serveur anticipe la latence au-dela de 2 ms (comme un serveur reel avec l'horodatage du packet forwarder), voir lorawan-cell-shadow.cc.",
+      "puissance_rx2_scenario_dbm": 14.0,
+      "rx1_delai_plage_s": [
+        1.0,
+        5.0
+      ],
+      "rx1_delai_s_v6": 1.0,
+      "_decision_rx1": "Decision de l'auteur du 29/10/2026 (complement v6.1) : RX1 a 5 s en cas central (remontee cellulaire). Ancienne valeur : 1 s (LoRaWAN Regional Parameters, defaut)."
+    },
+    "sensibilite_dbm_sf7_a_sf12_v5": [
+      -130.0,
+      -132.5,
+      -135.0,
+      -137.5,
+      -140.0,
+      -142.5
+    ],
+    "decalage_sensibilite_plage_db": [
+      0.0,
+      3.0
+    ],
+    "_source_decalage": "Consignes v6 : nos trames depassent 12 octets ; sensibilite degradee de 0 a 3 dB (decalage ajoute aux valeurs SX1302, positif = moins sensible).",
+    "remontee_modele": {
+      "actif": true,
+      "latence_mediane_aller_ms": 19.5,
+      "ecart_type_log": 0.5,
+      "probabilite_pic": 0.01,
+      "probabilite_pic_plage": [
+        0.0,
+        0.01,
+        0.05
+      ],
+      "pic_s": [
+        1.0,
+        6.0
+      ],
+      "perte_tcp": 0.01,
+      "rto_min_ms": 200.0,
+      "deduplication_ms": 200.0,
+      "too_late_ms": 42.5,
+      "estimation_aller_retour": "90e centile des 20 derniers, au moins 5",
+      "_source": "Consignes v6, point 3. Ancienne valeur (v5) : lien point a point de 2 ms sans perte ni gigue, et le serveur anticipait toute latence (lorawan-cell-shadow.cc : Rx1Delay du planificateur = rx1Delay - 2 x (latence - 2 ms)), donc aucun accuse ne pouvait arriver trop tard. Nouveau modele (planificateur du module, ajout local) : latence aller simple log-normale de mediane 19,5 ms = la moitie des 39 ms de latence mobile moyenne au Benin au 1er semestre 2026 (nPerf, relaye par La Nouvelle Tribune et Sikafinance, juillet 2026 ; nPerf mesure un aller-retour), ecart-type du log 0,5 (HYPOTHESE) ; pics de 1 a 6 s avec probabilite 0, 1 ou 5 % par trajet (reperes : Harinda et al., Computers 11(2):25, 2022, remontee mobile souvent au-dela de 1,5 s ; The Things Stack, 5 s avec une remontee LTE ; valeurs transmises par l'auteur) ; perte TCP rattrapee apres le RTO minimal de 200 ms (Linux, TCP_RTO_MIN = HZ/5, include/net/tcp.h), probabilite 1 % par trajet (HYPOTHESE) ; deduplication du serveur 200 ms (ChirpStack, deduplication_delay par defaut, chirpstack.toml) ; estimation de l'aller-retour par le 90e centile des 20 derniers, au moins 5 (The Things Stack, page 'Gateway RTT') ; rejet si la reponse arrive moins de 42,5 ms avant l'emission (sx1302_hal, jitqueue.c : TX_START_DELAY 1500 + TX_MARGIN_DELAY 1000 + TX_JIT_DELAY 40000 us), puis essai de la fenetre suivante (elements RX1 puis RX2 d'une descendante ChirpStack)."
+    },
+    "gain_antenne_dbi_v61": 5.0,
+    "_decision_gain_v62": "Decision de l'auteur (complement v6.2, 29/10/2026) : antenne de 8 dBi en reference. Antennes reelles a fiche lue ou publiee a 868 MHz : Taoglas OMB.868.B08F21 (8 dBi, ouverture verticale 13 deg), Delock 12504 (860-870 MHz, 8 dBi), Sirio SPO 868-8 N-f ; prix releves environ 42 EUR HT (JC Antenna JCF868-8, DigiKey) a 70 $ (RAK). Prix de l'antenne inchange dans le cout (69,90 EUR, du meme ordre). Pas de double comptage : Petajajarvi et al., ITST 2015, eq. (1), calcule la perte a partir du RSSI, du SNR, de la PIRE de l'emetteur et du gain du recepteur (2 dBi) : le gain de reception est ajoute au calcul, donc retire de la perte, qui est mesuree d'antenne isotrope a antenne isotrope (section de mesure relue le 29/10/2026, cc.oulu.fi/~kmikhayl/site-assets/pdfs/2015_ITST.pdf).",
+    "hauteur_antenne_m_v61": 15.0,
+    "_source_hauteur_v62": "Complement v6.2 : hauteur centrale = hauteur de calibration. Petajajarvi et al., ITST 2015, section III.A : antenne biconique Aerial D100-1000 de 2 dBi, 'located at the University of Oulu antenna tower', '24 m from sea-level' ; noeud a environ 2 m du sol. La hauteur au-dessus du sol n'est pas publiee et l'altitude du site n'a pas ete trouvee : 20 m est une HYPOTHESE (plage : quelques metres a 24 m). Ancienne valeur : 15 m."
+  },
+  "noeud": {
+    "hauteur_antenne_m": 1.5,
+    "energie": {
+      "tension_v": 3.3,
+      "courant_sommeil_a": 1e-07,
+      "courant_attente_a": 0.0014,
+      "courant_reception_a": 0.0108,
+      "emission_rendement_ampli": 0.45275,
+      "emission_courant_base_a": 0.014646,
+      "_source": "Valeurs du module lorawan 0.3.7 (exemple lorawan-energy-model-example.cc, d'apres la fiche SX1272 ; modele d'emission lineaire LinearLoraTxCurrentModel, coefficients tires de la fiche SX1272/73 Rev. 4, janvier 2019, selon le module). Non reverifiees dans la fiche elle-meme. Le PHY est mis en sommeil a t = 0 (le module le laisse en attente jusqu'a la premiere emission)."
+    },
+    "sensibilite_dbm_sf7_a_sf12": [
+      -124.0,
+      -127.0,
+      -130.0,
+      -133.0,
+      -135.0,
+      -137.0
+    ],
+    "_source_sensibilite": "Consignes v6, point 1 : le pont du projet utilise une RAK4631, donc une SX1262. Fiche Semtech DS_SX1261-2 rev. 1.2, juin 2019, tableau 3-8 (gain de reception renforce, 125 kHz) : -124 dBm en SF7 et -137 dBm en SF12, seules valeurs donnees a 125 kHz ; identiques aux bornes du module (SX1272). Les SF intermediaires (-127, -130, -133, -135) restent celles du module (non donnees par la fiche SX1262). Valeurs inchangees.",
+    "interieur": {
+      "perte_dimensionnement_db": 14.219,
+      "fraction_temps": 1.0,
+      "fraction_temps_plage": [
+        0.5,
+        0.7,
+        0.9,
+        1.0
+      ],
+      "perte_plage_db": [
+        0.0,
+        10.0,
+        14.0,
+        20.0,
+        25.0
+      ],
+      "p2109_traditionnel": {
+        "r": 12.64,
+        "s": 3.72,
+        "t": 0.96,
+        "u": 9.6,
+        "v": 2.0,
+        "w": 9.1,
+        "x": -3.0,
+        "y": 4.5,
+        "z": -2.0
+      },
+      "_calcul": "UIT-R P.2109, batiment traditionnel, incidence horizontale (theta = 0), mediane (P = 0,5) ; coefficients du tableau 6.6.3-1 de 3GPP TR 38.811 (itecspec.com/3gpp/38.811/s/6.6.3). f en GHz : L_h = r + s log f + t (log f)^2 ; mu2 = w + x log f ; L = 10 log10(10^(L_h/10) + 10^(mu2/10) + 10^(-3/10)). A 0,868 GHz : log f = -0,0615 ; L_h = 12,64 - 0,229 + 0,004 = 12,415 dB ; mu2 = 9,1 + 0,185 = 9,285 dB ; L = 10 log10(17,44 + 8,48 + 0,50) = 14.219 dB. A 0,9 GHz : 14.24 dB ; a 1,8 GHz : 14.84 dB. Controle prevu : Anderson, NTIA, 2024 (non relu ici).",
+      "_application": "Consignes v6, point 2. Ancienne valeur (v5) : aucune perte en interieur (calibration mesuree avec un emetteur dehors). Meme perte a la montee et a la descente (maillon IndoorLossModel, chaque extremite noeud a l'interieur), et au bilan cellulaire a frequence corrigee. Le pont est porte par le patient : calendrier quotidien d'une plage dehors de (1 - fraction) x 24 h, entre 6 h et 22 h, dedans le reste du temps (HYPOTHESE de forme, aucune enquete emploi du temps beninoise trouvee). PROPOSITION, a valider par l'auteur : dimensionnement avec le pont a l'interieur (fraction 1, cas des alertes a domicile, pire cas) ; fractions 0,5, 0,7, 0,9 en continuite.",
+      "_controle": "Controle (recherche-cellulaire-benin.md, section 5) : 80e centile P.2109 = 21,2 dB a 900 MHz ; Anderson (NTIA, 2024) : 14,8 dB en moyenne a 1,755 GHz, ecart-type 8,8 dB. Mesures ouest-africaines de faible qualite (Akanni et al., AZOJETE 17(3), 2021, Ilorin) : environ 12 dB sous la tole, 2,6 dB sous le chaume : l'habitat rural pourrait perdre moins que la mediane P.2109."
+    }
+  },
+  "zones": {
+    "_commentaire": "Famille C, calibration sourcee de l'auteur du 2026-10-25. Regle : chaque zone ancree sur une seule source, modele complet (d0, perte a d0, exposant, ombrage) ; l'exces de perte est soit dans une reference haute, soit dans un terme separe, selon la source. References publiees, PAS des mesures beninoises : exposant et perte de reference sont balayables (plages), l'incertitude devient un resultat. Limite assumee : pas de modele numerique de terrain ; un modele de type UIT-R P.1812 est cite en travaux futurs.",
+    "urbain_dense": {
+      "libelle": "Urbain dense (ex. Abomey-Calavi)",
+      "distance_reference_m": 1000,
+      "perte_reference_db": 132.4,
+      "path_loss_exponent": 1.58,
+      "shadowing_sigma_db": 9.9,
+      "_source": "Bonn, 'Path Loss in Urban LoRa Networks: A Large-Scale Measurement Study', arXiv 2109.07768 : n = 1,58, PL(1 km) = 132,41 dB, sigma = 9,9 dB (verifie dans le texte). Les auteurs attribuent l'exposant faible au relief varie de Bonn.",
+      "path_loss_exponent_plage": [
+        1.58,
+        3.3
+      ],
+      "perte_reference_db_plage": null,
+      "rayon_cellule_m": 2000,
+      "distance_decorrelation_ombrage_m": 50,
+      "_source_decorrelation": "3GPP TR 38.901 tableau 7.5-6, UMa NLOS. Valeurs lues dans ns-3 (three-gpp-propagation-loss-model.cc), qui cite ce tableau. Choix LOS/NLOS par zone : proposition a valider.",
+      "shadowing_sigma_db_plage": [
+        7.9,
+        11.9
+      ],
+      "_source_sigma_plage": "Plage de plus ou moins 2 dB validee par l'auteur le 2026-10-28. Justification : ecart entre les campagnes sources, 7,8 dB (Petajajarvi, sol) a 9,9 dB (Bonn, urbain)."
+    },
+    "peri_urbain": {
+      "libelle": "Peri-urbain / suburbain",
+      "distance_reference_m": 1000,
+      "perte_reference_db": 129.0,
+      "path_loss_exponent": 2.32,
+      "shadowing_sigma_db": 8.5,
+      "_source": "Decision de l'auteur du 2026-10-28 (retour sur la v4) : abandon de l'exposant interpole n = 1,9. Exposant et perte a 1 km du rural degage (Petajajarvi et al., ITST 2015, table IV, cas sol : n = 2,32, 129 dB), ecart-type d'ombrage 8,5 dB garde. Ancienne valeur : n = 1,9 (interpolation entre Bonn et Oulu), plage 1,7 a 2,5.",
+      "path_loss_exponent_plage": [
+        2.0,
+        2.5
+      ],
+      "perte_reference_db_plage": null,
+      "rayon_cellule_m": 4000,
+      "distance_decorrelation_ombrage_m": 50,
+      "_source_decorrelation": "3GPP TR 38.901 tableau 7.5-6, UMa NLOS (assimilation a valider). Valeurs lues dans ns-3 (three-gpp-propagation-loss-model.cc), qui cite ce tableau. Choix LOS/NLOS par zone : proposition a valider.",
+      "shadowing_sigma_db_plage": [
+        6.5,
+        10.5
+      ],
+      "_source_sigma_plage": "Plage de plus ou moins 2 dB validee par l'auteur le 2026-10-28. Justification : ecart entre les campagnes sources, 7,8 dB (Petajajarvi, sol) a 9,9 dB (Bonn, urbain)."
+    },
+    "rural_degage": {
+      "libelle": "Rural degage",
+      "distance_reference_m": 1000,
+      "perte_reference_db": 129.0,
+      "path_loss_exponent": 2.32,
+      "shadowing_sigma_db": 7.8,
+      "_source": "Petajajarvi et al., ITST 2015, table IV, cas sol (voiture) : B = 128,95 dB a d0 = 1 km, n = 2,32, sigma = 7,8 dB (verifie dans le texte).",
+      "path_loss_exponent_plage": [
+        2.0,
+        2.5
+      ],
+      "perte_reference_db_plage": null,
+      "rayon_cellule_m": 6000,
+      "distance_decorrelation_ombrage_m": 120,
+      "_source_decorrelation": "3GPP TR 38.901 tableau 7.5-6, RMa NLOS. Valeurs lues dans ns-3 (three-gpp-propagation-loss-model.cc), qui cite ce tableau. Choix LOS/NLOS par zone : proposition a valider.",
+      "shadowing_sigma_db_plage": [
+        5.8,
+        9.8
+      ],
+      "_source_sigma_plage": "Plage de plus ou moins 2 dB validee par l'auteur le 2026-10-28. Justification : ecart entre les campagnes sources, 7,8 dB (Petajajarvi, sol) a 9,9 dB (Bonn, urbain)."
+    },
+    "rural_arbore": {
+      "libelle": "Rural arbore (terrain decouvert + vegetation, bande)",
+      "distance_reference_m": 1000,
+      "perte_reference_db": 129.0,
+      "path_loss_exponent": 2.32,
+      "shadowing_sigma_db": 7.8,
+      "_source": "Decision V de l'auteur (2026-10-26) : comptage unique de la vegetation. Base = terrain decouvert, Petajajarvi et al. ITST 2015 table IV cas sol (B = 128,95 dB a 1 km, n = 2,32, sigma = 7,8 dB), plus un terme de vegetation dependant de la distance. Pereira 2024 (PMC10935028, n = 2,75 avec la vegetation dans l'exposant) n'est plus l'ancrage : son exposant compte deja la vegetation.",
+      "path_loss_exponent_plage": [
+        2.0,
+        2.5
+      ],
+      "perte_reference_db_plage": null,
+      "vegetation": {
+        "actif": true,
+        "modele": "A(d) = densite x Am [1 - exp(-c f^a d^b / Am)] ; Am = A1 f^alpha (UIT-R P.833-10 par. 2.1, saturation) ; croissance c f^a d^b du modele ITU ancien (CCIR 1986 : c = 0,2, a = 0,3, b = 0,6, f en MHz, d en m), valable sous 400 m. La densite multiplie la croissance et la saturation.",
+        "coef_croissance_db": 0.2,
+        "exposant_frequence": 0.3,
+        "exposant_distance": 0.6,
+        "A1_db": 0.18,
+        "alpha": 0.752,
+        "_source_A1_alpha": "P.833-10 : mesures 900-1800 MHz, parc d'arbres tropicaux, Rio de Janeiro. Am = 29,2 dB a 868 MHz, densite 1.",
+        "_source_croissance": "La formule 0,2 f^0,3 d^0,6 est le modele ITU ancien (CCIR 1986), pas la P.833-10 ; repris comme terme ITU-R dans Rowhani Sistani et al., arXiv 2604.19427 (verger d'oliviers, validite d < 400 m, RMSE 28 dB sur leurs mesures). Au-dela d'environ 140 m le terme est sature : aux distances LoRa, c'est la densite x Am qui fixe la portee.",
+        "balayage_densite": [
+          0.05,
+          0.1,
+          0.2,
+          0.35,
+          0.5,
+          0.75,
+          1.0
+        ],
+        "densite_centrale": 0.35,
+        "_commentaire_densite": "Revue du 2026-10-27 (point 4) : densite centrale portee de 0,1 (Am 2,9 dB, rayon fiable 5,3 km a 5 dBi, au-dessus de la cible 2-4 km) a 0,2 (Am 5,8 dB, environ 3,9 km a 5 dBi). Reperes : 5,45 a 9,32 dB d'attenuation par couronne de palmier (palmeraie, Malaisie, 433 MHz, PMC9317254) ; environ 25 dB qui sature au-dela de 400 m en foret tropicale (923 MHz, PMC13210814). Palmeraie et savane arboree beninoises : 5 a 10 dB, soit densite 0,2 a 0,35 ; bande gardee de 0,05 a 1 ; foret dense environ 0,85 (25 dB).",
+        "densite_variante": 0.2,
+        "_decision_densite_v5": "Decision de l'auteur du 2026-10-28 (retour sur la v4) : densite centrale 0,35, variante 0,2. Ancienne valeur centrale 0,2 (v4)."
+      },
+      "rayon_cellule_m": 4000,
+      "distance_decorrelation_ombrage_m": 120,
+      "_source_decorrelation": "3GPP TR 38.901 tableau 7.5-6, RMa NLOS. Valeurs lues dans ns-3 (three-gpp-propagation-loss-model.cc), qui cite ce tableau. Choix LOS/NLOS par zone : proposition a valider.",
+      "shadowing_sigma_db_plage": [
+        5.8,
+        9.8
+      ],
+      "_source_sigma_plage": "Plage de plus ou moins 2 dB validee par l'auteur le 2026-10-28. Justification : ecart entre les campagnes sources, 7,8 dB (Petajajarvi, sol) a 9,9 dB (Bonn, urbain)."
+    },
+    "lacustre": {
+      "libelle": "Lacustre / bord d'eau (prudence reflexion sur l'eau)",
+      "distance_reference_m": 1000,
+      "perte_reference_db": 126.4,
+      "path_loss_exponent": 1.76,
+      "shadowing_sigma_db": 8.0,
+      "_source": "Petajajarvi et al., ITST 2015, table IV, cas eau (bateau) : B = 126,43 dB a d0 = 1 km, n = 1,76, sigma = 8,0 dB (verifie dans le texte).",
+      "path_loss_exponent_plage": [
+        1.76,
+        2.0
+      ],
+      "perte_reference_db_plage": null,
+      "rayon_cellule_m": 5000,
+      "distance_decorrelation_ombrage_m": 37,
+      "_source_decorrelation": "3GPP TR 38.901 tableau 7.5-6, RMa LOS (eau degagee). Valeurs lues dans ns-3 (three-gpp-propagation-loss-model.cc), qui cite ce tableau. Choix LOS/NLOS par zone : proposition a valider.",
+      "shadowing_sigma_db_plage": [
+        6.0,
+        10.0
+      ],
+      "_source_sigma_plage": "Plage de plus ou moins 2 dB validee par l'auteur le 2026-10-28. Justification : ecart entre les campagnes sources, 7,8 dB (Petajajarvi, sol) a 9,9 dB (Bonn, urbain)."
+    },
+    "_commentaire_reference": "Le log-distance de ns-3 garde la perte constante a PL(d0) sous d0 (propagation-loss-model.cc, ligne 497) : pour les zones ancrees a 1 km, un noeud a moins de 1 km subit PL(1 km). Prudent, sans effet sur la portee ; les modeles d'Oulu et de Bonn ne sont de toute facon pas valables sous 1 km."
+  },
+  "methode": {
+    "_commentaire": "Famille G. Regles de simulation Monte Carlo.",
+    "repetitions": 20,
+    "repetitions_plage": [
+      10,
+      30
+    ],
+    "graine_base": 1,
+    "duree_simulee_jours": 2,
+    "warmup_jours": 0.25,
+    "seuil_acceptabilite_pdr": 0.95,
+    "repetitions_validation": 10,
+    "_commentaire_repetitions": "Decision M de l'auteur : 10 repetitions pour la validation, 20 pour les chiffres de production. Moins de 10 rend la borne basse de l'IC 95 % inutilisable (quantile de Student).",
+    "regle_repetitions": {
+      "exploratoire": 5,
+      "minimum_chiffre_annonce": 10,
+      "demi_largeur_max_livraison": 0.01,
+      "demi_largeur_max_rayon_relative": 0.05,
+      "_source": "Consignes v4, point 4 (retour des encadrants, 2026-10-27) : 5 repetitions pour les balayages exploratoires ; pour chaque chiffre annonce, repeter jusqu'a une demi-largeur d'IC 95 % sous 1 point de livraison (ou 5 % du rayon), minimum 10. Controle par analyse/controle_repetitions.py."
+    }
+  },
+  "experiences": {
+    "_commentaire": "Famille experiences. Chaque entree decrit un balayage. L'orchestrateur Python lit ces definitions, ne touche jamais au modele.",
+    "capacite": {
+      "actif": true,
+      "description": "Patients tenus par passerelle a qualite de service egale, cellule isolee, sur un melange de profils. La fraction du profil intensif est le parametre de stress.",
+      "balayage_nb_noeuds": [
+        50,
+        100,
+        200,
+        400,
+        800,
+        1600,
+        2400,
+        3200,
+        6400
+      ],
+      "arret_adaptatif_pdr": 0.0,
+      "placement": "disque_uniforme",
+      "rayon_placement": "rayon_fiable_theorique",
+      "_commentaire_rayon": "Noeuds places dans le rayon fiable theorique de la zone (cellule isolee), pour mesurer la capacite et non la couverture. A faible charge, le taux mesure la part de couverture ; la degradation avec la charge mesure la capacite.",
+      "profils": true,
+      "balayage_fraction_intensif": [
+        0.0,
+        0.1,
+        0.25,
+        0.5
+      ],
+      "zones": [
+        "urbain_dense",
+        "peri_urbain",
+        "rural_degage",
+        "rural_arbore",
+        "lacustre"
+      ],
+      "mode_confirmation": "mixte",
+      "_commentaire_modes": "Modes : tout_non_confirme (alerte comprise, meme trafic sans acquittement), mixte (routine non confirmee, alerte confirmee), tout_confirme (routine et alerte confirmees). L'experience capacite tourne en mixte avec la fraction intensive balayee ; capacite_modes compare les trois modes au melange de base."
+    },
+    "portee": {
+      "actif": true,
+      "description": "Taux de livraison par bande de distance et rayon fiable par zone, ombrage actif. Charge moderee : on mesure la portee, pas la capacite. Figure de la section 5.4.",
+      "balayage_nb_noeuds": [
+        400
+      ],
+      "arret_adaptatif_pdr": 0.0,
+      "placement": "distance_uniforme",
+      "_commentaire_placement": "distance_uniforme : distance a la passerelle tiree uniformement entre 0 et le rayon de test, angle uniforme. Chaque bande de distance recoit autant de noeuds, ce qui donne la meme precision sur toute la courbe. disque_uniforme : densite uniforme par surface, comme capacite, mais les bandes proches sont presque vides. A valider par l'auteur.",
+      "nb_bandes_distance": 20,
+      "zones": [
+        "urbain_dense",
+        "peri_urbain",
+        "rural_degage",
+        "rural_arbore",
+        "lacustre"
+      ],
+      "rayon_test_facteur_rayon_fiable": 2.5,
+      "_commentaire_rayon": "Decision L : rayon de test = 2,5 x rayon fiable theorique de la zone (bilan de liaison).",
+      "balayer_densite_vegetation": true,
+      "_commentaire_vegetation": "Pour une zone a vegetation, la portee est simulee pour chaque densite de vegetation.balayage_densite (bande). Les autres experiences prennent la densite centrale.",
+      "balayage_gain_antenne_dbi": [
+        3.0,
+        5.0,
+        8.0
+      ],
+      "_commentaire_gain": "Portee simulee pour chaque gain d'antenne de passerelle (central 5 dBi, sensibilite 3 et 8)."
+    },
+    "multi_passerelles": {
+      "actif": true,
+      "description": "Plusieurs passerelles, noeuds fixes : diversite de reception (une montante entendue par plusieurs passerelles), deduplication au serveur, gain de livraison apporte par les passerelles voisines.",
+      "balayage_nb_noeuds": [
+        200
+      ],
+      "arret_adaptatif_pdr": 0.0,
+      "placement": "disque_uniforme",
+      "passerelles": {
+        "nombre": 7,
+        "disposition": "hexagonale",
+        "_commentaire": "Pavage : une passerelle centrale et six voisines a distance s. Noeuds dans la cellule centrale (disque de rayon s / racine(3), rayon circonscrit de l'hexagone). Mesure la fiabilite dans un reseau pave en fonction de l'espacement ; densite de passerelles = 2 / (racine(3) s^2)."
+      },
+      "zones": [
+        "urbain_dense",
+        "peri_urbain",
+        "rural_degage",
+        "rural_arbore",
+        "lacustre"
+      ],
+      "balayage_espacement_facteur_rayon_fiable": [
+        1.0,
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "_commentaire_espacement": "Decision N : espacement balaye, c'est un resultat. Etendu jusqu'a 6 rayons fiables : la validation montre une tenue jusqu'a 3 a 6 avec la diversite.",
+      "balayage_correlation_sites": [
+        0.3,
+        0.5,
+        0.7
+      ],
+      "_commentaire_correlation": "Decision P : correlation de l'ombrage entre sites balayee de 0,3 a 0,7 autour du defaut 3GPP 0,5, car l'espacement tenu, donc le cout, en depend."
+    },
+    "fiabilite": {
+      "actif": false,
+      "description": "Comparaison non confirme / confirme / differencie a charge croissante.",
+      "balayage_nb_noeuds": [
+        100,
+        400,
+        1600
+      ],
+      "regimes": [
+        "non_confirme",
+        "confirme"
+      ],
+      "zones": [
+        "peri_urbain"
+      ]
+    },
+    "sensibilite_propagation": {
+      "actif": true,
+      "description": "Balayage de l'exposant et/ou de la perte de reference par zone, pour produire la bascule sur une plage et non sur une valeur. Les valeurs balayees viennent des plages de chaque zone (path_loss_exponent_plage, perte_reference_db_plage).",
+      "parametre": "path_loss_exponent",
+      "_commentaire_parametre": "path_loss_exponent ou perte_reference_db.",
+      "nb_points": 5,
+      "_commentaire_nb_points": "Nombre de valeurs reparties uniformement sur la plage de la zone, bornes comprises.",
+      "experience_de_base": "portee",
+      "_commentaire_base": "Experience dont on reprend placement, rayon de test et nombre de noeuds.",
+      "balayage_nb_noeuds": [
+        400
+      ],
+      "arret_adaptatif_pdr": 0.0,
+      "zones": [
+        "urbain_dense",
+        "peri_urbain",
+        "rural_degage",
+        "rural_arbore",
+        "lacustre"
+      ]
+    },
+    "mobilite": {
+      "actif": true,
+      "description": "Trois scenarios de patients mobiles, sur fond de patients fixes. Traces par trame et par mesure des mobiles (analyse/analyse_mobilite.py).",
+      "noeuds_fixes": 50,
+      "cadence_instrumentation_s": 300,
+      "_commentaire_cadence": "Cadence des mobiles choisie pour echantillonner finement le trajet, pas un profil clinique. A faible charge, la probabilite de livraison en un point ne depend pas de la cadence. 300 s respecte le cycle de service en SF12.",
+      "duree_simulee_jours": 1,
+      "vitesse_m_s": 1.4,
+      "_commentaire_vitesse": "Marche a pied (ordre de grandeur usuel, a sourcer si cite).",
+      "scenarios": {
+        "a_trajet": {
+          "zone": "rural_degage",
+          "mobiles": 20,
+          "trajet_en_rayons_fiables": [
+            [
+              -2.0,
+              0
+            ],
+            [
+              2.0,
+              0
+            ]
+          ],
+          "decalage_s": 1800,
+          "politiques_sf": [
+            "fixe",
+            "sf12",
+            "oracle",
+            "adr"
+          ]
+        },
+        "b_equidistant": {
+          "zone": "rural_degage",
+          "mobiles": 10,
+          "passerelles_espacement_facteur_rayon_fiable": 1.5,
+          "trajet_en_rayons_fiables": [
+            [
+              0,
+              -1.0
+            ],
+            [
+              0,
+              1.0
+            ],
+            [
+              0,
+              -1.0
+            ]
+          ],
+          "decalage_s": 600,
+          "alertes_par_jour_instrumentation": 144
+        },
+        "c_debordement": {
+          "zone": "rural_arbore",
+          "mobiles": 10,
+          "trajet_en_rayons_fiables": [
+            [
+              0,
+              0
+            ],
+            [
+              8.0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "decalage_s": 900,
+          "store_and_forward": [
+            false,
+            true
+          ]
+        }
+      },
+      "repetitions": 5
+    },
+    "capacite_modes": {
+      "actif": true,
+      "description": "Experience centrale (decision U) : capacite et cout du confirme, trois modes de confirmation compares a trafic identique, melange de base. La regle 'confirme reserve a l'alerte' doit sortir de cette comparaison.",
+      "experience_de_base": "capacite",
+      "balayage_modes_confirmation": [
+        "tout_non_confirme",
+        "mixte",
+        "mixte_rx2",
+        "tout_confirme",
+        "tout_confirme_rx2"
+      ],
+      "balayage_fraction_intensif": [
+        0.1
+      ],
+      "mesure_energie": true,
+      "palier_max_par_mode": {
+        "tout_confirme": 2400,
+        "tout_confirme_rx2": 3200,
+        "mixte": 3200,
+        "mixte_rx2": 3200
+      },
+      "_commentaire_palier_max": "Decision du 2026-10-27 (delai de redaction) : au-dela de ces paliers le mode est deja sature en urbain (mesure), les runs y sont les plus longs. On mesure finement le tout confirme la ou il tient (50 a 2400).",
+      "_commentaire_rx2": "Modes _rx2 (2026-10-27) : le serveur repond en RX2 (869,525 MHz, 27 dBm, sous-bande a 10 %) quand le bilan prevu en RX1 (meme debit, 14 dBm) n'atteint pas le noeud, d'apres la perte deduite de la puissance recue en montante. Option ajoutee localement au module (NetworkScheduler::Rx1BudgetCheck, desactivee par defaut). Levier pour rendre le tout confirme viable : teste en urbain a 5 dBi, 200 patients, 3 repetitions : accuses 88 -> 98,6 %, delai p95 383 -> 13 s, energie 1,24 -> 0,64 J/jour."
+    },
+    "capacite_longue": {
+      "actif": true,
+      "description": "Confirmation des points de capacite retenus par une simulation longue de 7 jours (decision U), une repetition par zone et par mode, antenne 5 dBi.",
+      "experience_de_base": "capacite_modes",
+      "duree_simulee_jours": 7,
+      "repetitions": 1,
+      "points_retenus": {
+        "tout_confirme_rx2": 300,
+        "mixte_rx2": 1600
+      },
+      "_commentaire": "Points retenus d'apres capacite_modes_5dBi (croisements : tout confirme RX2 280 a 470 patients, mixte RX2 1600 a 1900). Lance par orchestrateur/longue_7j.sh."
+    },
+    "capacite_cadence": {
+      "actif": true,
+      "description": "Capacite a 10 et 15 messages par patient et par jour (decision de l'auteur), modes cles, deux zones extremes, antenne 5 dBi. Sert a corriger les capacites a 7 messages par jour de capacite_modes_5dBi.",
+      "experience_de_base": "capacite_modes",
+      "zones": [
+        "urbain_dense",
+        "rural_degage"
+      ],
+      "balayage_modes_confirmation": [
+        "tout_non_confirme",
+        "mixte_rx2",
+        "tout_confirme_rx2"
+      ],
+      "balayage_messages_par_jour": [
+        10,
+        15
+      ],
+      "balayage_nb_noeuds": [
+        50,
+        100,
+        200,
+        400,
+        800,
+        1600,
+        3200,
+        6400
+      ],
+      "palier_max_par_mode": {
+        "tout_confirme_rx2": 1600,
+        "mixte_rx2": 3200
+      },
+      "repetitions": 10
+    },
+    "sensibilite_rx2_nbtrans": {
+      "actif": true,
+      "description": "Revue critique du 2026-10-27 : (3) marge de 6 et 10 dB sur la decision RX1 contre RX2 (0 dB = prevision parfaite, meilleur cas) ; (6) routine confirmee a 2 et 3 transmissions au lieu de 8. 10 messages par jour, deux zones extremes, 10 repetitions.",
+      "experience_de_base": "capacite_cadence",
+      "balayage_messages_par_jour": [
+        10
+      ],
+      "balayage_modes_confirmation": [
+        "tout_confirme_rx2",
+        "mixte_rx2"
+      ],
+      "balayage_marge_rx1_db": [
+        0,
+        6,
+        10
+      ],
+      "balayage_nbtrans_routine": [
+        2,
+        3,
+        8
+      ],
+      "balayage_nb_noeuds": [
+        50,
+        100,
+        200,
+        400,
+        800,
+        1600
+      ],
+      "palier_max_par_mode": {
+        "tout_confirme_rx2": 1600,
+        "mixte_rx2": 1600
+      },
+      "repetitions": 10
+    },
+    "robustesse_panne": {
+      "actif": true,
+      "description": "Consignes v4, point 1 (retour des encadrants) : pavage hexagonal a 7 passerelles, la passerelle centrale tombe ; part des patients de la cellule centrale encore servis par les six voisines, en fonction de l'espacement. Meme tirage avec et sans panne (nombres aleatoires communs).",
+      "experience_de_base": "multi_passerelles",
+      "balayage_espacement_facteur_rayon_fiable": [
+        1.0,
+        1.5,
+        2.0,
+        2.5,
+        3.0,
+        3.5,
+        4.0
+      ],
+      "balayage_correlation_sites": [
+        0.5
+      ],
+      "balayage_panne_centrale": [
+        0,
+        1
+      ],
+      "repetitions": 20
+    },
+    "reglementaire_rx2_14dbm": {
+      "actif": true,
+      "description": "Consignes v4, point 10 : RX2 a 14 dBm simule (la decision ARCEP 2020-320 ne fixe pas de puissance), contre 27 dBm a tirage identique.",
+      "experience_de_base": "capacite_cadence",
+      "balayage_messages_par_jour": [
+        10
+      ],
+      "balayage_modes_confirmation": [
+        "tout_confirme_rx2",
+        "mixte_rx2"
+      ],
+      "balayage_puissance_rx2_dbm": [
+        27,
+        14
+      ],
+      "balayage_nb_noeuds": [
+        50,
+        100,
+        200,
+        400,
+        800,
+        1600
+      ],
+      "palier_max_par_mode": {
+        "tout_confirme_rx2": 1600,
+        "mixte_rx2": 1600
+      },
+      "repetitions": 10
+    },
+    "delai_rx1_5s": {
+      "actif": true,
+      "description": "Consignes v4, point 13 : delai RX1 de 5 s (remontee cellulaire), contre 1 s a tirage identique ; effet sur le delai d'accuse et la capacite.",
+      "experience_de_base": "capacite_cadence",
+      "balayage_messages_par_jour": [
+        10
+      ],
+      "balayage_modes_confirmation": [
+        "tout_confirme_rx2",
+        "mixte_rx2"
+      ],
+      "balayage_rx1_delai_s": [
+        1,
+        5
+      ],
+      "balayage_nb_noeuds": [
+        50,
+        100,
+        200,
+        400,
+        800,
+        1600
+      ],
+      "palier_max_par_mode": {
+        "tout_confirme_rx2": 1600,
+        "mixte_rx2": 1600
+      },
+      "repetitions": 10
+    },
+    "capacite_longue_v4": {
+      "actif": true,
+      "description": "Consignes v4, point 6 : simulation longue de 7 jours a 10 messages par jour, 5 repetitions par zone et par mode (au lieu d'une), au voisinage des capacites retenues. Verification du regime et du tampon de 72 h.",
+      "experience_de_base": "capacite_cadence",
+      "balayage_messages_par_jour": [
+        10
+      ],
+      "balayage_modes_confirmation": [
+        "tout_confirme_rx2",
+        "mixte_rx2"
+      ],
+      "duree_simulee_jours": 7,
+      "repetitions": 5,
+      "points_retenus": {
+        "tout_confirme_rx2": 200,
+        "mixte_rx2": 1600
+      }
+    },
+    "sensibilite_ombrage": {
+      "actif": true,
+      "description": "Consignes v4, point 7 : sensibilite du rayon fiable (methode probit) a l'ecart-type d'ombrage par zone, plage de la zone (shadowing_sigma_db_plage), antenne 5 dBi, densite de vegetation centrale.",
+      "experience_de_base": "sensibilite_propagation",
+      "parametre": "shadowing_sigma_db",
+      "nb_points": 3,
+      "balayer_densite_vegetation": false,
+      "balayage_gain_antenne_dbi": [
+        5.0
+      ],
+      "repetitions": 20
+    },
+    "robustesse_panne_fin": {
+      "actif": true,
+      "description": "Consignes v4, point 1 : affinage au pas de 0,1 de l'espacement tenu en panne de la centrale (le pas de 0,5 de robustesse_panne donne une marge trop grossiere).",
+      "experience_de_base": "robustesse_panne",
+      "balayage_espacement_facteur_rayon_fiable": [
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.6,
+        2.7,
+        2.8,
+        2.9,
+        3.1,
+        3.2,
+        3.3,
+        3.4,
+        3.6,
+        3.7,
+        3.8,
+        3.9
+      ],
+      "balayage_panne_centrale": [
+        1
+      ],
+      "repetitions": 20
+    },
+    "portee_v4": {
+      "actif": true,
+      "description": "Consignes v4, point 4 : rayon fiable central (5 dBi, densite de vegetation centrale) repete jusqu'a une demi-largeur d'IC 95 % sous 5 % du rayon. Le controle a 20 repetitions demandait jusqu'a 108 repetitions (lacustre) : 100 repetitions par zone.",
+      "experience_de_base": "portee",
+      "balayer_densite_vegetation": false,
+      "balayage_gain_antenne_dbi": [
+        5.0
+      ],
+      "repetitions": 100
+    },
+    "portee_v5": {
+      "actif": true,
+      "description": "Retour v4 (2026-10-28) : rayon fiable du peri-urbain (n = 2,32) et de l'arbore (densite 0,35), 100 repetitions, 5 dBi.",
+      "experience_de_base": "portee_v4",
+      "zones": [
+        "peri_urbain",
+        "rural_arbore"
+      ],
+      "repetitions": 100
+    },
+    "multi_passerelles_v5": {
+      "actif": true,
+      "description": "Retour v4 : espacement tenu du peri-urbain et de l'arbore apres recalibration.",
+      "experience_de_base": "multi_passerelles",
+      "zones": [
+        "peri_urbain",
+        "rural_arbore"
+      ]
+    },
+    "robustesse_panne_v5": {
+      "actif": true,
+      "description": "Retour v4 : marge de robustesse du peri-urbain et de l'arbore apres recalibration, pas de 0,1.",
+      "experience_de_base": "robustesse_panne",
+      "zones": [
+        "peri_urbain",
+        "rural_arbore"
+      ],
+      "balayage_espacement_facteur_rayon_fiable": [
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8,
+        2.9,
+        3.0,
+        3.1,
+        3.2,
+        3.3,
+        3.4,
+        3.5,
+        3.6,
+        3.7,
+        3.8,
+        3.9,
+        4.0
+      ],
+      "repetitions": 20
+    },
+    "capacite_v5": {
+      "actif": true,
+      "description": "Retour v4 : capacite a 10 messages par jour du peri-urbain et de l'arbore recalibres, modes cles.",
+      "experience_de_base": "capacite_cadence",
+      "zones": [
+        "peri_urbain",
+        "rural_arbore"
+      ],
+      "balayage_messages_par_jour": [
+        10
+      ],
+      "balayage_modes_confirmation": [
+        "tout_non_confirme",
+        "mixte_rx2",
+        "tout_confirme_rx2"
+      ],
+      "repetitions": 10
+    },
+    "capacite_rx2_14dbm_descendante": {
+      "actif": true,
+      "description": "Point 7 (2026-10-28) : tout confirme RX2 avec RX2 a 14 dBm, cellule dimensionnee sur la voie descendante (rayon ou l'accuse RX2 SF12 a 14 dBm arrive a 95 %). Capacite et taux d'accuses dans ces cellules.",
+      "experience_de_base": "capacite_cadence",
+      "zones": [
+        "urbain_dense",
+        "peri_urbain",
+        "rural_degage",
+        "rural_arbore",
+        "lacustre"
+      ],
+      "balayage_messages_par_jour": [
+        10
+      ],
+      "balayage_modes_confirmation": [
+        "tout_confirme_rx2"
+      ],
+      "puissance_rx2_dbm": 14.0,
+      "rayon_placement": "descendant_rx2",
+      "balayage_nb_noeuds": [
+        50,
+        100,
+        200,
+        400,
+        800
+      ],
+      "palier_max_par_mode": {
+        "tout_confirme_rx2": 800
+      },
+      "repetitions": 10
+    },
+    "sfw_longue": {
+      "actif": true,
+      "description": "Retour v4 (2026-10-28, point 6) : tampon de 72 h du store-and-forward teste en charge. Patients fixes au palier de charge, store-and-forward sur tous les ponts, 10 patients mobiles qui sortent de la couverture (au-dela de l'horizon) pendant une pause de 48 h (en deca de l'autonomie) ou 96 h (au-dela), puis reviennent. Meme tirage avec et sans store-and-forward. Lance par orchestrateur/run_sfw_longue.py.",
+      "experience_de_base": "capacite_cadence",
+      "zones": [
+        "urbain_dense",
+        "rural_degage"
+      ],
+      "patients_fixes": [
+        200,
+        1600
+      ],
+      "messages_par_jour": 10,
+      "mode_confirmation": "mixte_rx2",
+      "mobiles": 10,
+      "decalage_mobiles_s": 1800,
+      "distance_hors_couverture_facteur_horizon": 1.2,
+      "pause_hors_couverture_h": [
+        48,
+        96
+      ],
+      "_commentaire_pause": "Le trajet est : point de depart a 0,3 rayon, pause, aller au-dela de l'horizon, pause, retour. La pause s'applique a chaque point : la premiere se passe en couverture. Hors couverture pendant environ pause + 5 h (traversee a 1,4 m/s).",
+      "duree_simulee_jours": 10,
+      "repetitions": 5
+    },
+    "sensibilite_exposant_v5": {
+      "actif": true,
+      "description": "Retour v4 : sensibilite a l'exposant du peri-urbain et de l'arbore recalibres (5 dBi, densite centrale), probit.",
+      "experience_de_base": "sensibilite_propagation",
+      "zones": [
+        "peri_urbain",
+        "rural_arbore"
+      ],
+      "balayer_densite_vegetation": false,
+      "balayage_gain_antenne_dbi": [
+        5.0
+      ],
+      "repetitions": 20
+    },
+    "sensibilite_ombrage_v5": {
+      "actif": true,
+      "description": "Retour v4 : sensibilite a l'ombrage du peri-urbain et de l'arbore recalibres, probit.",
+      "experience_de_base": "sensibilite_ombrage",
+      "zones": [
+        "peri_urbain",
+        "rural_arbore"
+      ],
+      "repetitions": 20
+    },
+    "portee_v6": {
+      "actif": true,
+      "description": "Consignes v6 : rayon fiable par zone avec la sensibilite SX1302 et le pont a l'interieur (14,2 dB, fraction 1), 100 repetitions.",
+      "experience_de_base": "portee_v4",
+      "repetitions": 100
+    },
+    "portee_interieur_v6": {
+      "actif": true,
+      "description": "Consignes v6, point 2 : rayon fiable selon la perte en interieur 0, 10, 14, 20, 25 dB (0 = comparaison v5 avec la sensibilite SX1302).",
+      "experience_de_base": "portee_v4",
+      "balayage_interieur_perte_db": [
+        0,
+        10,
+        14,
+        20,
+        25
+      ],
+      "repetitions": 20
+    },
+    "portee_sensibilite_v6": {
+      "actif": true,
+      "description": "Consignes v6, point 1 : sensibilite passerelle degradee de 0 a 3 dB (trames plus longues que les 12 octets de la fiche SX1302), pont a l'interieur. Le decalage s'ajoute a la sensibilite (+3 : -141 devient -138 dBm). Un premier essai a -3 dB (sensibilite amelioree, signe inverse) est ecarte.",
+      "experience_de_base": "portee_v4",
+      "balayage_decalage_sensibilite_db": [
+        0.0,
+        1.5,
+        3.0
+      ],
+      "repetitions": 20
+    },
+    "multi_passerelles_v6": {
+      "actif": true,
+      "description": "Consignes v6 : espacement tenu, nouveaux parametres.",
+      "experience_de_base": "multi_passerelles"
+    },
+    "robustesse_v6": {
+      "actif": true,
+      "description": "Consignes v6 : marge de robustesse, nouveaux parametres, pas de 0,1.",
+      "experience_de_base": "robustesse_panne",
+      "balayage_espacement_facteur_rayon_fiable": [
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8,
+        2.9,
+        3.0,
+        3.1,
+        3.2,
+        3.3,
+        3.4,
+        3.5,
+        3.6,
+        3.7,
+        3.8,
+        3.9,
+        4.0
+      ],
+      "repetitions": 20
+    },
+    "capacite_v6": {
+      "actif": true,
+      "description": "Consignes v6 : capacite par zone (lacustre simule) et par mode, 10 messages par jour, remontee realiste (pic 1 %), pont a l'interieur, sensibilite SX1302.",
+      "experience_de_base": "capacite_cadence",
+      "balayage_messages_par_jour": [
+        10
+      ],
+      "zones": [
+        "urbain_dense",
+        "peri_urbain",
+        "rural_degage",
+        "rural_arbore",
+        "lacustre"
+      ],
+      "balayage_modes_confirmation": [
+        "tout_non_confirme",
+        "mixte_rx2",
+        "tout_confirme_rx2"
+      ],
+      "balayage_nb_noeuds": [
+        50,
+        100,
+        200,
+        400,
+        800,
+        1600,
+        3200
+      ],
+      "palier_max_par_mode": {
+        "tout_confirme_rx2": 1600,
+        "mixte_rx2": 3200,
+        "tout_non_confirme": 3200
+      },
+      "repetitions": 10
+    },
+    "capacite_recap_v6": {
+      "actif": true,
+      "description": "Consignes v6, point 7 : mixte a recapitulatif quotidien, 4 jours simules (deux recapitulatifs au moins), mesures des 30 dernieres heures non evaluees pour l'exigence de 72 h.",
+      "experience_de_base": "capacite_cadence",
+      "balayage_messages_par_jour": [
+        10
+      ],
+      "zones": [
+        "urbain_dense",
+        "peri_urbain",
+        "rural_degage",
+        "rural_arbore",
+        "lacustre"
+      ],
+      "balayage_modes_confirmation": [
+        "mixte_recap_rx2"
+      ],
+      "balayage_nb_noeuds": [
+        50,
+        100,
+        200,
+        400,
+        800,
+        1600,
+        3200
+      ],
+      "palier_max_par_mode": {
+        "mixte_recap_rx2": 3200
+      },
+      "duree_simulee_jours": 4,
+      "exclure_dernieres_s": 108000,
+      "repetitions": 10
+    },
+    "remontee_v6": {
+      "actif": true,
+      "description": "Consignes v6, point 3 : remontee realiste, probabilite de pic 0, 1, 5 %, delai RX1 1 et 5 s, tout confirme et mixte RX2.",
+      "experience_de_base": "capacite_cadence",
+      "balayage_messages_par_jour": [
+        10
+      ],
+      "zones": [
+        "urbain_dense",
+        "rural_degage"
+      ],
+      "balayage_modes_confirmation": [
+        "tout_confirme_rx2",
+        "mixte_rx2"
+      ],
+      "balayage_pic_remontee": [
+        0.0,
+        0.01,
+        0.05
+      ],
+      "balayage_rx1_delai_s": [
+        1,
+        5
+      ],
+      "balayage_nb_noeuds": [
+        100,
+        200,
+        400,
+        800
+      ],
+      "palier_max_par_mode": {
+        "tout_confirme_rx2": 800,
+        "mixte_rx2": 800
+      },
+      "repetitions": 10
+    },
+    "alertes_rares_v6": {
+      "actif": true,
+      "description": "Consignes v6, point 5 : 0,03 alerte par patient et par jour en sensibilite (routine identique).",
+      "experience_de_base": "capacite_cadence",
+      "balayage_messages_par_jour": [
+        10
+      ],
+      "zones": [
+        "urbain_dense",
+        "rural_degage"
+      ],
+      "balayage_modes_confirmation": [
+        "tout_confirme_rx2",
+        "mixte_rx2",
+        "mixte_recap_rx2"
+      ],
+      "balayage_alertes_par_jour": [
+        0.03
+      ],
+      "balayage_nb_noeuds": [
+        100,
+        200,
+        400,
+        800,
+        1600
+      ],
+      "palier_max_par_mode": {
+        "tout_confirme_rx2": 1600,
+        "mixte_rx2": 1600,
+        "mixte_recap_rx2": 1600
+      },
+      "duree_simulee_jours": 4,
+      "exclure_dernieres_s": 108000,
+      "repetitions": 10
+    },
+    "continuite_interieur_v6": {
+      "actif": true,
+      "description": "Consignes v6, point 2 : part du temps a l'interieur 0,5 / 0,7 / 0,9 / 1, patients fixes dans la cellule dimensionnee, 200 patients, 4 jours ; routine en 72 h par patient et alertes emises a l'interieur, modes tout confirme, mixte, mixte a recapitulatif.",
+      "experience_de_base": "capacite_cadence",
+      "balayage_messages_par_jour": [
+        10
+      ],
+      "zones": [
+        "urbain_dense",
+        "peri_urbain",
+        "rural_degage",
+        "rural_arbore",
+        "lacustre"
+      ],
+      "balayage_modes_confirmation": [
+        "tout_confirme_rx2",
+        "mixte_rx2",
+        "mixte_recap_rx2"
+      ],
+      "balayage_interieur_fraction": [
+        0.5,
+        0.7,
+        0.9,
+        1.0
+      ],
+      "balayage_nb_noeuds": [
+        200
+      ],
+      "duree_simulee_jours": 4,
+      "exclure_dernieres_s": 108000,
+      "repetitions": 10
+    },
+    "capacite_rx2_14dbm_v6": {
+      "actif": true,
+      "description": "Consignes v6 : tout confirme RX2 a 14 dBm, cellule dimensionnee sur la voie descendante, nouveaux parametres.",
+      "experience_de_base": "capacite_rx2_14dbm_descendante",
+      "repetitions": 10
+    },
+    "multi_passerelles_ext_v6": {
+      "actif": true,
+      "description": "Consignes v6 : extension du balayage d'espacement en urbain (tenu au-dela de 6 rayons, borne du balayage de base).",
+      "experience_de_base": "multi_passerelles",
+      "zones": [
+        "urbain_dense"
+      ],
+      "balayage_espacement_facteur_rayon_fiable": [
+        6.0,
+        7.0,
+        8.0,
+        9.0,
+        10.0,
+        12.0
+      ]
+    },
+    "robustesse_ext_v6": {
+      "actif": true,
+      "description": "Consignes v6 : extension du balayage de panne au-dela de 4 rayons (urbain, lacustre).",
+      "experience_de_base": "robustesse_panne",
+      "zones": [
+        "urbain_dense",
+        "lacustre"
+      ],
+      "balayage_espacement_facteur_rayon_fiable": [
+        4.1,
+        4.2,
+        4.3,
+        4.4,
+        4.5,
+        4.6,
+        4.7,
+        4.8,
+        4.9,
+        5.0,
+        5.1,
+        5.2,
+        5.3,
+        5.4,
+        5.5,
+        5.6,
+        5.7,
+        5.8,
+        5.9,
+        6.0,
+        6.1,
+        6.2,
+        6.3,
+        6.4,
+        6.5,
+        6.6,
+        6.7,
+        6.8,
+        6.9,
+        7.0,
+        7.1,
+        7.2,
+        7.3,
+        7.4,
+        7.5,
+        7.6,
+        7.7,
+        7.8,
+        7.9,
+        8.0,
+        8.1,
+        8.2,
+        8.3,
+        8.4,
+        8.5,
+        8.6,
+        8.7,
+        8.8,
+        8.9,
+        9.0,
+        9.1,
+        9.2,
+        9.3,
+        9.4,
+        9.5,
+        9.6,
+        9.7,
+        9.8,
+        9.9,
+        10.0
+      ],
+      "repetitions": 20
+    },
+    "exigences_pavage_v6": {
+      "actif": true,
+      "description": "Consignes v6, point 6 : exigences (alertes 99 % en 15 min, routine 95 % en 72 h par patient) dans le reseau pave (7 passerelles, diversite), et non en cellule isolee. Patients avec profils dans la cellule centrale, 200 patients, 4 jours.",
+      "experience_de_base": "capacite_cadence",
+      "balayage_messages_par_jour": [
+        10
+      ],
+      "zones": [
+        "urbain_dense",
+        "peri_urbain",
+        "rural_degage",
+        "rural_arbore",
+        "lacustre"
+      ],
+      "balayage_modes_confirmation": [
+        "tout_confirme_rx2",
+        "mixte_recap_rx2"
+      ],
+      "passerelles": {
+        "nombre": 7,
+        "disposition": "hexagonale",
+        "_commentaire": "Pavage : une passerelle centrale et six voisines a distance s. Noeuds dans la cellule centrale (disque de rayon s / racine(3), rayon circonscrit de l'hexagone). Mesure la fiabilite dans un reseau pave en fonction de l'espacement ; densite de passerelles = 2 / (racine(3) s^2)."
+      },
+      "balayage_espacement_facteur_rayon_fiable": [
+        2.0,
+        3.0,
+        4.0
+      ],
+      "balayage_correlation_sites": [
+        0.5
+      ],
+      "balayage_nb_noeuds": [
+        200
+      ],
+      "duree_simulee_jours": 4,
+      "exclure_dernieres_s": 108000,
+      "repetitions": 10
+    },
+    "exigences_pavage_v61": {
+      "actif": true,
+      "description": "Complement v6.1 : exigences dans le reseau pave avec RX1 a 5 s (decision), tout confirme et mixte a recapitulatif, RX2 a 27 et 14 dBm (point 4), alertes en 5 min comptees (point 5) ; donnees par patient pour la voie de secours (point 2).",
+      "experience_de_base": "exigences_pavage_v6",
+      "balayage_modes_confirmation": [
+        "tout_confirme_rx2",
+        "mixte_recap_rx2"
+      ],
+      "balayage_puissance_rx2_dbm": [
+        27,
+        14
+      ],
+      "repetitions": 10
+    },
+    "portee_gain_v61": {
+      "actif": true,
+      "description": "Complement v6.1, point 3 : rayon fiable avec une antenne de passerelle de 8 et 9 dBi (pont a l'interieur, SX1302).",
+      "experience_de_base": "portee_v4",
+      "balayage_gain_antenne_dbi": [
+        8.0,
+        9.0
+      ],
+      "repetitions": 100
+    },
+    "alarme_deux_temps_v62": {
+      "actif": true,
+      "description": "Complement v6.2, point 7 : mixte a recapitulatif, RX2 a 14 dBm, alarme immediate contre alarme en deux temps (en attente du recapitulatif demande a la montee suivante), reseau pave.",
+      "experience_de_base": "exigences_pavage_v6",
+      "balayage_modes_confirmation": [
+        "mixte_recap_rx2"
+      ],
+      "balayage_puissance_rx2_dbm": [
+        14
+      ],
+      "balayage_alarme_deux_temps": [
+        0,
+        1
+      ],
+      "repetitions": 10
+    },
+    "parade_ouverture_v62": {
+      "actif": true,
+      "description": "Complement v6.2, point 4 : parade sans cellulaire, antenne du pont pres d'une ouverture : perte en interieur simulee 0, 5 et 14,2 dB, geometrie dimensionnee pour 14,2 dB ; memes tirages (patients suivis par numero).",
+      "experience_de_base": "exigences_pavage_v6",
+      "balayage_modes_confirmation": [
+        "mixte_recap_rx2"
+      ],
+      "balayage_interieur_simule_db": [
+        0.0,
+        5.0,
+        14.219
+      ],
+      "balayage_espacement_facteur_rayon_fiable": [
+        3.0,
+        4.0
+      ],
+      "repetitions": 10
+    }
+  },
+  "qualite_service": {
+    "_commentaire": "Decision U de l'auteur (2026-10-26). Meme definition pour LoRa et cellulaire. Sources : Van den Abeele et al. arXiv 1705.05899 ; Bor et al. arXiv 1610.04793 ; arXiv 2009.09397.",
+    "seuil_taux_patient": 0.95,
+    "critere_routine": "taux de livraison global du reseau (trames recues / trames produites, tous patients) : borne basse IC 95 % >= seuil_livraison_reseau",
+    "seuil_livraison_reseau": 0.95,
+    "_justification_seuil": "0,95, plus strict que le 0,90 courant de la litterature, justifie par l'usage sante.",
+    "garde_fou_par_patient": "5e percentile du taux par patient, montre a cote (pas un critere bloquant)",
+    "critere_confirme": "delai d'acquittement au 95e percentile (production -> acquittement, trame non acquittee = delai infini) <= plafond_delai_acquittement_s, plus energie rapportee",
+    "plafond_delai_acquittement_s": 60.0,
+    "_commentaire_criteres_par_mode": "tout_non_confirme : critere routine sur toutes les trames. mixte : critere routine sur la routine ET critere confirme sur l'alerte. tout_confirme : critere confirme sur toutes les trames (la livraison est rapportee, pas jugee).",
+    "fraction_patients_servis_min_abandonnee": 0.95,
+    "_abandon": "L'ancien critere '95 % des patients au-dessus de 95 %' est abandonne (decision U) : hors litterature et domine par le petit nombre de trames sur 2 jours.",
+    "plancher_p5_patient_espacement": 0.9,
+    "_commentaire_plancher_p5": "Revue critique du 2026-10-27 (point 5) : pour l'espacement des passerelles, la livraison globale ne suffit pas a proteger les patients du bord. Critere ajoute : 5e percentile du taux par patient >= 0,90 (95 % des patients recoivent au moins 90 % de leurs mesures). Les espacements dont la cellule depasse l'horizon radio (s / racine(3) > horizon) sont exclus.",
+    "part_servie_min_panne": 0.9,
+    "_source_part_servie_min_panne": "Consignes v4, point 1 (retour des encadrants du 2026-10-27) : au moins 90 % des patients couverts quand la passerelle centrale tombe.",
+    "exigences_v6": {
+      "routine_livree_72h_par_patient": 0.95,
+      "alerte_livree_15min": 0.99,
+      "alarme_technique_alerte_non_confirmee": 1.0,
+      "_source": "Consignes v6, point 6 (exigences de l'auteur).",
+      "alerte_delai_max_s": 300,
+      "_decision_delai": "Decision de l'auteur (complement v6.2) : delai d'alerte ramene a 5 min (ancienne valeur 15 min) ; mesure en v6.1 : la part livree en 5 min egale celle en 15 min a 0,05 point pres."
+    }
+  },
+  "profils_patients": {
+    "_commentaire": "Profils de trafic du pont agregateur (emission, pas mesure brute), sources par l'auteur le 2026-10-25. Les cadences et tailles source sont des plages ; la valeur nominale retenue ici est la BORNE HAUTE, prudente pour la capacite (proposition a valider). Taille = charge applicative LoRaWAN, la MAC ajoute l'en-tete.",
+    "profils": {
+      "routine": {
+        "libelle": "HTA 2x/j + vitaux IC/BPCO 1x/j",
+        "uplinks_par_jour": 4,
+        "uplinks_par_jour_plage": [
+          2,
+          4
+        ],
+        "octets_charge": 20,
+        "octets_charge_plage": [
+          15,
+          20
+        ],
+        "confirme": false,
+        "_source": "Remote Patient Monitoring for Heart Failure or COPD, Health PEI (1x/j) ; Home Blood Pressure Monitoring, VCU Health (2x/j)."
+      },
+      "intermediaire": {
+        "libelle": "Diabete, autosurveillance glycemique 1 a 4/j",
+        "uplinks_par_jour": 4,
+        "uplinks_par_jour_plage": [
+          2,
+          4
+        ],
+        "octets_charge": 15,
+        "octets_charge_plage": [
+          10,
+          15
+        ],
+        "confirme": false,
+        "_source": "Pratique clinique SMBG, citation formelle a epingler."
+      },
+      "intensif": {
+        "libelle": "Diabete, capteur continu toutes les 5 min, groupe en lots horaires",
+        "uplinks_par_jour": 24,
+        "uplinks_par_jour_plage": [
+          24,
+          24
+        ],
+        "octets_charge": 30,
+        "octets_charge_plage": [
+          25,
+          30
+        ],
+        "confirme": false,
+        "_source": "Specification constructeur courante des capteurs continus (5 min), citation formelle a epingler. Envoi groupe horaire."
+      }
+    },
+    "melange_base": {
+      "routine": 0.75,
+      "intermediaire": 0.15,
+      "intensif": 0.1
+    },
+    "profil_intensif": "intensif",
+    "_commentaire_melange": "Quand la fraction intensive est balayee, le reste est reparti entre les autres profils au prorata du melange de base.",
+    "alerte": {
+      "actif": true,
+      "libelle": "Franchissement de seuil, rare, superpose au profil de base, mode confirme",
+      "alertes_par_jour": 1.0,
+      "_commentaire_taux": "Decision T (2026-10-26) : 1 par patient et par jour, majorant volontaire pour le test de charge, cliniquement plus rare.",
+      "octets_charge": 12,
+      "_commentaire_taille": "Decision T : 12 octets.",
+      "nb_transmissions_max": 8,
+      "_commentaire_nbtrans": "Decision T : 8 transmissions maximum.",
+      "profils_concernes": [
+        "routine",
+        "intermediaire",
+        "intensif"
+      ],
+      "differer_routine_pendant_alerte": true,
+      "_commentaire_differer": "Decision T : routine differee pendant l'alerte (la MAC du module ecrase la trame en cours).",
+      "alertes_par_jour_sensibilite": 0.03,
+      "_source_sensibilite": "Consignes v6, point 5 : 0,03 alerte par patient et par jour en sensibilite. Lee et al., JAMA Netw Open 2022;5(1):e2143590 : 552 alertes pour 162 patients sur 16 semaines, soit 552 / (162 x 112) = 0,030 (suivi complet suppose ; calcul de l'auteur, article non relu ici). 1 par jour garde pour le dimensionnement (pire cas)."
+    },
+    "mobilite_par_defaut": "ancre",
+    "_commentaire_mobilite": "Attribut ancre ou debordant, exploite par les experiences de mobilite (fraction de debordants).",
+    "confirmation": {
+      "nb_transmissions_routine_confirmee": 8,
+      "_commentaire": "En tout confirme, la routine prend le meme nombre maximal de transmissions que l'alerte (8), pour comparer a bases egales. Choix a valider.",
+      "garde_routine_confirmee_s": 7200,
+      "_commentaire_garde": "Securite : une routine confirmee sans issue apres ce delai est comptee perdue. Le module signale normalement l'issue ; le nombre de gardes declenchees est rapporte (ligne ACK) pour verifier qu'il reste nul.",
+      "file_d_attente": "La MAC du module ecrase toute trame en cours. Le pont attend l'issue d'une trame confirmee avant d'envoyer la suivante (file), comme une pile LoRaWAN reelle ; une routine interrompue par une alerte est remise en tete de file.",
+      "marge_rx1_db": 0.0,
+      "_commentaire_marge_rx1": "Marge exigee pour repondre en RX1. 0 dB : l'ombrage etant reciproque dans le modele, la prevision est exacte. En reel, une marge de quelques dB serait prudente (a balayer si le temps le permet)."
+    },
+    "recapitulatif": {
+      "echeance_h": 24,
+      "echeance_variante_h": 12,
+      "demande_pont_h": 26,
+      "alarme_h": 48,
+      "tampon_h": 72,
+      "remplissage_alarme": 0.9,
+      "masque_trames": 32,
+      "octets_descendante": 6,
+      "_source": "Consignes v6, point 7 : mixte a recapitulatif quotidien (mode mixte_recap_rx2). Emulation : la premiere montee apres l'echeance part confirmee avec une seule transmission ; la descendante qui la suit tient lieu de recapitulatif (le module n'envoie pas de charge applicative descendante : les 6 octets du recapitulatif ne sont pas comptes dans le temps d'antenne). Les mesures manquantes du masque des 32 dernieres trames sont renvoyees sans accuse, en lots espaces de 300 s. Litterature : Marais, Abu-Mahfouz et Hancke, IEEE Access, 2020 (accuses groupes AggACK, FREE), cites, non simules.",
+      "attente_alarme_max_h": 6,
+      "_source_attente": "Complement v6.2, point 7 : alarme en deux temps ; garde-fou de 6 h si aucun recapitulatif ne tranche (HYPOTHESE)."
+    }
+  },
+  "store_and_forward": {
+    "_commentaire": "Application du pont : routine non confirmee, une routine sur k est une sonde confirmee ; si la sonde echoue, mesures au tampon puis lots confirmes au plus pres de la charge maximale du debit courant, espaces de espacement_lots_s, 2 transmissions par lot. Decision S : choix de conception assume (chapitre 6).",
+    "actif": false,
+    "sonde_toutes_les_k_routines": 4,
+    "taille_tampon_mesures": 96,
+    "espacement_lots_s": 300,
+    "_commentaire_espacement": "Superieur a la pause imposee par le cycle de service de 1 % apres une trame SF12 pleine (environ 2,5 s d'antenne, donc 250 s), pour que la MAC n'ecrase pas un lot retarde.",
+    "nb_transmissions_max": 2,
+    "charge_mac_max_octets_par_dr": [
+      59,
+      59,
+      59,
+      123,
+      230,
+      230
+    ],
+    "_source_charge": "Table du module lorawan 0.3.7 (lorawan-mac-helper.cc, EU868), coherente avec les parametres regionaux LoRaWAN : 51, 115 et 222 octets de charge applicative.",
+    "autonomie_coupure_h": 72,
+    "autonomie_coupure_h_plage": [
+      48,
+      72
+    ],
+    "_commentaire_tampon": "Decision S (2026-10-26) : le tampon est dimensionne par l'autonomie visee (tenir 48 a 72 h de coupure) : taille = autonomie x 3600 / periode de mesure du profil, calculee par l'orchestrateur. taille_tampon_mesures n'est plus utilisee."
+  },
+  "cellulaire": {
+    "_commentaire": "Volet 4G (module LTE de ns-3, lte-cell.cc). Meme propagation par zone que le LoRa (stopmnt-propagation.h). Valeurs SOURCEES marquees, les autres sont a sourcer : ne pas produire de chiffre cellulaire de couverture tant qu'elles manquent.",
+    "mcl_pusch_db": 140.7,
+    "_source_mcl": "3GPP TR 36.888, tableau 5.2.1.2-2 : LTE FDD, PUSCH, UE 23 dBm sur 360 kHz, eNodeB 2 antennes de reception, SINR requis -4,3 dB (verifie). PUCCH 147,2 ; PRACH 141,7 ; PDSCH 145,4 dB.",
+    "puissance_ue_dbm": 23.0,
+    "puissance_enb_dbm": 46.0,
+    "facteur_bruit_enb_db": 5.0,
+    "facteur_bruit_ue_db": 9.0,
+    "_source_puissances": "Hypotheses de 3GPP TR 36.888 (UE 23 dBm, eNodeB 46 dBm, facteurs de bruit 5 et 9 dB).",
+    "gain_antenne_enb_dbi": 17.0,
+    "gain_antenne_passerelle_lora_dbi": null,
+    "hauteur_enb_m": null,
+    "distance_inter_sites_m_par_zone": null,
+    "bande_et_largeur": null,
+    "_a_sourcer": "Gains d'antenne (secteur eNodeB, passerelle LoRa), hauteur et densite des sites des operateurs par zone (ARCEP, operateurs), bande et largeur 4G au Benin. Sans eux, la couverture cellulaire n'est pas chiffrable a armes egales.",
+    "rlc": "am",
+    "handover": {
+      "algorithme": "A3 RSRP",
+      "hysteresis_db": 3.0,
+      "time_to_trigger_ms": 256,
+      "_source": "Valeurs par defaut de ns-3 (A3RsrpHandoverAlgorithm), pas des parametres d'operateur."
+    },
+    "limite_ns3": "Mesure le 2026-10-25 : la montante ns-3 echoue des 120 a 125 dB de perte pour un UE seul sur 50 blocs (10 MHz), 130 a 135 dB sur 6 blocs (1,4 MHz), contre 140,7 dB de MCL 3GPP. Causes : l'ordonnanceur montant donne toute la bande a un UE seul sans tenir compte de sa puissance, et l'eNodeB n'a pas de diversite de reception. Proposition : couverture cellulaire par bilan de liaison (MCL 3GPP + gains d'antenne + propagation de zone), ns-3 reserve a la latence, au handover et a la charge en zone bien couverte.",
+    "simulation": {
+      "duree_simulee_s": 600,
+      "cadence_instrumentation_s": 60,
+      "_commentaire": "ns-3 simule chaque milliseconde : durees courtes, cadence d'instrumentation."
+    },
+    "_commentaire_O": "Decision O (2026-10-26) : la couverture cellulaire n'est pas simulee dans ns-3, elle est calculee par bilan de liaison (analyse/bilan_cellulaire.py) avec la meme propagation et le meme ombrage par zone que le LoRa. ns-3 reste reserve a la latence, au handover et a l'energie en zone couverte.",
+    "gain_antenne_terminal_dbi": 0.0,
+    "_source_gains": "Gain passerelle LoRa : voir passerelle.gain_antenne_dbi (5 dBi sources, remplace les 10 dBi provisoires). eNodeB 17 dBi et terminal 0 dBi : valeurs de l'auteur, a sourcer.",
+    "mcl_lora_db_annonce": 157.0,
+    "_commentaire_mcl_lora": "Le bilan LoRa est calcule depuis le config (puissance 14 dBm - sensibilite SF12 -142,5 dBm = 156,5 dB) ; 157 dB est la valeur annoncee (Lauridsen et al., Aalborg, VTC Spring 2017).",
+    "mcl_nbiot_db": 164.0,
+    "_source_nbiot": "Objectif de couverture NB-IoT de 164 dB (3GPP TR 45.820), repris par Lauridsen et al., VTC Spring 2017. Conditionnel : NB-IoT non active au Benin, perspective seulement.",
+    "bandes_4g_mhz_a_tester": [
+      800,
+      1800
+    ],
+    "_commentaire_bandes": "Bande 4G au Benin A SOURCER. On teste 800 MHz (bande 20) et 1800 MHz (bande 3). Correction de frequence appliquee a la propagation calibree a 868 MHz : 20 log10(f / 868), comme en espace libre (hypothese, les modeles empiriques ont souvent une dependance plus forte).",
+    "couverture_operateur_reference": {
+      "territoire_pct": 88,
+      "rural_pct": 63,
+      "_source": "Chiffres de l'auteur (decision O), source a epingler. Sert de verification, pas d'entree."
+    },
+    "bande_4g_benin_mhz": 1800,
+    "_source_bande_benin": "4G beninoise en bande 3 (1800 MHz) : MTN Benin (lancement novembre 2016) et be.Telecoms, devenu Celtiis (decembre 2015) ; Moov non trouve (Powertec, TechCabal). Le cas 800 MHz du bilan de liaison n'est donc qu'une perspective.",
+    "mcl_2g_db": 144.0,
+    "_source_mcl_2g": "Consignes v6, point 9 : 2G a 900 MHz, MCL de 144 dB (3GPP TR 45.820, annexe B.2 ; valeur transmise par l'auteur, document non relu ici). Methode : Lauridsen et al., VTC Spring 2017.",
+    "bande_2g_benin_mhz": 900,
+    "module_cat1_repli_2g": {
+      "modele": "Quectel EG915U-EU",
+      "bandes_lte": "B1/3/5/7/8/20/28",
+      "bandes_gsm": "B2/B3/B5/B8 (dont 900 et 1800 MHz)",
+      "prix_eur": 14.12,
+      "_source": "Bandes : page produit Quectel (python.quectel.com/en/products/eg915u-eu) et fiche resumee hardware.iot.telekom.com ; prix : SOS electronic (deja dans le cout). Couvre la bande 3 beninoise (1 800 MHz) et la 2G 900/1800. Bandes GSM du Benin : 900/1800 MHz (a confirmer, ARCEP)."
+    },
+    "ecartees": {
+      "3g": "Abonnements T1 2026 (observatoire ARCEP) : 2G 8,18 M, 3G 3,25 M, 4G 7,58 M ; la 2G represente encore 43 % des abonnements. Rien d'annonce au Benin ; selon une analyse Ookla publiee par la GSMA, la 3G partira probablement avant la 2G, extinction generalisee attendue 'from 2030 onwards'.",
+      "5g": "MTN le 22/11/2024 (Cotonou, Abomey-Calavi), Moov le 24/04/2026 (dont Ouidah) : limitee aux villes, sans interet pour quelques petits messages par jour."
+    },
+    "atlas_arcep": {
+      "identifiants": {
+        "departement_atlantique": [
+          "department",
+          4
+        ],
+        "ouidah": [
+          "city",
+          4
+        ],
+        "tori_bossito": [
+          "city",
+          9
+        ],
+        "so_ava": [
+          "city",
+          12
+        ],
+        "kpomasse": [
+          "city",
+          13
+        ],
+        "abomey_calavi": [
+          "city",
+          16
+        ],
+        "allada": [
+          "city",
+          22
+        ],
+        "toffo": [
+          "city",
+          28
+        ],
+        "ze": [
+          "city",
+          29
+        ]
+      },
+      "_source": "Complement aux consignes v6 (2026-10-29) : atlas ARCEP Benin, GET https://atlas.arcep.bj/api/qos-data/{department|city}/{id} ; part de surface en 4G 'bonne' (RSRP >= -90 dBm, mesure dehors) et 2G (seuil -87 dBm), couverture du 22/10/2023. Releve de l'auteur le 28/10/2026, reextrait par analyse/couverture_arcep.py. La part 'bonne' sert d'approximation de la couverture en interieur (-90 dBm dehors, 14 dB de perte : environ -104 dBm dedans). Limites : surface et non population, donnees de 2023."
+    },
+    "mcl_cat1_db": 142.7,
+    "_source_mcl_cat1": "LTE Cat-1 : 142,7 dB (livre blanc LTE-M, 2017, cite dans recherche-cellulaire-benin.md). Variante de la MCL PUSCH 140,7 dB (3GPP TR 36.888)."
+  },
+  "cout": {
+    "_commentaire": "Couche cout et bascule (section 5.5), ajoutee le 2026-10-27. Chaque valeur porte sa source ; 'hypothese' = sans source, balayee entre bas et haut. Couts en euros, annualises sur la duree d'amortissement, sans actualisation.",
+    "fcfa_par_eur": 655.957,
+    "_source_fcfa": "Parite fixe du franc CFA (UEMOA) avec l'euro.",
+    "eur_par_usd": 0.92,
+    "_source_usd": "HYPOTHESE : ordre de grandeur du taux de change, a remplacer par le taux du jour.",
+    "amortissement_ans": 5,
+    "_source_amortissement": "Horizon de 5 ans du cout total de possession utilise par Kerlink (blog 'Optimising LoRaWAN Coverage'). Hypothese pour les dispositifs patients.",
+    "passerelle": {
+      "materiel_usd": [
+        382,
+        525
+      ],
+      "_source_materiel": "RAK7289V2 (8 canaux, sans LTE) a 382 $, jusqu'a 525 $ pour les variantes (dont LTE pour la remontee), store.rakwireless.com, consulte le 2026-10-27.",
+      "antenne_eur": 69.9,
+      "_source_antenne": "Antenne fibre de verre RAK 5 dBi 868 MHz, 69,90 EUR (revendeur pileupdx.com, date de la page non visible).",
+      "scenario_bas": {
+        "installation_eur_hypothese": 500,
+        "remontee_fcfa_par_mois": 2500,
+        "_commentaire": "HYPOTHESE : passerelle posee sur un batiment existant (centre de sante), alimentation secteur, installation 500 EUR, remontee par un forfait mobile de 2 500 FCFA par mois (plus petit forfait mensuel releve chez Moov, page non datee, a verifier)."
+      },
+      "scenario_haut": {
+        "part_materiel_dans_cout_total": 0.1,
+        "_commentaire": "Kerlink : passerelle et antenne font moins de 10 % du cout total de possession sur 5 ans (installation, visite de site, main d'oeuvre, acces au site, exploitation). Cout total = (materiel + antenne) / 0,10. Source constructeur, non africaine."
+      },
+      "alimentation_secours": {
+        "appliquer": true,
+        "materiel_avec_secours_usd": [
+          830.0,
+          1279.0
+        ],
+        "_source": "Consignes v4, point 5 (2026-10-27) : passerelle avec alimentation de secours. Bas : Milesight SG50, passerelle LoRaWAN solaire autonome (panneau 30 a 45 W, batterie LiFePO4 integree, 4G), a partir de 830 $ (MCCI, store.mcci.com, page consultee le 2026-10-27). Haut : RAK WisGate Edge Pro + Battery Plus 50 Ah + panneau 80 W, 1 169 a 1 279 $ (store.rakwireless.com, lot 'wisgate-edge-pro-battery-plus-solar-panel-kit'). Statut : catalogue, pas de devis. Remplace materiel_usd quand appliquer = true (proposition, a valider par l'auteur).",
+        "_statut": "catalogue"
+      },
+      "_source_materiel_v4": "Verification du 2026-10-27 (consignes v4) : store.rakwireless.com affiche le RAK7289V2 a 402 $ (prix normal), variantes de 372 a 525 $ (relu via la recherche, page non ouverte). Ecart de 10 $ sur la borne basse avec la valeur du config (382 $), non corrige : sans effet quand l'alimentation de secours est appliquee.",
+      "alimentation_secteur": {
+        "puissance_w": [
+          5,
+          12
+        ],
+        "_source_puissance": "Haut : 12 W maximum pour le RAK7289V2 (documentation HARDWARIO de la passerelle, ligne 'Power Consumption : Max 12 W', relue dans un resultat de recherche le 29/10/2026, page non ouverte : rendu JavaScript). La fiche RAK (docs.rakwireless.com) ne donne que les entrees PoE 802.3af 37-57 V et 12 V ; le rapport de consommation RAK (learn.rakwireless.com) a refuse l'acces (403). Bas : 5 W, HYPOTHESE (consignes v6.3).",
+        "tarif_fcfa_kwh": [
+          125,
+          148
+        ],
+        "_source_tarif": "SBEE, 'Nouveaux tarifs 2020-2021' (DCC, janvier 2021 ; decret n° 2020-328 du 24/06/2020), tarifs 2021 : BT2 usage professionnel et prepaiement, tarif unique 125 FCFA/kWh ; BT1 tranche 2 (> 250 kWh) 148 FCFA/kWh ; prime fixe 500 FCFA/kVA/mois, non comptee (passerelle sur un compteur existant, HYPOTHESE). Document relu via eis.ecowas.int. Grille plus recente non trouvee sur sbee.bj ; un blog d'aout 2026 (iambeezy) cite les memes niveaux (88/125/148), non officiel.",
+        "_application": "Variante sans alimentation de secours seulement (alimentation_secours.appliquer = false) : + puissance x 8 760 h x tarif. Les passerelles retenues (Milesight SG50 solaire autonome ; RAK WisGate Edge Pro + Battery Plus + panneau 80 W) ont un cout electrique nul ; le scenario Kerlink compte deja l'energie."
+      }
+    },
+    "dispositif": {
+      "lora_usd": 17.99,
+      "_source_lora": "RAK4631 (nRF52840 BLE + SX1262 LoRa), 17,99 $, store.rakwireless.com. Le pont BLE-LoRa tient dans ce seul module.",
+      "surcout_cellulaire_eur": 14.12,
+      "_source_cellulaire": "Module LTE Cat-1 Quectel EG915U (EG915UEUAB-N05), 14,12 EUR a l'unite, SOS electronic. Le pont cellulaire = meme coeur BLE + ce module : seul le surcout compte, le reste (boitier, batterie, coeur BLE) est commun aux deux familles. Prix du dispositif cellulaire natif par devis : mesure manquante du cadrage.",
+      "carte_sim_fcfa_hypothese": 0
+    },
+    "abonnement_cellulaire": {
+      "_commentaire": "Refonte du 2026-10-27 (remarque de l'auteur) : on part du besoin reel en donnees d'un patient, puis on le met en face de ce qui existe et de ce que l'Etat peut negocier avec les operateurs.",
+      "besoin": {
+        "_commentaire": "Octets echanges par message selon la pile protocolaire (en-tetes normalises, hors signalisation radio qui n'est pas facturee). Charges des profils dans profils_patients.",
+        "piles": {
+          "coap_dtls": {
+            "libelle": "CoAP sur UDP, DTLS a cle partagee (profil IoT)",
+            "montant_par_message": 71,
+            "descendant_par_message": 61,
+            "fixe_par_jour": 600,
+            "_source": "IPv4 20 (RFC 791) + UDP 8 (RFC 768) + enregistrement DTLS 29 (13 d'en-tete, 8 de nonce, 8 d'etiquette AES-CCM-8, RFC 6347/6655) + CoAP 4 + jeton et options 10 (RFC 7252) ; accuse CoAP descendant. Fixe : une renegociation DTLS par jour, environ 600 octets (hypothese)."
+          },
+          "mqtt_tls": {
+            "libelle": "MQTT sur TLS 1.3, connexion permanente",
+            "montant_par_message": 86,
+            "descendant_par_message": 146,
+            "fixe_par_jour": 30240,
+            "_source": "TCP/IP 40 + enregistrement TLS 1.3 22 + MQTT 2 + sujet 20 + identifiant 2 (OASIS MQTT 3.1.1) ; PUBACK plus deux accuses TCP. Fixe : PINGREQ/PINGRESP toutes les 10 min pour tenir la traduction d'adresses de l'operateur, 210 octets par echange, 144 par jour (intervalle : hypothese)."
+          },
+          "https": {
+            "libelle": "HTTPS, nouvelle connexion a chaque message",
+            "montant_par_message": 2600,
+            "descendant_par_message": 700,
+            "fixe_par_jour": 0,
+            "_source": "Ouverture TCP, poignee de main TLS 1.3 complete (environ 1 a 2 ko avec certificat ECDSA ou RSA : arXiv 2407.12536 et suivants), requete et reponse HTTP (hypothese 300 et 200 octets), fermeture."
+          }
+        },
+        "arrondi_facturation_octets": [
+          0,
+          10240
+        ],
+        "_commentaire_arrondi": "HYPOTHESE : certains operateurs arrondissent chaque session au ko ou a la dizaine de ko superieure. Pratique beninoise non trouvee : balayee de 0 a 10 ko par message."
+      },
+      "scenarios": {
+        "forfait_grand_public": {
+          "libelle": "Plus petit forfait mensuel grand public",
+          "fcfa_par_mois": 2500,
+          "_source": "Moov Africa Benin, a partir de 2 500 FCFA (page non datee, a verifier).",
+          "fcfa_par_mois_v5": 2500,
+          "fcfa_par_mois_plage": [
+            2500,
+            15100
+          ],
+          "_source_v6": "Consignes v6, point 9 (2026-10-28). Les forfaits illimites de 5 000 et 10 000 FCFA ont ete retires des grilles de MTN et Moov Africa (et de Celtiis selon Beninwebtv) le 4 aout 2026 (Banouto, 4 aout 2026 ; Beninwebtv ; La Nouvelle Tribune, aout 2026). Plus petite offre mensuelle de cette categorie chez MTN depuis : 15 100 FCFA (20 Go+). Borne basse : 2 500 FCFA/mois, plus petit forfait mensuel releve chez Moov en v5 (page non datee, existence apres aout 2026 non verifiee). Valeur centrale gardee a 2 500 FCFA (v5), plage 2 500 a 15 100."
+        },
+        "volume_prix_public": {
+          "libelle": "Volume reel au prix public du Go, sans frais fixe",
+          "fcfa_par_go": [
+            1228,
+            2048
+          ],
+          "_source": "Observatoire ARCEP Benin au 31 mars 2026 (via Beninwebtv). Borne basse theorique : n'existe pas comme offre."
+        },
+        "offre_machine_negociee": {
+          "libelle": "Offre machine negociee par l'Etat (carte SIM machine, volume mutualise)",
+          "frais_fcfa_par_mois": [
+            55,
+            500
+          ],
+          "fcfa_par_go": [
+            1228,
+            2048
+          ],
+          "_source": "Bas : equivalent de 1NCE IoT Lifetime Flat, 10 EUR pour 10 ans et 500 Mo, soit 55 FCFA par mois (1nce.com ; couverture du Benin non confirmee). Haut : HYPOTHESE, un cinquieme du plus petit forfait grand public. Volume au prix public du Go (majorant d'un prix de gros).",
+          "_v63": "Consignes v6.3 (29/10/2026) : remplacee par le modele de convention (cout.convention) dans analyse/convention_v63.py. Ancien modele : frais par ligne 55 a 500 FCFA/mois + volume (toutes piles) au prix public du Go, sans marge ni frais de convention. Nouveau : volume MQTT/TLS x prix du Go x (1 + marge) + k x F_global (une fois pour le projet) + 12 x lignes x f_ligne (55 a 800 FCFA/mois). Les valeurs ci-dessus sont gardees pour la reproduction de la v6.2 (controle 1)."
+        },
+        "zero_rating_etat": {
+          "libelle": "Gratuite des donnees vers les serveurs du projet, payee par l'Etat a l'operateur",
+          "fcfa_par_go": [
+            1228,
+            2048
+          ],
+          "forfait_convention_fcfa_par_an": null,
+          "_source": "Proposition de l'auteur (2026-10-27), sur le modele des offres operateurs qui rendent gratuit l'acces a certains sites ou reseaux sociaux. L'Etat paie le volume total vers les serveurs du projet ; plancher calcule au prix public du Go (ARCEP, mars 2026). Le prix reel de la convention est a negocier : l'operateur ajoutera probablement un forfait (inconnu, laisse a null). Vaut pour le telephone du patient et pour un pont cellulaire dont la carte SIM n'atteint que les serveurs du projet."
+        }
+      },
+      "leviers_etat": "Celtiis, troisieme operateur, est porte par la SBIN, societe d'Etat dont la gestion est deleguee a Sonatel depuis 2021 ; le Code du numerique (art. 60) prevoit une contribution des operateurs au service universel (taux non fixe par decret selon l'A4AI) ; numerotation a 10 chiffres depuis le 30 novembre 2024, motivee notamment par les communications entre machines (ARCEP Benin). Voies : offre machine sur l'operateur public, APN sante dedie, donnees gratuites vers le serveur de sante, financement par le fonds de service universel."
+    },
+    "communes": {
+      "_source": "Monographie departementale de l'Atlantique, Mission de spatialisation des cibles prioritaires des ODD au Benin, 2019 (developpement.gouv.bj), chiffres RGPH4 2013. Kpomasse et Toffo : population 2013 absente du document, ESTIMEE en repartissant le reste du departement (1 398 229 habitants) selon leur poids de 2002 (Wikipedia : 57 190 et 74 717) ; superficie de Toffo : Wikipedia. Ze : 653 km2 dans la monographie, 543 km2 ailleurs. RGPH5 : resultats par commune non trouves.",
+      "abomey_calavi": {
+        "population_2013": 656358,
+        "superficie_km2": 539,
+        "zone": "urbain_dense"
+      },
+      "allada": {
+        "population_2013": 127512,
+        "superficie_km2": 381,
+        "zone": "rural_degage"
+      },
+      "kpomasse": {
+        "population_2013": 67648,
+        "superficie_km2": 305,
+        "zone": "rural_degage",
+        "population_estimee": true,
+        "population_2013_estimee_v61": 73375
+      },
+      "ouidah": {
+        "population_2013": 162034,
+        "superficie_km2": 364,
+        "zone": "peri_urbain"
+      },
+      "so_ava": {
+        "population_2013": 118547,
+        "superficie_km2": 218,
+        "zone": "lacustre"
+      },
+      "toffo": {
+        "population_2013": 101585,
+        "superficie_km2": 515,
+        "zone": "rural_arbore",
+        "population_estimee": true,
+        "population_2013_estimee_v61": 95858
+      },
+      "tori_bossito": {
+        "population_2013": 57632,
+        "superficie_km2": 328,
+        "zone": "rural_arbore"
+      },
+      "ze": {
+        "population_2013": 106913,
+        "superficie_km2": 653,
+        "zone": "rural_arbore"
+      },
+      "_affectation_zones": "PROPOSITION a valider par l'auteur : Abomey-Calavi urbain dense, Ouidah peri-urbain, So-Ava lacustre, Allada et Kpomasse rural degage, Toffo, Tori-Bossito et Ze rural arbore.",
+      "_source_v62": "Complement v6.2 (29/10/2026) : populations 2013 de Kpomasse (67 648, ancienne estimation 73 375) et de Toffo (101 585, ancienne estimation 95 858) verifiees sur citypopulation.de (tableau du recensement INSAE du 11/05/2013, total Atlantique 1 398 229) ; la plaquette INStaD de l'Atlantique n'a pas pu etre relue (erreur 503). Superficie de Ze : le contour de l'atlas ARCEP donne 650 km2, ce qui confirme 653 km2 (monographie) et ecarte 543 km2. Surfaces des contours ARCEP (km2) : Abomey-Calavi 495, Allada 413, Kpomasse 309, Ouidah 305, So-Ava 201, Toffo 519, Tori-Bossito 321, Ze 650 (superficies du config gardees)."
+    },
+    "fraction_population_suivie": [
+      0.005,
+      0.02,
+      0.05
+    ],
+    "_commentaire_fraction": "HYPOTHESE de couverture du programme : part de la population suivie par STOP-MNT. Reperes : hypertension chez 27,5 % (rural) a 29,9 % (urbain) des adultes de 25 a 64 ans, diabete 1,8 a 3,3 % (enquete STEPS Benin 2008, PMC4422555).",
+    "energie_cellulaire": {
+      "tension_v": 3.8,
+      "courant_veille_enregistre_a": 0.0015,
+      "courant_eteint_a": 3.2e-05,
+      "_source_courants": "Quectel EG915U-EU, specification produit V1.2 : 1,5 mA en veille LTE (cycle de paging 256), 32 uA eteint. Tension nominale 3,8 V (hypothese courante du module). Le Cat-1 n'a pas de mode PSM confirme pour ce module.",
+      "energie_par_message_connecte_j": [
+        1.5,
+        14.7
+      ],
+      "energie_rattachement_j": [
+        3.0,
+        20.0
+      ],
+      "_source_energie_message": "HYPOTHESES, aucune mesure Cat-1 trouvee : etablissement de connexion, emission et temporisation d'inactivite de l'operateur (plusieurs secondes a quelques dizaines de mA en moyenne, crete 774 mA a 22 dBm selon le guide materiel EG915U). A titre de comparaison, une mise a jour de zone en LTE-M (technologie plus sobre) coute 84 a 105 mJ (Nordic nRF9160).",
+      "pile": {
+        "capacite_mah": 2500,
+        "tension_v": 3.7,
+        "rechargeable": true,
+        "_source": "HYPOTHESE : batterie lithium-ion rechargeable courante (format 18650, 2500 mAh, 3,7 V nominal). Precision de l'auteur (2026-10-27) : les ponts sont des equipements autonomes rechargeables ; on compte donc l'intervalle entre deux recharges, pas un cout de remplacement."
+      },
+      "tau_periodique_min": 54,
+      "_source_tau": "Temporisateur T3412 par defaut, 54 min (3GPP TS 24.301).",
+      "strategie_autonome": "eteint entre deux messages",
+      "_commentaire_autonomie": "Remarque de l'auteur (2026-10-27) : ponts autonomes rechargeables (LoRa et cellulaire, les deux existent dans la litterature). Indicateur : jours entre deux recharges, d'apres l'energie radio seule (microcontroleur et BLE communs, non comptes : les intervalles reels sont plus courts). Strategie centrale du cellulaire : eteint entre deux messages ; 'reste enregistre' en cas defavorable.",
+      "_references_v6": "Consignes v6, point 9 : MQTT sur TLS en cas central (connexion permanente, pile mqtt_tls du besoin en donnees), CoAP sur DTLS en sensibilite. Modeles mesures cites par l'auteur, non simules ici et non relus : Jensen et al., VTC 2012 (modele de puissance LTE) ; Lauridsen et al., VTC 2013 ; Huang et al., MobiSys 2012 (queue d'inactivite LTE de l'ordre de 10 s a environ 1 W sur smartphone, a verifier dans l'article) ; Balasubramanian et al., IMC 2009 (2G et 3G). Aucune mesure publiee pour un petit envoi en Cat-1 : l'energie par message reste une HYPOTHESE, 1 a 5 J connecte, 2 a 10 J avec rattachement.",
+      "energie_par_message_connecte_j_v6": [
+        1.0,
+        5.0
+      ],
+      "_source_energie_message_v6_1": "Mise a jour du 29/10/2026 d'apres recherche-cellulaire-benin.md (mesures verifiees par l'auteur) : ancienne valeur 1 a 5 J (hypothese pure). Borne basse 2G : queue GSM de 6 s a 0,25 J/s (Balasubramanian et al., IMC 2009) = 1,5 J, envoi compris au premier ordre. Borne haute 4G : transfert d'environ 1 s puis queue RRC de 11,6 s (Huang et al., MobiSys 2012) a 1,169 W connecte (Lauridsen et al., VTC 2013) = 14,7 J. Mesures de smartphones et de modules LTE, pas d'un module Cat-1 ou 2G envoyant un petit message (aucune mesure publiee) : intervalle d'hypothese a mesurer avec le prototype.",
+      "energie_rattachement_j_v6": [
+        2.0,
+        10.0
+      ],
+      "_source_rattachement_v6_1": "Rattachement + envoi : environ deux fois l'envoi connecte (HYPOTHESE, aucune mesure trouvee), soit 3 a 20 J. Ancienne valeur 2 a 10 J.",
+      "_source_veille_v6_1": "Veille : 1,5 mA x 3,8 V = 5,7 mW (fiche EG915U, gardee) ; repere mesure plus haut : DRX profond 29 mW (Lauridsen et al., VTC 2013), veille 0,50 W (Jensen et al., VTC 2012, smartphone)."
+    },
+    "kit_patient": {
+      "_commentaire": "Kit complet par patient (decision de l'auteur du 2026-10-27) : montre BLE standard plus l'intermediaire selon le cas. Valeurs (bas, haut) en euros, converties si besoin.",
+      "montre_ble_eur": [
+        29.0,
+        39.99
+      ],
+      "_source_montre": "Xiaomi Smart Band 9 : 39,99 EUR au lancement europeen, vue a 29 EUR (presse specialisee). Commune aux trois cas : pese sur le cout total, pas sur la comparaison. Un appareil de mesure medical BLE (tensiometre, glucometre) couterait plus cher, de facon identique pour les trois cas.",
+      "pont_lora": {
+        "module_usd": 17.99,
+        "_source_module": "RAK4631 (nRF52840 BLE + SX1262), store.rakwireless.com.",
+        "carte_base_usd": 10.81,
+        "_source_carte": "RAK19007 WisBlock Base Board, DigiKey, prix unitaire.",
+        "boitier_eur": [
+          5.0,
+          35.9
+        ],
+        "_source_boitier": "Bas : HYPOTHESE, boitier plastique d'interieur. Haut : RAK Unify IP67, 39 $ (store.rakwireless.com).",
+        "antenne_eur": [
+          3.0,
+          6.0
+        ],
+        "_source_antenne": "HYPOTHESE (petite antenne 868 MHz).",
+        "piles_eur": [
+          3.0,
+          6.0
+        ],
+        "_source_piles": "HYPOTHESE : batterie rechargeable lithium-ion du pont (18650) et son support."
+      },
+      "pont_cellulaire_en_plus": {
+        "module_lte_eur": 14.12,
+        "_source_module": "Quectel EG915U, SOS electronic.",
+        "antenne_lte_eur": [
+          3.0,
+          6.0
+        ],
+        "_source_antenne": "HYPOTHESE.",
+        "carte_sim_fcfa": [
+          0,
+          500
+        ],
+        "_source_sim": "HYPOTHESE (prix d'une carte SIM grand public).",
+        "_commentaire": "Le pont cellulaire est branche ou recharge (voir energie) : alimentation non comptee."
+      },
+      "telephone_relais_usd": [
+        0,
+        75
+      ],
+      "_source_telephone": "0 si le patient a deja un smartphone (cas de la surcouche cellulaire du cadrage) ; 75 $ si on le fournit : itel se dit n°1 du segment des smartphones a moins de 75 $ en Afrique (communique itel via BusinessWire). Donnees : forfait du patient (cout marginal nul s'il en a un) ou memes offres que le pont cellulaire.",
+      "remplacement_annuel": [
+        0.1,
+        0.2
+      ],
+      "_source_remplacement": "HYPOTHESE : part des kits perdus ou casses chaque annee.",
+      "_statut_remplacement": "hypothese bornee : aucune source trouvee le 2026-10-27 sur le taux annuel de perte ou de casse des dispositifs de telesurveillance ; garde de 10 a 20 % et varie dans la tornade."
+    },
+    "serveur_lns_eur_par_mois": [
+      3.79,
+      7.99
+    ],
+    "_source_lns": "Serveur reseau LoRaWAN ChirpStack (licence MIT) sur un petit VPS : Hetzner CX22 3,79 EUR/mois (2024) a CPX22 7,99 EUR/mois (2026) ; un guide (wz-it.com) estime environ 5 EUR/mois. Un seul serveur pour le departement. Le serveur applicatif de sante est commun aux deux familles et n'est pas compte.",
+    "remontee_passerelle": {
+      "octets_par_trame": 290,
+      "_source_trame": "HYPOTHESE : message PUSH_DATA JSON du packet forwarder Semtech (rxpk) environ 300 octets, plus accuse PUSH_ACK et en-tetes UDP/IP.",
+      "octets_maintien_par_jour": 1520000,
+      "_source_maintien": "Packet forwarder Semtech, valeurs par defaut (depot Lora-net/packet_forwarder, global_conf.json) : PULL_DATA toutes les 10 s (12 octets + UDP/IP) avec son accuse, statistiques toutes les 30 s (environ 250 octets) : environ 0,6 + 0,8 Mo par jour, arrondi a 1,5 Mo.",
+      "octets_par_trame_v5": 360,
+      "octets_maintien_par_jour_v5": 1500000,
+      "octets_par_accuse": 550,
+      "_source_v6": "Consignes v6, point 4 : MQTT sur TLS (ChirpStack MQTT Forwarder ou Gateway Bridge) au lieu du JSON UDP de Semtech. Anciennes valeurs (v5, UDP) : 360 octets par trame, 1 500 000 octets de maintien par jour. Calcul (HYPOTHESES de taille, a mesurer sur une passerelle) : montante = message protobuf UplinkFrame environ 120 o (charge PHY environ 37 o + metadonnees) + sujet MQTT eu868/gateway/<id>/event/up 41 o + en-tete MQTT 4 o + enregistrement TLS 1.3 22 o (5 en-tete, 1 type, 16 etiquette AES-GCM) + TCP/IP 52 o (IPv4 20 + TCP 20 + horodatage 12, actif par defaut sous Linux) + accuse TCP du serveur 52 o = environ 290 o. Accuse descendant d'une trame confirmee : DownlinkFrame (elements RX1 et RX2) environ 145 o + sujet 45 o + TLS 22 + TCP 52 + accuse TCP 52, plus l'evenement TxAck remontant environ 230 o : environ 550 o. Maintien : PINGREQ/PINGRESP MQTT (2 o chacun, OASIS MQTT 3.1.1) toutes les 30 s (HYPOTHESE, keep_alive_interval sans defaut documente dans le ChirpStack MQTT Forwarder), environ 256 o par echange, et statistiques de passerelle toutes les 30 s (valeur du Gateway Bridge, stats_interval=30s), environ 270 o : (256 + 270) x 2 880 = 1,52 Mo par jour."
+    },
+    "part_patients_avec_smartphone": [
+      0.15,
+      0.3
+    ],
+    "_source_smartphone": "Pas de taux de possession de smartphone trouve. Reperes : 28 % de la population utilisait regulierement Internet sur mobile en 2023 (GSMA, via Ecofin Agency) ; 32,2 % d'internautes fin 2025 (DataReportal, Digital 2026 Benin). Haut = 30 % ; bas = 15 % (HYPOTHESE : patients chroniques plus ages, moins equipes).",
+    "equipements_commerce": {
+      "_commentaire": "Produits finis trouves le 2026-10-27 (remarque de l'auteur : chercher les vrais equipements, pas seulement des composants). Prix revendeurs, en dollars, a confirmer par devis.",
+      "montre_4g_directe_usd": [
+        36.0,
+        48.3
+      ],
+      "_source_montre_4g": "Montres 4G pour personnes agees (SOS, frequence cardiaque, tension estimee par algorithme, SpO2) : 36 a 48,30 $ (Made-in-China, Alibaba). Modele type L23 (Unisoc 8541E) : FDD-LTE B1, B3, B5, B8 et GSM 900/1800 (Global Sources) ; 650 mAh, 50 a 72 h. Compatible avec la 4G beninoise en bande 3 (1800 MHz) a priori ; homologation et importateur au Benin a verifier. Tension non medicale.",
+      "tensiometre_4g_usd": [
+        99.95,
+        148.33
+      ],
+      "_source_tensiometre_4g": "Tensiometres medicaux 4G (The Digital Health Store) : Transtek TeleRPM Gen 2 Plus 99,95 $, Smart Meter iBloodPressure 109,95-119,95 $, Telli Health TelliBP01 131,22 $ (rechargeable), A&D UA-1020CEL 148,33 $. 4 piles AA sauf Telli.",
+      "montre_lorawan_directe_usd": 158.0,
+      "_source_montre_lorawan": "LPWAN Space ED20W, montre LoRaWAN (frequence cardiaque, temperature, tension), version EU868 disponible (bande ouverte par l'ARCEP Benin), 450 mAh rechargeable, environ 7 jours a un envoi toutes les 15 min ; 158 $ sur la page produit consultee le 2026-10-27 (128 $ dans un resultat de recherche plus ancien).",
+      "pont_lora_commerce_usd": 98.0,
+      "_source_pont_lora": "MOKOSmart LW003-B, pont BLE vers LoRaWAN, revendeur Choovio.",
+      "pont_cellulaire_commerce_usd": 219.0,
+      "_source_pont_cellulaire": "Stel Life Cellular Hub, telesurveillance (MDMaxx) ; alimente sur secteur.",
+      "disponibilite_benin": {
+        "montre_4g_directe": "oui a priori (bande 3 geree), homologation a verifier",
+        "montre_lorawan_directe": "oui (version EU868)",
+        "pont_lora_commerce": "a confirmer (version EU868 du MOKO LW003-B non verifiee)",
+        "tensiometre_4g": "non (carte SIM liee aux operateurs americains T-Mobile, Verizon, AT&T selon Transtek)",
+        "pont_cellulaire_commerce": "non (produit americain, alimente sur secteur)"
+      },
+      "verification_2026_10_27": {
+        "montre_4g_directe": "Bandes FDD-LTE B1/B3/B5/B8 et GSM 900/1800 (Global Sources, modeles Unisoc 8541E) : compatible bande 3 beninoise. Serveur configurable par SMS sur ces montres (forum Traccar, guide FindMyKids), a confirmer pour le modele exact. Store-and-forward non documente. 650 mAh, 50 a 72 h. Tension estimee par algorithme. Homologation et importateur au Benin a verifier.",
+        "montre_lorawan_directe": "ED20W : EU868 disponible, OTAA/ABP, classe A, compatible avec tout serveur LoRaWAN selon le vendeur ; store-and-forward, methode de mesure de la tension et certifications non indiques (lpwanspace.com).",
+        "pont_lora_commerce": "MOKO LW003-B : EU868 confirme (mokosmart.com), decodeur publie (depot TTN), variante rechargeable LW003-B Pro-B ; store-and-forward non documente.",
+        "consequence": "Le store-and-forward et le choix de la fenetre d'accuse simules supposent de maitriser le logiciel de l'equipement : argument pour le pont fabrique par le projet (composants), a poser par ecrit aux fabricants."
+      }
+    },
+    "marge_robustesse": {
+      "appliquer": true,
+      "fichier": [
+        "robustesse_panne/robustesse_marge.csv",
+        "robustesse_panne_v5/robustesse_marge.csv",
+        "robustesse_v6/robustesse_marge.csv"
+      ],
+      "_source": "Consignes v4, point 1 (retour des encadrants) : marge sur le nombre de passerelles qui garde au moins 90 % des patients de la cellule servis quand la passerelle centrale tombe, mesuree par analyse/analyse_robustesse.py (pavage hexagonal a 7 passerelles, 20 repetitions). Proposition, a valider par l'auteur."
+    },
+    "facteur_capacite": 1.0,
+    "_source_facteur_capacite": "Multiplicateur des capacites simulees, 1 par defaut. Sert a l'analyse en tornade (consignes v4, point 11) : 150 a 340 patients par passerelle en tout confirme RX2 d'apres sensibilite_rx2_nbtrans.",
+    "passerelles_min_par_commune": 2,
+    "_source_passerelles_min": "Decision de l'auteur du 2026-10-28 : au moins 2 passerelles par commune (redondance).",
+    "exploitation_reseau": {
+      "appliquer": true,
+      "administration_etp": [
+        0.25,
+        1.0
+      ],
+      "salaire_mensuel_charge_fcfa": [
+        300000,
+        600000
+      ],
+      "visites_par_passerelle_par_an": [
+        1,
+        2
+      ],
+      "cout_visite_eur": [
+        25,
+        100
+      ],
+      "_source": "Demande de l'auteur du 2026-10-28 (point 8) : poste explicite d'exploitation du reseau prive. HYPOTHESES BORNEES, aucune source beninoise : administration du serveur et du parc par un technicien de 0,25 a 1 equivalent temps plein, salaire charge de 300 000 a 600 000 FCFA par mois ; une a deux visites par passerelle et par an, 25 a 100 EUR par visite (deplacement et main d'oeuvre). Ajoute au scenario bas seulement : le scenario haut (Kerlink) compte deja l'exploitation dans les 90 % hors materiel."
+    },
+    "scenario_rx2_14dbm": {
+      "actif": false,
+      "_commentaire": "Point 7 (2026-10-28) : RX2 limitee a 14 dBm. Cellules dimensionnees sur la voie descendante (RX2, SF12, 14 dBm, sans gain d'antenne en emission comme dans le modele), pavage hexagonal de cellules isolees (l'accuse vient d'une seule passerelle), capacite simulee dans ces cellules (experience capacite_rx2_14dbm_descendante). Active par couche_cout.py --scenario-rx2-14dbm."
+    },
+    "espacement_exigence_alerte": {
+      "urbain_dense": 3.0,
+      "peri_urbain": 2.0,
+      "rural_degage": 2.0,
+      "rural_arbore": 2.0,
+      "lacustre": 2.0,
+      "_source": "Consignes v6, point 6 : espacement (en rayons de dimensionnement) qui tient l'exigence de 99 % des alertes livrees en 15 min dans le reseau pave (experience exigences_pavage_v6, 10 repetitions, correlation 0,5, 200 patients) : 99,6 a 99,7 % a 2 rayons dans toutes les zones, 99,1 % a 3 rayons en urbain ; a 3 rayons, 97,3 a 98,8 % hors urbain. Grille de 1 rayon : valeurs prudentes. Active par couche_cout.py --espacement-alerte."
+    },
+    "placement_plne": {
+      "maille_m": 300,
+      "maille_adaptative": true,
+      "capacite_par_zone": {
+        "urbain_dense": 404,
+        "peri_urbain": 344,
+        "rural_degage": 271,
+        "rural_arbore": 290,
+        "lacustre": 253
+      },
+      "_source": "Complement v6.1, point 1 : maille de 300 m (ou le sixieme du rayon de couverture si plus grand, au plus 1 km) ; capacite du tout confirme RX2 simulee en v6 (croisements_capacite_v6.csv, 10 repetitions), la plus contraignante. Donnees : WorldPop 2021, 100 m, version contrainte R2024B (worldpop-public-data.soton.ac.uk), contours des communes de l'atlas ARCEP (/api/cities), telecharges le 29/10/2026 dans donnees/.",
+      "communes_exclues": [
+        "so_ava"
+      ],
+      "_source_exclusion": "So-Ava : WorldPop 2021 contraint ne compte que 20 090 habitants contre 118 547 au RGPH4 2013 ; la version contrainte place la population sur les batiments detectes et manque tres probablement les villages lacustres sur pilotis. Le pavage est garde pour cette commune.",
+      "maille_m_v62": 250,
+      "seuil_maille_arboree": 0.5,
+      "limite_resolution_s": 1800,
+      "_source_v62": "Complement v6.2, points 2 et 3 : mailles de 250 m ; maille arboree si plus de la moitie de sa surface habitee est en classe 10 d'ESA WorldCover 10 m 2021 v200 (HYPOTHESE de seuil) ; 30 min de resolution par commune et par critere, pavage comme solution de depart (HiGHS via highspy)."
+    },
+    "hybrides": {
+      "part_ombre_lora": {
+        "urbain_dense": 0.014,
+        "peri_urbain": 0.0195,
+        "rural_degage": 0.0235,
+        "rural_arbore": 0.0295,
+        "lacustre": 0.034
+      },
+      "fichier_couverture": "cellulaire/couverture_arcep_communes.csv",
+      "_source": "Complement v6.1, point 2. part_ombre_lora : patients qui ne recoivent rien dans le reseau pave a l'espacement de routine (le plus proche teste : 4 rayons en urbain et en lacustre, 3 ailleurs), tout confirme RX2 a 27 dBm, RX1 5 s, 10 repetitions (analyse/secours_lora.py, exigences_pavage_v61) ; repartition bimodale : ces patients ne passent jamais, les autres livrent 100 % de leurs alertes en 15 min. Cellulaire + secours LoRa : part sans couverture interieure par commune = 1 - max(4G, 2G 'bonne') de l'atlas ARCEP (surface, 2023)."
+    },
+    "population_variante_2021": {
+      "ze": 168765,
+      "abomey_calavi": 1159797,
+      "toffo": 127458,
+      "tori_bossito": 116526,
+      "ouidah": 223006,
+      "allada": 168623,
+      "kpomasse": 117300,
+      "so_ava": 192823,
+      "_source": "Complement v6.2, point 8 : aucune projection INStaD par commune trouvee (projection revisee nationale 2014-2063, novembre 2022 ; plaquette Atlantique : 1 614 167 en 2018, non relue, site en erreur 503). Variante : WorldPop 2021, 100 m, contraint (somme par commune sur les contours ARCEP) ; So-Ava : RGPH4 2013 x 1.627 (croissance des sept autres communes entre RGPH4 2013 et WorldPop 2021), car WorldPop contraint y manque les villages lacustres. Total 2274298."
+    },
+    "mat_30m": {
+      "mat_neuf_eur": [
+        5000,
+        30000
+      ],
+      "partage_site_eur_par_mois": [
+        25,
+        100
+      ],
+      "amortissement_mat_ans": 15,
+      "_source": "Complement v6.2, point 1 : HYPOTHESES BORNEES. Seules sources trouvees : pages de vendeurs (Global Sources : environ 1 000 a 1 350 $ la tonne de structure ; xytower.com : 25 000 a 65 000 $ pour une tour en treillis, hauteur non precisee) ; aucun tarif de location d'emplacement sur pylone ou chateau d'eau trouve. Amortissement du mat sur 15 ans (HYPOTHESE)."
+    },
+    "convention": {
+      "_commentaire": "Consignes v6.3 (29/10/2026) : convention entre le projet et un operateur. C_connexion = somme des volumes x p_Go x (1 + m) + k x F_global + 12 x N_lignes x f_ligne. Seule la couche de connexion change ; passerelles, patients, volumes par message et tirages Monte-Carlo sont ceux de la v6.2.",
+      "fcfa_par_go": [
+        1228,
+        2048
+      ],
+      "_source_fcfa_par_go": "Observatoire ARCEP Benin au 31 mars 2026 (via Beninwebtv), inchange depuis la v6.2. Tirage Monte-Carlo : valeur tiree en v6.2 pour 'Offre machine : prix du Go'.",
+      "marge_operateur": [
+        0.15,
+        0.2
+      ],
+      "_source_marge": "Decision de l'auteur (consignes v6.3). Tirage uniforme, graine 63.",
+      "f_global_fcfa_par_an": [
+        0,
+        5000000,
+        10000000,
+        20000000,
+        50000000
+      ],
+      "_source_f_global": "HYPOTHESE : aucun tarif de convention publie. Balaye pour trouver le seuil, pas pour deviner le prix. Paye une fois pour le projet si au moins une ligne est dans la convention.",
+      "facteur_prudence_k": [
+        1,
+        1.5,
+        2
+      ],
+      "_source_k": "Decision de l'auteur (consignes v6.3).",
+      "f_ligne_fcfa_par_mois": [
+        55,
+        800
+      ],
+      "_source_f_ligne": "Bas : 1NCE IoT Lifetime Flat, 10 EUR pour 10 ans, soit 55 FCFA/mois (1nce.com, couverture du Benin non confirmee). Haut : Orange Cote d'Ivoire 'Smart M2M' Malima Premium, 650 a 800 FCFA par carte SIM et par mois, option de gestion sans donnees (business.orange.ci, page non datee). Tirage Monte-Carlo : valeur v6.2 de 'Offre machine : frais' (55 a 500) recalee lineairement sur 55 a 800 (meme nombre aleatoire).",
+      "pile_patient": "mqtt_tls",
+      "_source_pile": "Consignes v6.3 : volumes du pont MQTT/TLS (86 o montant, 146 o descendant, 30 240 o fixes par jour), cout.abonnement_cellulaire.besoin.piles.mqtt_tls, sans arrondi de facturation. La v6.2 prenait la plage de toutes les piles et arrondis (63 ko a 3,9 Mo par mois).",
+      "receptions_par_trame": [
+        1.5,
+        4.6
+      ],
+      "_source_receptions": "SIMULE : passerelles qui recoivent et remontent chaque trame (gwReceptions / received), multi_passerelles_v6, 20 repetitions, espacement de 1 a 6 rayons, correlation 0,3 a 0,7 : de 1,45 (rural arbore, 6 rayons) a 4,63 (urbain, 1 rayon). Chaque reception est remontee (290 o). Tirage uniforme, graine 63.",
+      "forfait_public_passerelle_fcfa_par_mois": [
+        2500,
+        15100
+      ],
+      "_source_forfait_public": "Plage v6.2 du forfait grand public (cout.abonnement_cellulaire.scenarios.forfait_grand_public.fcfa_par_mois_plage) : 2 500 FCFA (Moov, page non datee, existence apres aout 2026 non verifiee) a 15 100 FCFA (MTN, plus petite offre mensuelle apres le 4 aout 2026). En v6.2 la passerelle payait 2 500 FCFA (tornade 1 000 a 5 000). Sert aussi aux cartes SIM du secours cellulaire quand le projet n'a pas de convention. Tirage Monte-Carlo : valeur v6.2 de 'Remontee passerelle' (1 000 a 5 000) recalee lineairement sur 2 500 a 15 100.",
+      "kerlink_connexion_incluse": true,
+      "_source_kerlink": "Structure de cout Kerlink (scenario haut) : les 90 % hors materiel couvrent site, energie, exploitation et remontee (v6.2). Aucune remontee ajoutee, et les passerelles ne sont pas des lignes de la convention dans cette structure.",
+      "_statut": "en attente de validation de l'auteur : (1) la variante 'LoRa sans convention' met aussi au forfait public les cartes SIM du secours cellulaire (sinon il faudrait une convention) ; (2) le serveur LoRaWAN et son administration sont payes une fois des qu'il existe une passerelle (le cellulaire + secours LoRa en a aussi) ; (3) dans la vue par commune, F_global est reparti au prorata des lignes, les autres communes gardant leur choix optimal du departement."
+    }
+  },
+  "_decisions_v6_1": {
+    "date": "2026-10-29",
+    "pont_interieur": "100 % du temps en cas central, 50 a 90 % en sensibilite",
+    "extrapolation_sous_1km": "acceptee, ecrite comme limite",
+    "rx1": "5 s",
+    "modes": "tout-confirme comme etalon, mixte a recapitulatif comme mode recommande",
+    "sensibilite_plus_3db": "traitee par le bilan (rayon x 0,74), pas par la simulation (artefact d'attribution des SF du module)",
+    "delai_alerte": "15 min (5 min rapporte a titre d'information)"
+  }
+}

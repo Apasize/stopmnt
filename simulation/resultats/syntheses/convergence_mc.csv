@@ -1,0 +1,9 @@
+structure,indicateur,valeur_500,ic95_bas,ic95_haut,premiers_100,premiers_200,premiers_300,premiers_400
+bas,mediane_choix,39.1693,38.2302,39.7697,38.6544,38.5521,39.1313,39.3933
+bas,p_mixte,0.986,0.9759,0.996,1.0,0.99,0.9867,0.985
+bas,p_lora_moins_cher,0.832,0.798,0.862,0.86,0.855,0.8533,0.8525
+bas,economie_mediane_pct,5.5169,5.1417,5.9665,4.897,5.1953,5.3005,5.3615
+haut,mediane_choix,41.4627,40.7142,42.3006,41.288,41.0876,41.4822,41.5065
+haut,p_mixte,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+haut,p_lora_moins_cher,0.134,0.104,0.162,0.12,0.125,0.12,0.13
+haut,economie_mediane_pct,10.2001,9.4076,10.5584,11.1905,10.5605,10.4083,10.3672

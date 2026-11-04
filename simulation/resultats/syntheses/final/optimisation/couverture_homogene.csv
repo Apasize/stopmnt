@@ -1,0 +1,17 @@
+rayon,commune,passerelles,borne_inferieure,statut
+passerelle_seule,abomey_calavi,209,193.0,Time limit reached
+passerelle_seule,allada,205,205.0,Optimal
+passerelle_seule,kpomasse,104,104.0,Optimal
+passerelle_seule,ouidah,109,109.0,Optimal
+passerelle_seule,so_ava,11,11.0,Optimal
+passerelle_seule,toffo,238,236.0,Time limit reached
+passerelle_seule,tori_bossito,114,114.0,Optimal
+passerelle_seule,ze,280,277.0,Time limit reached
+reseau_pave,abomey_calavi,45,45.0,Optimal
+reseau_pave,allada,80,77.0,Time limit reached
+reseau_pave,kpomasse,46,46.0,Optimal
+reseau_pave,ouidah,46,46.0,Optimal
+reseau_pave,so_ava,7,7.0,Optimal
+reseau_pave,toffo,97,93.0,Time limit reached
+reseau_pave,tori_bossito,51,51.0,Optimal
+reseau_pave,ze,120,114.0,Time limit reached

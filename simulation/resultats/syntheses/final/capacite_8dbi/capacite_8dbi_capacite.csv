@@ -1,0 +1,16 @@
+zone,variante,mode,capacite_palier,borne,capacite_interpolee_livraison,capacite_interpolee_delai_routine,capacite_interpolee_delai_alerte,paliers,repetitions
+urbain_dense,mode=mixte_rx2 messages=10 intensif=0.1,mixte_rx2,200,,1607.0449433451747,,>3200,50 100 200 400 800 1600 3200,10
+urbain_dense,mode=tout_confirme_rx2 messages=10 intensif=0.1,tout_confirme_rx2,200,,>1600,330.50093153505406,346.5528929286334,50 100 200 400 800 1600,10
+urbain_dense,mode=tout_non_confirme messages=10 intensif=0.1,tout_non_confirme,3200,>=,>3200,,,50 100 200 400 800 1600 3200,10
+peri_urbain,mode=mixte_rx2 messages=10 intensif=0.1,mixte_rx2,1600,,1924.6473339083539,,>3200,50 100 200 400 800 1600 3200,10
+peri_urbain,mode=tout_confirme_rx2 messages=10 intensif=0.1,tout_confirme_rx2,200,,>1600,272.91352041294937,301.42952375170813,50 100 200 400 800 1600,10
+peri_urbain,mode=tout_non_confirme messages=10 intensif=0.1,tout_non_confirme,3200,>=,>3200,,,50 100 200 400 800 1600 3200,10
+rural_degage,mode=mixte_rx2 messages=10 intensif=0.1,mixte_rx2,1600,,1912.6023765933764,,2886.3398941191635,50 100 200 400 800 1600 3200,10
+rural_degage,mode=tout_confirme_rx2 messages=10 intensif=0.1,tout_confirme_rx2,200,,>1600,242.43800706575598,267.06062891658297,50 100 200 400 800 1600,10
+rural_degage,mode=tout_non_confirme messages=10 intensif=0.1,tout_non_confirme,3200,>=,>3200,,,50 100 200 400 800 1600 3200,10
+rural_arbore,mode=mixte_rx2 messages=10 intensif=0.1,mixte_rx2,1600,,2021.460677672255,,>3200,50 100 200 400 800 1600 3200,10
+rural_arbore,mode=tout_confirme_rx2 messages=10 intensif=0.1,tout_confirme_rx2,200,,>1600,259.61230395688364,280.232113571469,50 100 200 400 800 1600,10
+rural_arbore,mode=tout_non_confirme messages=10 intensif=0.1,tout_non_confirme,3200,>=,>3200,,,50 100 200 400 800 1600 3200,10
+lacustre,mode=mixte_rx2 messages=10 intensif=0.1,mixte_rx2,800,,1621.1000096576927,,2279.0583438826684,50 100 200 400 800 1600 3200,10
+lacustre,mode=tout_confirme_rx2 messages=10 intensif=0.1,tout_confirme_rx2,200,,>1600,231.86274928947827,239.3662743958211,50 100 200 400 800 1600,10
+lacustre,mode=tout_non_confirme messages=10 intensif=0.1,tout_non_confirme,3200,>=,>3200,,,50 100 200 400 800 1600 3200,10

@@ -1,0 +1,5 @@
+scenario,kit_lora,kit_cellulaire,cout_patient_lora,cout_patient_cellulaire,cout_passerelle,patients_pour_rembourser
+centre_detaille,31.65,36.73,31.85,44.7,411.2,32.0
+centre_kerlink,31.65,36.73,31.84,44.74,974.2,75.5
+bas,19.95,24.18,20.03,25.43,294.0,54.4
+haut,45.75,51.71,46.04,66.45,1105.8,54.2

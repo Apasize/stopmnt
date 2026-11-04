@@ -1,0 +1,31 @@
+structure,f_global_fcfa_an,k,tirages,p_tout_lora_moins_cher_que_tout_cellulaire,p_choix_egal_tout_lora_sans_convention,p_choix_tout_lora_sous_convention,p_choix_mixte,p_choix_tout_cellulaire,economie_choix_vs_meilleure_famille_unique_keur_mediane,affectation_la_plus_frequente,frequence
+scénario bas détaillé,0,1.0,500,0.85,0.0,0.024,0.976,0.0,51.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518
+scénario bas détaillé,0,1.5,500,0.85,0.0,0.024,0.976,0.0,51.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518
+scénario bas détaillé,0,2.0,500,0.85,0.0,0.024,0.976,0.0,51.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518
+scénario bas détaillé,5000000,1.0,500,0.85,0.0,0.024,0.976,0.0,51.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518
+scénario bas détaillé,5000000,1.5,500,0.85,0.0,0.024,0.976,0.0,51.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518
+scénario bas détaillé,5000000,2.0,500,0.85,0.0,0.024,0.976,0.0,51.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518
+scénario bas détaillé,10000000,1.0,500,0.85,0.0,0.024,0.976,0.0,51.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518
+scénario bas détaillé,10000000,1.5,500,0.85,0.0,0.024,0.976,0.0,51.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518
+scénario bas détaillé,10000000,2.0,500,0.85,0.0,0.024,0.976,0.0,51.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518
+scénario bas détaillé,20000000,1.0,500,0.85,0.0,0.024,0.976,0.0,51.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518
+scénario bas détaillé,20000000,1.5,500,0.85,0.004,0.02,0.976,0.0,51.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518
+scénario bas détaillé,20000000,2.0,500,0.854,0.01,0.014,0.976,0.0,50.4,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518
+scénario bas détaillé,50000000,1.0,500,0.856,0.02,0.012,0.968,0.0,49.7,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.518
+scénario bas détaillé,50000000,1.5,500,0.876,0.098,0.008,0.894,0.0,42.5,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.502
+scénario bas détaillé,50000000,2.0,500,0.896,0.202,0.008,0.79,0.0,32.4,"LoRa sous convention : Abomey-Calavi, Ouidah, Sô-Ava ; cellulaire ailleurs",0.452
+Kerlink 10 %,0,1.0,500,0.186,0.0,0.0,1.0,0.0,122.2,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822
+Kerlink 10 %,0,1.5,500,0.186,0.0,0.0,1.0,0.0,122.2,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822
+Kerlink 10 %,0,2.0,500,0.186,0.0,0.0,1.0,0.0,122.2,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822
+Kerlink 10 %,5000000,1.0,500,0.186,0.0,0.0,1.0,0.0,122.2,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822
+Kerlink 10 %,5000000,1.5,500,0.186,0.0,0.0,1.0,0.0,122.2,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822
+Kerlink 10 %,5000000,2.0,500,0.186,0.0,0.0,1.0,0.0,122.2,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822
+Kerlink 10 %,10000000,1.0,500,0.186,0.0,0.0,1.0,0.0,122.2,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822
+Kerlink 10 %,10000000,1.5,500,0.186,0.0,0.0,1.0,0.0,122.2,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822
+Kerlink 10 %,10000000,2.0,500,0.186,0.0,0.0,1.0,0.0,122.2,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822
+Kerlink 10 %,20000000,1.0,500,0.186,0.0,0.0,1.0,0.0,122.2,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822
+Kerlink 10 %,20000000,1.5,500,0.19,0.0,0.0,1.0,0.0,121.8,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822
+Kerlink 10 %,20000000,2.0,500,0.196,0.0,0.0,1.0,0.0,119.6,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822
+Kerlink 10 %,50000000,1.0,500,0.208,0.0,0.0,1.0,0.0,117.8,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822
+Kerlink 10 %,50000000,1.5,500,0.25,0.004,0.0,0.996,0.0,110.5,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822
+Kerlink 10 %,50000000,2.0,500,0.324,0.014,0.0,0.986,0.0,98.7,"LoRa sous convention : Abomey-Calavi, Sô-Ava ; cellulaire ailleurs",0.822

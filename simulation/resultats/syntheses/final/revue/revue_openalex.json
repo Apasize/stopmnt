@@ -1,0 +1,56 @@
+{
+ "iomt_mnt": {
+  "requete": "(\"internet of medical things\" OR IoMT OR \"remote patient monitoring\" OR telemonitoring) AND (hypertension OR diabetes OR \"chronic disease\" OR \"non-communicable\" OR cardiovascular) AND (architecture OR framework OR system)",
+  "resultats": 1482,
+  "lus": 1000,
+  "corpus_retrouve": 6
+ },
+ "lpwan_sante": {
+  "requete": "(LoRaWAN OR LoRa OR LPWAN OR NB-IoT) AND (\"remote patient monitoring\" OR \"health monitoring\" OR healthcare OR telemedicine)",
+  "resultats": 1086,
+  "lus": 1000,
+  "corpus_retrouve": 1
+ },
+ "afrique": {
+  "requete": "(\"remote patient monitoring\" OR mHealth OR IoT OR IoMT) AND (hypertension OR \"non-communicable\" OR \"chronic disease\") AND (Africa OR Benin OR \"low-income\" OR \"resource-limited\")",
+  "resultats": 235,
+  "lus": 235,
+  "corpus_retrouve": 1
+ },
+ "cout_transport": {
+  "requete": "(LoRaWAN OR LoRa OR LPWAN) AND (cellular OR 4G OR LTE OR NB-IoT) AND (cost OR \"total cost of ownership\") AND (health OR healthcare OR patient)",
+  "resultats": 72,
+  "lus": 72,
+  "corpus_retrouve": 0
+ },
+ "bilan": {
+  "corpus": 31,
+  "avec_doi": 31,
+  "retrouves": 8,
+  "manquants": [
+   "Security and Privacy Framework for Cloud-Based Remote Patient Monitoring and In-place Sensor-Based Care",
+   "DEMO: A Multi-Modal Approach for Monitoring COPD Patients - the TOLIFE Project",
+   "A lightweight blockchain and fog-enabled secure remote patient monitoring system",
+   "A power-aware ECG processing node for real-time feature extraction in WBAN",
+   "A Federated FHIR-Based Interoperability Framework for Multi-Site Heart Failure Monitoring: The RETENTION Project †",
+   "Design and Usability Assessment of a Multi-Device SOA-Based Telecare Framework for the Elderly",
+   "Developing Plug-and-Play Interoperability: An Approach Through IEEE 11073-10206 and the Bluetooth General Health Sensor Profile and Service",
+   "In-Network Machine Learning for Real-Time Patient Monitoring on IoMT Edge Gateways",
+   "A hierarchical, scalable architecture for a real-time monitoring system for an electrocardiography, using context-aware computing",
+   "Access Control and Privacy-Preserving Blockchain-Based System for Diseases Management",
+   "Platform for Healthcare Promotion and Cardiovascular Disease Prevention",
+   "New Solution based on Fuzzy System to Optimize Energy Efficiency in IoT Devices to Remote Monitoring of Chronic Diseases",
+   "Enabling the internet of mobile crowdsourcing health things: A mobile fog computing, blockchain and iot based continuous glucose monitoring system for diabetes mellitus research and care",
+   "Automatic edge app placement for personalized heart attack predictions",
+   "An IPv6-based framework for fog-assisted healthcare monitoring",
+   "Innovative Approaches to Chronic Heart Failure Monitoring: A Critical Analysis of Wearable Devices",
+   "SFoG-RPI: A Secured QoS Aware and Load Balancing Framework for FoG Computing in Healthcare Paradigm",
+   "FogHealth: Leveraging Fledge for Real-Time Urban Health Data Managements",
+   "A Hybrid AI Framework for Sensor-Based Personal Health Monitoring towards Precision Health",
+   "A Novel Low-Latency and Energy-Efficient Task Scheduling Framework for Internet of Medical Things in an Edge Fog Cloud System",
+   "IoT-driven remote health monitoring system with sensor fusion enhancing immediate medical assistance in distributed settings",
+   "Remote Health Monitoring Systems Based on Bluetooth Low Energy (BLE) Communication Systems",
+   "IOT based Smart Health Monitoring System for Chronic Diseases"
+  ]
+ }
+}

@@ -1,0 +1,79 @@
+--- a/network-scheduler.h.orig	2026-10-27 02:19:01.225740282 +0100
++++ b/contrib/lorawan/model/network-scheduler.h	2026-10-27 02:19:15.832465940 +0100
+@@ -75,6 +75,13 @@
+                                          //!< \todo Never called. Place calls in the right places.
+     Ptr<NetworkStatus> m_status;         //!< A pointer to the NetworkStatus object.
+     Ptr<NetworkController> m_controller; //!< A pointer to the NetworkController object.
++    // STOP-MNT (ajout local, desactive par defaut) : choix de la fenetre de
++    // reponse selon le bilan de liaison prevu en RX1.
++    bool m_rx1BudgetCheck = false;  //!< Passer en RX2 si RX1 ne porte pas
++    double m_edTxPowerDbm = 14;     //!< Puissance d'emission des noeuds (montante)
++    double m_gwRxGainDb = 0;        //!< Gain d'antenne passerelle en reception
++    double m_rx1PowerDbm = 14;      //!< Puissance d'emission passerelle en RX1
++    double m_rx1MarginDb = 0;       //!< Marge exigee en RX1
+ };
+ 
+ } // namespace lorawan
+--- a/network-scheduler.cc.orig	2026-10-27 02:19:01.223326069 +0100
++++ b/contrib/lorawan/model/network-scheduler.cc	2026-10-27 02:19:15.832744975 +0100
+@@ -7,6 +7,9 @@
+  */
+ 
+ #include "network-scheduler.h"
++#include "end-device-lora-phy.h"
++#include "ns3/boolean.h"
++#include "ns3/double.h"
+ 
+ #include "network-controller.h"
+ #include "network-status.h"
+@@ -33,6 +36,23 @@
+                             "Trace source that is fired when a receive window opportunity happens.",
+                             MakeTraceSourceAccessor(&NetworkScheduler::m_receiveWindowOpened),
+                             "ns3::Packet::TracedCallback")
++            .AddAttribute("Rx1BudgetCheck",
++                          "STOP-MNT : repondre en RX2 quand le bilan prevu en RX1 ne porte pas",
++                          BooleanValue(false),
++                          MakeBooleanAccessor(&NetworkScheduler::m_rx1BudgetCheck),
++                          MakeBooleanChecker())
++            .AddAttribute("EdTxPowerDbm", "STOP-MNT : puissance d'emission des noeuds",
++                          DoubleValue(14), MakeDoubleAccessor(&NetworkScheduler::m_edTxPowerDbm),
++                          MakeDoubleChecker<double>())
++            .AddAttribute("GwRxGainDb", "STOP-MNT : gain d'antenne passerelle en reception",
++                          DoubleValue(0), MakeDoubleAccessor(&NetworkScheduler::m_gwRxGainDb),
++                          MakeDoubleChecker<double>())
++            .AddAttribute("Rx1PowerDbm", "STOP-MNT : puissance passerelle en RX1",
++                          DoubleValue(14), MakeDoubleAccessor(&NetworkScheduler::m_rx1PowerDbm),
++                          MakeDoubleChecker<double>())
++            .AddAttribute("Rx1MarginDb", "STOP-MNT : marge exigee en RX1",
++                          DoubleValue(0), MakeDoubleAccessor(&NetworkScheduler::m_rx1MarginDb),
++                          MakeDoubleChecker<double>())
+             .SetGroupName("lorawan");
+     return tid;
+ }
+@@ -91,6 +111,26 @@
+     // NetworkStatus
+     Address gwAddress = m_status->GetBestGatewayForDevice(deviceAddress, window);
+ 
++    // STOP-MNT : si l'accuse en RX1 (meme debit que la montante, puissance
++    // RX1) n'atteindrait pas le noeud d'apres la perte du lien deduite de la
++    // puissance recue en montante, on saute RX1 et on vise RX2.
++    if (window == 1 && m_rx1BudgetCheck && gwAddress != Address())
++    {
++        Ptr<EndDeviceStatus> eds = m_status->GetEndDeviceStatus(deviceAddress);
++        std::map<double, Address> gws = eds->GetPowerGatewayMap();
++        if (!gws.empty())
++        {
++            double bestRx = gws.rbegin()->first;
++            double pathLoss = m_edTxPowerDbm + m_gwRxGainDb - bestRx;
++            uint8_t sf = eds->GetLastReceivedPacketInfo().sf;
++            double sens = EndDeviceLoraPhy::SENSITIVITY[std::min<int>(5, std::max<int>(0, sf - 7))];
++            if (m_rx1PowerDbm - pathLoss < sens + m_rx1MarginDb)
++            {
++                gwAddress = Address();
++            }
++        }
++    }
++
+     if (gwAddress == Address() && window == 1)
+     {
+         NS_LOG_DEBUG("No suitable gateway found for first window.");

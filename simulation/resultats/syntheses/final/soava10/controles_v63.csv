@@ -1,0 +1,17 @@
+controle,niveau,grandeur,v63,v62,ecart,v63_conventions_v62
+0 composantes,bas,choix par commune,656.5,653.9,2.6,
+0 composantes,bas,LoRa + secours,746.2,743.5,2.7,
+0 composantes,bas,cellulaire + secours,714.1,714.1,0.0,
+0 composantes,haut,choix par commune,1576.4,1567.9,8.5,
+0 composantes,haut,LoRa + secours,1891.0,1882.2,8.8,
+0 composantes,haut,cellulaire + secours,1733.9,1733.9,-0.0,
+0 tirages,bas,ecart max choix / cellulaire (k EUR),6.52,0,0.05,
+0 tirages,haut,ecart max choix / cellulaire (k EUR),12.85,0,0.05,
+1 reproduction,bas,choix par commune,652.4,653.9,-1.5,656.7
+1 reproduction,bas,LoRa + secours,722.5,743.5,-21.0,746.2
+1 reproduction,bas,cellulaire + secours,713.2,714.1,-0.9,714.7
+1 reproduction,haut,choix par commune,1576.4,1567.9,8.5,1575.1
+1 reproduction,haut,LoRa + secours,1891.0,1882.2,8.8,1891.0
+1 reproduction,haut,cellulaire + secours,1731.0,1733.9,-2.9,1731.0
+2 volume,centre,tout LoRa (passerelles + secours),380.5,,1117.0,
+2 volume,centre,tout cellulaire (ponts + passerelles du secours),320.2,,940.0,

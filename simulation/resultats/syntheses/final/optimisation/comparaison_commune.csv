@@ -1,0 +1,5 @@
+scenario,couverture_complete_passerelles,tout_lora_eur,tout_cellulaire_eur,choix_commune_eur,communes_lora,choix_maille_eur,passerelles_maille,gain_maille_vs_commune_pct
+centre_detaille,3378,82.33,45.63,44.8,so_ava,38.59,193,13.9
+centre_kerlink,3378,150.15,46.13,45.56,so_ava,41.45,92,9.0
+bas,3378,56.18,26.25,25.96,so_ava,23.89,125,8.0
+haut,3378,180.3,67.82,66.72,so_ava,58.91,126,11.7

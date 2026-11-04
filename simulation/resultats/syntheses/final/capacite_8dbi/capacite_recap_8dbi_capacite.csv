@@ -1,0 +1,6 @@
+zone,variante,mode,capacite_palier,borne,capacite_interpolee_livraison,capacite_interpolee_delai_routine,capacite_interpolee_delai_alerte,paliers,repetitions
+urbain_dense,mode=mixte_recap_rx2 messages=10 intensif=0.1,mixte_recap_rx2,1600,,>3200,,2003.4599462322697,50 100 200 400 800 1600 3200,10
+peri_urbain,mode=mixte_recap_rx2 messages=10 intensif=0.1,mixte_recap_rx2,1600,,>3200,,1781.2769043115682,50 100 200 400 800 1600 3200,10
+rural_degage,mode=mixte_recap_rx2 messages=10 intensif=0.1,mixte_recap_rx2,1600,,>3200,,1720.1309562886254,50 100 200 400 800 1600 3200,10
+rural_arbore,mode=mixte_recap_rx2 messages=10 intensif=0.1,mixte_recap_rx2,1600,,>3200,,1747.065070852888,50 100 200 400 800 1600 3200,10
+lacustre,mode=mixte_recap_rx2 messages=10 intensif=0.1,mixte_recap_rx2,800,,>3200,,1591.4014499015016,50 100 200 400 800 1600 3200,10
