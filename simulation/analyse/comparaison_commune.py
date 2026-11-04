@@ -28,7 +28,7 @@ def main():
     pts = np.stack([X, Y], 1)
     # Couverture complete : le cellulaire devient prohibitif.
     n0 = W * 2.0
-    y, z, _, _, st = O.resoudre(pts, Ri, n0, np.zeros_like(n0), np.full_like(n0, 1e4), 1.0, 900, 1)
+    y, z, _, _, st, _ = O.resoudre(pts, Ri, n0, np.zeros_like(n0), np.full_like(n0, 1e4), 1.0, 900, 1)
     gw = {c: int((COM[y] == c).sum()) for c in set(COM)}
     print("couverture complete", sum(gw.values()), st, gw, "mailles non couvertes", int((~z).sum()), flush=True)
     res = []

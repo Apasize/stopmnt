@@ -33,11 +33,11 @@ def lire(*p):
 
 
 def murs(prod, out):
-    """Rayon fiable a 5 dBi, emetteur dehors (20 repetitions) et a l'interieur (100 repetitions)."""
+    """Rayon fiable a 8 dBi, emetteur dehors (20 repetitions) et a l'interieur (100 repetitions)."""
     deh = {r["groupe"].split(" | ")[0]: float(r["rayon_fiable_m"]) / 1000
-           for r in lire(prod, "portee_interieur_v6/rayon_fiable_probit/rayon_fiable_probit.csv") if "interieur=0 gain=5" in r["groupe"]}
+           for r in lire(prod, "final/8dbi/portee_interieur_8dbi/rayon_fiable_probit/rayon_fiable_probit.csv") if "interieur=0 gain=8" in r["groupe"]}
     ded = {r["groupe"].split(" | ")[0]: float(r["rayon_fiable_m"]) / 1000
-           for r in lire(prod, "portee_v6/rayon_fiable_probit/rayon_fiable_probit.csv") if r["groupe"].endswith("gain=5")}
+           for r in lire(prod, "portee_gain_v61/rayon_fiable_probit/rayon_fiable_probit.csv") if r["groupe"].endswith("gain=8")}
     fig, ax = plt.subplots(figsize=(9, 3.9))
     for i, (z, n, _) in enumerate(reversed(ZONES)):
         ax.plot([ded[z], deh[z]], [i, i], color="#d9d3c7", lw=6, solid_capstyle="round", zorder=1)
@@ -47,7 +47,7 @@ def murs(prod, out):
         ax.text(deh[z] + .25, i, fr(deh[z]) + " km", va="center", color=GRIS)
     ax.set_yticks(range(5), [n for _, n, _ in reversed(ZONES)])
     ax.set_xlabel("rayon fiable (km)")
-    ax.set_xlim(0, 16)
+    ax.set_xlim(0, 23)
     ax.set_ylim(-.5, 4.7)
     ax.grid(axis="y", visible=False)
     ax.legend(frameon=False, loc="upper right")

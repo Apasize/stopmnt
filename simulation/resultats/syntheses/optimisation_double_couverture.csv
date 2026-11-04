@@ -1,5 +1,0 @@
-scenario,structure,fraction,part_smartphone,f_ligne,mult_passerelle,patients,cout_passerelle_eur_an,cout_keur_an,eur_patient_an,borne_inf_eur_patient_an,passerelles,doublees_capacite,part_patients_lora,charge_max_passerelle,statut,tout_cellulaire_eur,couverture_complete_lora_eur,choix_commune_eur
-centre_detaille,detaillee,0.02,0.0,,1.0,27965,411.2,1135.7,40.61,40.57,209,0,0.592,393,Time limit reached,45.63,40.56,38.77
-centre_kerlink,Kerlink,0.02,0.0,,1.0,27965,974.2,1222.8,43.73,43.72,93,0,0.403,468,Optimal,46.13,51.18,41.14
-bas,detaillee,0.02,0.0,,1.0,27965,294.0,694.0,24.82,24.81,134,0,0.5,468,Optimal,26.25,26.31,23.86
-haut,Kerlink,0.02,0.0,,1.0,27965,1105.8,1744.7,62.39,62.38,134,0,0.509,468,Optimal,67.82,67.96,58.78

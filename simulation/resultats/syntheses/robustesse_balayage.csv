@@ -1,0 +1,8 @@
+part_exigee,eur_patient_an,borne_inf_eur_patient_an,passerelles,part_patients_lora,part_lora_double_couverte,tout_cellulaire_eur,statut
+0.0,38.59,38.49,193,0.768,0.156,45.63,Time limit reached
+0.1,38.83,38.48,214,0.774,0.27,45.63,Time limit reached
+0.3,38.88,38.61,218,0.774,0.373,45.63,Time limit reached
+0.5,38.94,38.88,215,0.766,0.501,45.63,Time limit reached
+0.7,39.4,39.33,232,0.751,0.701,45.63,Time limit reached
+0.9,40.25,40.12,235,0.688,0.9,45.63,Time limit reached
+1.0,41.05,40.64,221,0.611,1.0,45.63,Time limit reached

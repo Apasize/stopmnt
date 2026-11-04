@@ -1511,6 +1511,22 @@
       "duree_simulee_jours": 6,
       "exclure_dernieres_s": 259200,
       "repetitions": 10
+    },
+    "portee_interieur_8dbi": {
+      "actif": true,
+      "description": "Rayon fiable dehors et selon la perte en interieur, a 8 dBi (4/11/2026), pour la figure 3.1.",
+      "experience_de_base": "portee_v4",
+      "balayage_interieur_perte_db": [
+        0,
+        10,
+        14,
+        20,
+        25
+      ],
+      "repetitions": 20,
+      "balayage_gain_antenne_dbi": [
+        8.0
+      ]
     }
   },
   "qualite_service": {

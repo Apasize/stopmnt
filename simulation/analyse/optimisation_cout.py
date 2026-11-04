@@ -131,8 +131,10 @@ def couts(cfg, comp, j, fr, fl=None, fpub=None, mult_g=1.0, s=0.0):
     return out, tel
 
 
-def resoudre(pts, Ri, n, c_L, c_C, g, lim, fils, gap=0.001, k=1):
-    """k : nombre de passerelles ouvertes exigees a portee d'une maille servie en LoRaWAN (1 : couverture simple ; 2 : double couverture, tolerante a la panne d'une passerelle)."""
+def resoudre(pts, Ri, n, c_L, c_C, g, lim, fils, gap=0.001, k=1, rho=0.0, depart=None):
+    """k : passerelles ouvertes exigees a portee de toute maille servie en LoRaWAN (1 par defaut).
+    rho : part minimale des patients servis en LoRaWAN qui doivent voir au moins deux passerelles ouvertes
+    a portee, et garder donc le service si l'une tombe en panne (0 : pas d'exigence de robustesse)."""
     m = len(n)
     arbre = cKDTree(pts)
     vois = [arbre.query_ball_point(pts[i], Ri[i]) for i in range(m)]
@@ -141,31 +143,73 @@ def resoudre(pts, Ri, n, c_L, c_C, g, lim, fils, gap=0.001, k=1):
     h.setOptionValue("time_limit", float(lim))
     h.setOptionValue("threads", int(fils))
     h.setOptionValue("mip_rel_gap", float(gap))
+    rob = rho > 0
+    entier_z = rob or k > 1  # z continu n'est exact qu'en couverture simple
+    nc = (3 if rob else 2) * m
     lp = highspy.HighsLp()
-    lp.num_col_ = 2 * m
-    lp.num_row_ = m
+    lp.num_col_ = nc
     constante = float((n * c_C).sum())
-    lp.col_cost_ = np.concatenate([np.full(m, g), n * (c_L - c_C)])
-    lp.col_lower_ = np.zeros(2 * m)
-    lp.col_upper_ = np.ones(2 * m)
-    lp.row_lower_ = np.full(m, -highspy.kHighsInf)
-    lp.row_upper_ = np.zeros(m)
-    starts, idx, val = [0], [], []
-    for i in range(m):
+    cout = [np.full(m, g), n * (c_L - c_C)] + ([np.zeros(m)] if rob else [])
+    lp.col_cost_ = np.concatenate(cout)
+    lp.col_lower_ = np.zeros(nc)
+    lp.col_upper_ = np.ones(nc)
+    starts, idx, val, hi = [0], [], [], []
+    for i in range(m):  # couverture : k z_i <= somme des y_j a portee
         for j in vois[i]:
             idx.append(j); val.append(-1.0)
         idx.append(m + i); val.append(float(k))
-        starts.append(len(idx))
+        starts.append(len(idx)); hi.append(0.0)
+    if rob:
+        for i in range(m):  # double couverture : w_i <= somme des y_j a portee - z_i (exact si y et z entiers)
+            for j in vois[i]:
+                idx.append(j); val.append(-1.0)
+            idx += [m + i, 2 * m + i]; val += [1.0, 1.0]
+            starts.append(len(idx)); hi.append(0.0)
+        for i in range(m):  # w_i <= z_i
+            idx += [2 * m + i, m + i]; val += [1.0, -1.0]
+            starts.append(len(idx)); hi.append(0.0)
+        for i in range(m):  # rho * somme n_i z_i <= somme n_i w_i
+            idx += [m + i, 2 * m + i]; val += [float(rho * n[i]), float(-n[i])]
+        starts.append(len(idx)); hi.append(0.0)
+    lp.num_row_ = len(hi)
+    lp.row_lower_ = np.full(len(hi), -highspy.kHighsInf)
+    lp.row_upper_ = np.array(hi)
     lp.a_matrix_.format_ = highspy.MatrixFormat.kRowwise
     lp.a_matrix_.start_ = np.array(starts, dtype=np.int32)
     lp.a_matrix_.index_ = np.array(idx, dtype=np.int32)
     lp.a_matrix_.value_ = np.array(val)
-    lp.integrality_ = [highspy.HighsVarType.kInteger] * m + [highspy.HighsVarType.kContinuous] * m
+    lp.integrality_ = ([highspy.HighsVarType.kInteger] * m
+                       + [highspy.HighsVarType.kInteger if entier_z else highspy.HighsVarType.kContinuous] * m
+                       + ([highspy.HighsVarType.kContinuous] * m if rob else []))
     h.passModel(lp)
+    if depart is not None:  # solution de depart realisable (sites ouverts, mailles en LoRaWAN)
+        y0, z0 = depart
+        nb = np.array([y0[v].sum() if v else 0 for v in vois])
+        z0 = z0 * (nb >= max(k, 2 if rob else 1))  # ne garder que les mailles reellement couvertes
+        sol = highspy.HighsSolution()
+        sol.col_value = list(np.concatenate([y0, z0] + ([z0] if rob else [])).astype(float))
+        sol.value_valid = True
+        h.setSolution(sol)
     h.run()
     info = h.getInfo()
     x = np.array(h.getSolution().col_value)
-    return x[:m] > 0.5, x[m:] > 0.5, constante + info.objective_function_value, constante + info.mip_dual_bound, h.modelStatusToString(h.getModelStatus())
+    y, z = x[:m] > 0.5, x[m:2 * m] > 0.5
+    ouverts = np.zeros(m, dtype=int)
+    for i in range(m):
+        ouverts[i] = int(y[vois[i]].sum()) if vois[i] else 0
+    part_double = float(n[z & (ouverts >= 2)].sum() / n[z].sum()) if z.any() else 0.0
+    return y, z, constante + info.objective_function_value, constante + info.mip_dual_bound, h.modelStatusToString(h.getModelStatus()), part_double
+
+
+def depart(a, m):
+    """Solution de depart lue dans un fichier de mailles (colonnes lora et site), si --depart est donne."""
+    f = getattr(a, "depart", None)
+    if not f:
+        return None
+    r = list(csv.DictReader(open(f, encoding="utf-8")))
+    if len(r) != m:
+        raise ValueError(f"{f} : {len(r)} mailles au lieu de {m}")
+    return np.array([float(x["site"]) for x in r]), np.array([float(x["lora"]) for x in r])
 
 
 def un(t):
@@ -187,7 +231,7 @@ def un(t):
     n = W * sc["fraction"] * 100 * (1 - sc.get("s", 0.0))
     cL = np.array([cu[c]["cL"] for c in COM]); cC = np.array([cu[c]["cC"] for c in COM])
     pts = np.stack([X, Y], 1)
-    y, z, obj, borne, statut = resoudre(pts, Ri, n, cL, cC, gv, a.limite, a.fils, a.gap, a.couverture)
+    y, z, obj, borne, statut, part_double = resoudre(pts, Ri, n, cL, cC, gv, a.limite, a.fils, a.gap, getattr(a, "couverture", 1), getattr(a, "robustesse", 0.0), depart(a, len(n)))
     Ntot = float(W.sum() * sc["fraction"] * 100)
     lns = next(iter(cu.values()))["lns"]
     nb_ph = Ntot * sc.get("s", 0.0)
@@ -207,7 +251,7 @@ def un(t):
              "cout_keur_an": round(total / 1000, 1), "eur_patient_an": round(total / Ntot, 2),
              "borne_inf_eur_patient_an": round((borne + F + lns + nb_ph * tel) / Ntot, 2),
              "passerelles": int(y.sum()) + sup, "doublees_capacite": sup, "part_patients_lora": round(float(n[z].sum() / n.sum()), 3),
-             "charge_max_passerelle": round(float(charges.max())), "statut": statut,
+             "charge_max_passerelle": round(float(charges.max())), "statut": statut, "robustesse_exigee": getattr(a, "robustesse", 0.0), "part_lora_double_couverte": round(part_double, 3),
              "tout_cellulaire_eur": round(tout_cell / Ntot, 2), "couverture_complete_lora_eur": round(ref / Ntot, 2),
              "choix_commune_eur": round(ch_com / Ntot, 2)}
     com = []
@@ -238,6 +282,8 @@ def main():
     ap.add_argument("--seul", default=None)
     ap.add_argument("--gap", type=float, default=0.001)
     ap.add_argument("--fils", type=int, default=None)
+    ap.add_argument("--depart", default=None, help="fichier de mailles (lora, site) servant de solution de depart")
+    ap.add_argument("--robustesse", type=float, default=0.0, help="part minimale des patients LoRaWAN a portee de deux passerelles ouvertes")
     ap.add_argument("--couverture", type=int, default=None, help="passerelles exigees a portee d'une maille LoRaWAN (defaut : cout.optimisation.couverture_minimale)")
     a = ap.parse_args()
     cfg = json.load(open(a.config, encoding="utf-8"))

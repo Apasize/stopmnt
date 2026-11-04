@@ -16,6 +16,7 @@ Scripts : `orchestrateur/campagne_8dbi.sh`, `orchestrateur/campagne_8dbi_suite.s
 | Panne : patients servis à l'espacement de routine (3.2.2) | 92,0 à 97,3 % | 92,5 à 97,3 % | `robustesse_v6/robustesse_panne.csv` |
 | Seuil de 90 % : arboré / urbain | 3,2 / 8,8 rayons | 3,2 / 8,8 rayons | idem |
 | Espacement tenu (corrélation 0,5), 5 zones | 6 / 3,5 / 3 / 3 / 4 | identique | `multi_passerelles_v6/multi_passerelles_synthese_production.csv` |
+| Rayon fiable extérieur (figure 3.1) : rural, urbain, lacustre | 6,08 / 4,83 / 14,07 km | 8,07 / 7,84 / 20,16 km (division par 4 à 8 avec les murs) | `portee_interieur_8dbi/rayon_fiable_probit/` |
 | Énergie du pont LoRa, jusqu'à 200 patients (3.3.3) | texte : 0,47 à 1,13 J/j | 0,45 à 1,16 J/j | `../capacite_8dbi`, `../capacite_recap_8dbi` |
 | Variante en réseau dense | 112 passerelles (anciennes capacités) | 113, 35,82 €/patient/an | `optimisation_rayon_diversite/optimum_scenarios.csv` |
 
