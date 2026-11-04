@@ -91,7 +91,7 @@
       3.0,
       8.0
     ],
-    "_source_gain": "Decision de l'auteur du 2026-10-27 : 5 dBi central, fiche officielle RAK RAKARG18 (863-870 MHz, 5,0 dBi a 868 MHz, 48 cm, pour passerelles RAK7289/RAK7240, docs.rakwireless.com). Sensibilite : 3 dBi (antenne fibre de verre Dragino, annonce revendeur, fiche non lue) et 8 dBi (Taoglas OMB.868.B08F21, fiche officielle lue : 8 dBi crete, ouverture verticale 13 deg, 1,47 m). Gain applique en reception passerelle seulement : la puissance rayonnee des descendantes est plafonnee par la reglementation (limites ARCEP a sourcer). L'antenne est independante de la marque de passerelle.",
+    "_source_gain": "Valeur effective : 8 dBi (decision v6.2 du 29/10/2026, voir _decision_gain_v62). Historique : Decision de l'auteur du 2026-10-27 : 5 dBi central, fiche officielle RAK RAKARG18 (863-870 MHz, 5,0 dBi a 868 MHz, 48 cm, pour passerelles RAK7289/RAK7240, docs.rakwireless.com). Sensibilite : 3 dBi (antenne fibre de verre Dragino, annonce revendeur, fiche non lue) et 8 dBi (Taoglas OMB.868.B08F21, fiche officielle lue : 8 dBi crete, ouverture verticale 13 deg, 1,47 m). Gain applique en reception passerelle seulement : la puissance rayonnee des descendantes est plafonnee par la reglementation (limites ARCEP a sourcer). L'antenne est independante de la marque de passerelle.",
     "fenetres_reception": {
       "_commentaire": "Consignes v4, points 10 et 13 (2026-10-27). Valeurs de base identiques au module lorawan 0.3.7 : RX1 1 s apres la fin de la montante, RX2 1 s plus tard, 869,525 MHz a 27 dBm (sous-bande ETSI 869,4-869,65 MHz du module), remontee point a point de 2 ms dans le modele. Surchargeables par experience ou balayage.",
       "rx1_delai_s": 5.0,
@@ -416,7 +416,7 @@
         5.0,
         8.0
       ],
-      "_commentaire_gain": "Portee simulee pour chaque gain d'antenne de passerelle (central 5 dBi, sensibilite 3 et 8)."
+      "_commentaire_gain": "Portee simulee pour chaque gain d'antenne de passerelle (3, 5 et 8 dBi). Depuis la v6.2, 8 dBi est la valeur retenue ; 5 dBi est conserve pour comparaison."
     },
     "multi_passerelles": {
       "actif": true,
@@ -1624,7 +1624,7 @@
     },
     "_commentaire_O": "Decision O (2026-10-26) : la couverture cellulaire n'est pas simulee dans ns-3, elle est calculee par bilan de liaison (analyse/bilan_cellulaire.py) avec la meme propagation et le meme ombrage par zone que le LoRa. ns-3 reste reserve a la latence, au handover et a l'energie en zone couverte.",
     "gain_antenne_terminal_dbi": 0.0,
-    "_source_gains": "Gain passerelle LoRa : voir passerelle.gain_antenne_dbi (5 dBi sources, remplace les 10 dBi provisoires). eNodeB 17 dBi et terminal 0 dBi : valeurs de l'auteur, a sourcer.",
+    "_source_gains": "Gain passerelle LoRa : voir passerelle.gain_antenne_dbi (8 dBi depuis la v6.2 ; 5 dBi auparavant, qui remplacait les 10 dBi provisoires). eNodeB 17 dBi et terminal 0 dBi : valeurs de l'auteur, a sourcer.",
     "mcl_lora_db_annonce": 157.0,
     "_commentaire_mcl_lora": "Le bilan LoRa est calcule depuis le config (puissance 14 dBm - sensibilite SF12 -142,5 dBm = 156,5 dB) ; 157 dB est la valeur annoncee (Lauridsen et al., Aalborg, VTC Spring 2017).",
     "mcl_nbiot_db": 164.0,
@@ -1714,7 +1714,7 @@
       ],
       "_source_materiel": "RAK7289V2 (8 canaux, sans LTE) a 382 $, jusqu'a 525 $ pour les variantes (dont LTE pour la remontee), store.rakwireless.com, consulte le 2026-10-27.",
       "antenne_eur": 69.9,
-      "_source_antenne": "Antenne fibre de verre RAK 5 dBi 868 MHz, 69,90 EUR (revendeur pileupdx.com, date de la page non visible).",
+      "_source_antenne": "Antenne fibre de verre RAK 5 dBi 868 MHz, 69,90 EUR (revendeur pileupdx.com, date de la page non visible). Prix d'une antenne 5 dBi, conserve : l'antenne 8 dBi retenue est de prix comparable d'apres les fiches consultees.",
       "scenario_bas": {
         "installation_eur_hypothese": 500,
         "remontee_fcfa_par_mois": 2500,
@@ -2199,7 +2199,8 @@
         "rural_arbore": 1747,
         "lacustre": 1591
       },
-      "_source_capacite": "Capacites du mode a recapitulatif (simulation ns-3, 10 repetitions, 5 dBi, 4 jours). Une passerelle plus chargee est doublee sur place, au cout d'une passerelle."
+      "_source_capacite": "Capacites du mode a recapitulatif a 8 dBi (simulation ns-3, 10 repetitions, 6 jours simules, 72 h exclues). Une passerelle plus chargee est doublee sur place, au cout d'une passerelle. Les anciennes valeurs a 5 dBi (4 jours) sont remplacees.",
+      "couverture_minimale": 1
     }
   },
   "_decisions_v6_1": {

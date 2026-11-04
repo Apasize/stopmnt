@@ -1,14 +1,16 @@
 # Registre des chiffres de l'optimisation
 
-Fichier produit par `analyse/registre_chiffres.py`. 147 valeurs sur 156 retrouvées au chiffre près dans le chapitre 3.
+Fichier produit par `analyse/registre_chiffres.py`. 152 valeurs sur 156 retrouvées au chiffre près dans le chapitre 3.
 
 Gain du choix par maille sur le choix par commune, à rayon égal : 6.6 à 9.8 %.
+
+Les valeurs absentes du texte sont expliquées dans la dernière colonne.
 
 | Chiffre | Valeur | Source (sous `resultats/production/final/`) | Dans le texte |
 |---|---|---|---|
 | Bas, par maille, €/patient/an | 23,9 | `optimisation/optimisation_scenarios.csv` | oui |
 | Bas, par maille, passerelles | 125 | `optimisation/optimisation_scenarios.csv` | oui |
-| Bas, tout cellulaire | 26,2 | `optimisation/comparaison_homogene.csv` | oui |
+| Bas, tout cellulaire | 26,3 | `optimisation/comparaison_homogene.csv` | oui |
 | Bas, par commune, rayon passerelle seule | 25,6 | `optimisation/comparaison_homogene.csv` | oui |
 | Bas, patients pour rembourser une passerelle | 54 | `optimisation/seuils_passerelle.csv` | oui |
 | Central détaillé, par maille, €/patient/an | 38,6 | `optimisation/optimisation_scenarios.csv` | oui |
@@ -74,10 +76,10 @@ Gain du choix par maille sur le choix par commune, à rayon égal : 6.6 à 9.8 %
 | Rayon fiable rural_arbore | gain=9 | 0,82 | `portee_gain_v61` | oui |
 | Rayon fiable rural_degage | gain=9 | 2,14 | `portee_gain_v61` | oui |
 | Rayon fiable urbain_dense | gain=9 | 1,16 | `portee_gain_v61` | oui |
-| ARCEP departement_atlantique 4g_bonne_MTN | 73,3 | `cellulaire/couverture_arcep_communes.csv` | NON |
-| ARCEP departement_atlantique 4g_bonne_MOOV | 84,8 | `cellulaire/couverture_arcep_communes.csv` | NON |
-| ARCEP departement_atlantique 4g_bonne_CELTIIS | 63,3 | `cellulaire/couverture_arcep_communes.csv` | NON |
-| ARCEP departement_atlantique 2g_bonne_meilleure | 95,5 | `cellulaire/couverture_arcep_communes.csv` | NON |
+| ARCEP departement_atlantique 4g_bonne_MTN | 73,3 | `cellulaire/couverture_arcep_communes.csv` | non : total départemental, non cité ; le tableau 3.6 donne les valeurs par commune |
+| ARCEP departement_atlantique 4g_bonne_MOOV | 84,8 | `cellulaire/couverture_arcep_communes.csv` | non : total départemental, non cité ; le tableau 3.6 donne les valeurs par commune |
+| ARCEP departement_atlantique 4g_bonne_CELTIIS | 63,3 | `cellulaire/couverture_arcep_communes.csv` | non : total départemental, non cité ; le tableau 3.6 donne les valeurs par commune |
+| ARCEP departement_atlantique 2g_bonne_meilleure | 95,5 | `cellulaire/couverture_arcep_communes.csv` | non : total départemental, non cité ; le tableau 3.6 donne les valeurs par commune |
 | ARCEP ouidah 4g_bonne_MTN | 91,3 | `cellulaire/couverture_arcep_communes.csv` | oui |
 | ARCEP ouidah 4g_bonne_MOOV | 89,5 | `cellulaire/couverture_arcep_communes.csv` | oui |
 | ARCEP ouidah 4g_bonne_CELTIIS | 93,1 | `cellulaire/couverture_arcep_communes.csv` | oui |
@@ -133,7 +135,7 @@ Gain du choix par maille sur le choix par commune, à rayon égal : 6.6 à 9.8 %
 | Coût so_ava scénario bas LoRa sous convention | 20,5 | `central/cout_communes_v63.csv` | oui |
 | Coût so_ava scénario bas cellulaire sous convention | 26,6 | `central/cout_communes_v63.csv` | oui |
 | Coût toffo scénario bas LoRa sous convention | 35,1 | `central/cout_communes_v63.csv` | oui |
-| Coût toffo scénario bas cellulaire sous convention | 28,1 | `central/cout_communes_v63.csv` | NON |
+| Coût toffo scénario bas cellulaire sous convention | 28,2 | `central/cout_communes_v63.csv` | oui |
 | Coût tori_bossito scénario bas LoRa sous convention | 35,6 | `central/cout_communes_v63.csv` | oui |
 | Coût tori_bossito scénario bas cellulaire sous convention | 27,3 | `central/cout_communes_v63.csv` | oui |
 | Coût ze scénario bas LoRa sous convention | 37,4 | `central/cout_communes_v63.csv` | oui |
@@ -151,14 +153,14 @@ Gain du choix par maille sur le choix par commune, à rayon égal : 6.6 à 9.8 %
 | Coût toffo scénario haut LoRa sous convention | 101,9 | `central/cout_communes_v63.csv` | oui |
 | Coût toffo scénario haut cellulaire sous convention | 72,3 | `central/cout_communes_v63.csv` | oui |
 | Coût tori_bossito scénario haut LoRa sous convention | 104,0 | `central/cout_communes_v63.csv` | oui |
-| Coût tori_bossito scénario haut cellulaire sous convention | 68,8 | `central/cout_communes_v63.csv` | NON |
-| Coût ze scénario haut LoRa sous convention | 110,5 | `central/cout_communes_v63.csv` | NON |
-| Coût ze scénario haut cellulaire sous convention | 74,2 | `central/cout_communes_v63.csv` | NON |
+| Coût tori_bossito scénario haut cellulaire sous convention | 68,9 | `central/cout_communes_v63.csv` | oui |
+| Coût ze scénario haut LoRa sous convention | 110,6 | `central/cout_communes_v63.csv` | oui |
+| Coût ze scénario haut cellulaire sous convention | 74,3 | `central/cout_communes_v63.csv` | oui |
 | Monte-Carlo Monte-Carlo, scénario bas détaillé tout LoRa sans convention | 47,1 [34,0 ; 65,5] | `central/cout_departement_v63.csv` | oui |
 | Monte-Carlo Monte-Carlo, scénario bas détaillé tout LoRa sous convention | 41,5 [29,8 ; 59,6] | `central/cout_departement_v63.csv` | oui |
 | Monte-Carlo Monte-Carlo, scénario bas détaillé tout cellulaire sous convention | 45,9 [31,8 ; 64,3] | `central/cout_departement_v63.csv` | oui |
 | Monte-Carlo Monte-Carlo, scénario bas détaillé choix par commune | 39,2 [28,0 ; 55,2] | `central/cout_departement_v63.csv` | oui |
 | Monte-Carlo Monte-Carlo, Kerlink 10 % tout LoRa sans convention | 54,4 [39,3 ; 79,7] | `central/cout_departement_v63.csv` | oui |
-| Monte-Carlo Monte-Carlo, Kerlink 10 % tout LoRa sous convention | 51,7 [37,5 ; 77,0] | `central/cout_departement_v63.csv` | NON |
+| Monte-Carlo Monte-Carlo, Kerlink 10 % tout LoRa sous convention | 51,7 [37,5 ; 77,1] | `central/cout_departement_v63.csv` | oui |
 | Monte-Carlo Monte-Carlo, Kerlink 10 % tout cellulaire sous convention | 46,4 [32,3 ; 65,2] | `central/cout_departement_v63.csv` | oui |
 | Monte-Carlo Monte-Carlo, Kerlink 10 % choix par commune | 41,5 [29,7 ; 58,6] | `central/cout_departement_v63.csv` | oui |

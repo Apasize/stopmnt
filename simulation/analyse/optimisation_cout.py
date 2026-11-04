@@ -131,7 +131,8 @@ def couts(cfg, comp, j, fr, fl=None, fpub=None, mult_g=1.0, s=0.0):
     return out, tel
 
 
-def resoudre(pts, Ri, n, c_L, c_C, g, lim, fils, gap=0.001):
+def resoudre(pts, Ri, n, c_L, c_C, g, lim, fils, gap=0.001, k=1):
+    """k : nombre de passerelles ouvertes exigees a portee d'une maille servie en LoRaWAN (1 : couverture simple ; 2 : double couverture, tolerante a la panne d'une passerelle)."""
     m = len(n)
     arbre = cKDTree(pts)
     vois = [arbre.query_ball_point(pts[i], Ri[i]) for i in range(m)]
@@ -153,7 +154,7 @@ def resoudre(pts, Ri, n, c_L, c_C, g, lim, fils, gap=0.001):
     for i in range(m):
         for j in vois[i]:
             idx.append(j); val.append(-1.0)
-        idx.append(m + i); val.append(1.0)
+        idx.append(m + i); val.append(float(k))
         starts.append(len(idx))
     lp.a_matrix_.format_ = highspy.MatrixFormat.kRowwise
     lp.a_matrix_.start_ = np.array(starts, dtype=np.int32)
@@ -186,7 +187,7 @@ def un(t):
     n = W * sc["fraction"] * 100 * (1 - sc.get("s", 0.0))
     cL = np.array([cu[c]["cL"] for c in COM]); cC = np.array([cu[c]["cC"] for c in COM])
     pts = np.stack([X, Y], 1)
-    y, z, obj, borne, statut = resoudre(pts, Ri, n, cL, cC, gv, a.limite, a.fils, a.gap)
+    y, z, obj, borne, statut = resoudre(pts, Ri, n, cL, cC, gv, a.limite, a.fils, a.gap, a.couverture)
     Ntot = float(W.sum() * sc["fraction"] * 100)
     lns = next(iter(cu.values()))["lns"]
     nb_ph = Ntot * sc.get("s", 0.0)
@@ -237,11 +238,13 @@ def main():
     ap.add_argument("--seul", default=None)
     ap.add_argument("--gap", type=float, default=0.001)
     ap.add_argument("--fils", type=int, default=None)
+    ap.add_argument("--couverture", type=int, default=None, help="passerelles exigees a portee d'une maille LoRaWAN (defaut : cout.optimisation.couverture_minimale)")
     a = ap.parse_args()
     cfg = json.load(open(a.config, encoding="utf-8"))
     op = cfg["cout"]["optimisation"]
     a.limite = a.limite or op["limite_resolution_s"]
     a.fils = a.fils or op["fils"]
+    a.couverture = a.couverture or int(op.get("couverture_minimale", 1))
     prod = os.path.abspath(a.prod)
     s1 = op["part_smartphone"][1]
     S = [dict(nom="centre_detaille", structure="bas", j=None, fraction=.02),

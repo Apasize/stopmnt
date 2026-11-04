@@ -10,7 +10,10 @@ def lire(*p):
 
 
 def fr(v, n=1):
-    return f"{float(v):.{n}f}".replace(".", ",")
+    """Arrondi au plus proche, la moitie vers le haut, comme dans le memoire (28,15 -> 28,2)."""
+    from decimal import Decimal, ROUND_HALF_UP
+    q = Decimal(1).scaleb(-n)
+    return str(Decimal(str(v)).quantize(q, rounding=ROUND_HALF_UP)).replace(".", ",")
 
 
 def entier(v):
@@ -91,13 +94,19 @@ def main():
             note(f"Monte-Carlo {r['source']} {r['architecture']}", f"{fr(r['eur_patient_an'])} [{fr(r['p2_5'])} ; {fr(r['p97_5'])}]", D)
     gains = [100 * (float(ho[(s, "passerelle_seule")]["choix_commune"]) - float(sc[s]["eur_patient_an"])) / float(ho[(s, "passerelle_seule")]["choix_commune"]) for s in noms]
     absents = [l for l in lignes if not l[3]]
+
+    def motif(n):
+        if n.startswith("ARCEP departement"):
+            return "total départemental, non cité ; le tableau 3.6 donne les valeurs par commune"
+        return "à vérifier"
     with open(a.out, "w", encoding="utf-8") as f:
         f.write("# Registre des chiffres de l'optimisation\n\n")
         f.write(f"Fichier produit par `analyse/registre_chiffres.py`. {len(lignes) - len(absents)} valeurs sur {len(lignes)} retrouvées au chiffre près dans le chapitre 3.\n\n")
         f.write(f"Gain du choix par maille sur le choix par commune, à rayon égal : {min(gains):.1f} à {max(gains):.1f} %.\n\n")
+        f.write("Les valeurs absentes du texte sont expliquées dans la dernière colonne.\n\n")
         f.write("| Chiffre | Valeur | Source (sous `resultats/production/final/`) | Dans le texte |\n|---|---|---|---|\n")
         for n, v, s, ok in lignes:
-            f.write(f"| {n} | {v.replace('~', ' ')} | `{s}` | {'oui' if ok else 'NON'} |\n")
+            f.write(f"| {n} | {v.replace('~', ' ')} | `{s}` | {'oui' if ok else 'non : ' + motif(n)} |\n")
     print(len(lignes), "valeurs,", len(absents), "absentes", [(l[0], l[1]) for l in absents], [round(g, 1) for g in gains])
 
 
